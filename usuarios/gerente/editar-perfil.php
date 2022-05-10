@@ -10,12 +10,18 @@
     <title>editar perfil</title>
 </head>
 <body>
+<?php 
+session_start();
+if ($_SESSION['Id_cargo'] ==true ){
+?>
     <?php  
     include '/xampp/xampp/htdocs/360/ruta360/php/include/menu.php';
     ?>
     <?php  
     include '/xampp/xampp/htdocs/360/ruta360/php/vista/editar-perfil.php';
     ?>
-    
+<?php } else{
+    header('Location:/login.php'); 
+} ?>
 </body>
 </html>

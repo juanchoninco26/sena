@@ -10,11 +10,19 @@
     <title>crear usuario</title>
 </head>
 <body>
+<?php 
+session_start();
+if ($_SESSION['Id_cargo'] ==true ){
+?>
     <?php 
     include '/xampp/xampp/htdocs/360/ruta360/php/include/menu.php';
     ?>
         <?php 
     include '/xampp/xampp/htdocs/360/ruta360/php/vista/crear-usuario.php';
     ?>
+<?php } else{
+    header('Location:/login.php'); 
+} ?>
+
 </body>
 </html>
