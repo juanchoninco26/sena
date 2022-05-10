@@ -15,24 +15,19 @@
                 </div>
             </div>
             <div class="subcaja3">
-            <div> 
+            <div>
+                <?php session_start();?> 
                 <?php 
                 //ver en minuto 49,16: https://www.youtube.com/watch?v=fCTd8ilXZGI
-                session_start();
-                if($row=$_SESSION['Id_cargo']==1){
-                    echo "<h3>Administrador</h3>";
-                }elseif($row=$_SESSION['Id_cargo']==2){
-                    echo "<h3>Asesor</h3>";
-                }elseif($row=$_SESSION['Id_cargo']==3){
-                    echo "<h3>Contador</h3>";
-                }
+                
                              
                 //ver video:https://www.youtube.com/watch?v=9BLoMGO-XcU
                 //el video muestra quien inicia el software
                 //session_start() esta en el: php/loguin
             
-                $nombre=$_SESSION['username'];  
-                echo "<p>$nombre</p>";
+                if($nombre=$_SESSION['Nombre']){
+                    echo "<p>$nombre</p>";
+                    } 
                ?>
              </div>
                 <div class="perfil">
@@ -44,42 +39,42 @@
             <div class="caj">
                 <form class="mod-datos" action="/php/guardar_dat.php" method="post">
                             <?php 
+                            include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php';
                             //youtube.com/watch?v=Ct6K4wRjlQQ
-                            if(isset($_GET['Nombre'])) {
-                            $consulta="SELECT* FROM empleados WHERE Nombre='".$_GET['Nombre']."'";
-                            $con=mysqli_query($ared,$consulta);
-                            while($row=mysqli_fetch_array($con)){
-                    
+                           //www.youtube.com/watch?v=0WJ_qFxeWCg
+                            
+                            $nombre1= $_SESSION['Nombre'];
+                            $consulta="SELECT *FROM empleados where Nombre='$nombre1'";
+                            $cons=mysqli_query($ared,$consulta);
+                              while($rows=mysqli_fetch_array($cons)) {
+
                             ?>
                     <div class="dat">
                         <div class="texto">
                             <p>Modificar Datos</p>
                         </div>
                         <p>Nombre</p>
-                        <input type="text" name="nombre" id="" value="<?php echo $row['Nombre'];?>">
+                        <input type="text" name="nombre" id="" value="<?php echo $rows['Nombre'];?>">
                         <p>Contraseña</p>
-                        <input type="password" name="contraseña" id="" value="<?php echo $row['Contraseña'];?>">
+                        <input type="password" name="contraseña" id="" value="<?php echo $rows['Contraseña'];?>">
                         <p>Repetir Contraseña</p>
-                        <input type="password" name="repcontraseña" id="" value="<?php echo $row['Contraseña'];?>">
+                        <input type="password" name="repcontraseña" id="" value="<?php echo $rows['Contraseña'];?>">
                         <p>Fecha de nacimiento</p>
-                        <input type="number" name="edad" id="" value="<?php echo $row['Fecha_nacimiento'];?>">
+                        <input type="text" name="edad" id="" value="<?php echo $rows['Fecha_nacimiento'];?>">
                         <p>Telefono</p>
-                        <input type= "number" name="telefono" id="" value="<?php echo $row['Telefono'];?>">
+                        <input type= "number" name="telefono" id="" value="<?php echo $rows['Telefono'];?>">
                     </div>
                     <div class="min-dat">
                         <p>Cargo</p>
-                        <input type="text" name="cargo" id="" value="<?php echo $row['Id_cargo'];?>">
+                        <input type="text" name="cargo" id="" value="<?php echo $rows['Id_cargo'];?>">
                         <p>Foto</p>
-                        <input type="file" name="foto" id="" value="<?php echo $row[' Fotografia'];?>">
+                        <input type="file" name="foto" id="" value="<?php echo $rows['Fotografia'];?>">
                     </div>
-                <?php  }
-            } ?>
-                </form>
+                <?php }   ?>
                 <div>
-                <input type="submit" value="guardar" name="editar_perfil">
+                   <input type="submit" value="guardar" name="editar_perfil">
                 </div>
-                
-                
+                </form>   
             </div>
         </div>
     </div>

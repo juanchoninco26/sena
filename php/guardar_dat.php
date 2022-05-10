@@ -73,7 +73,7 @@ if (isset($_POST['guardar_punt'])){
  }
 }
 
-//guradar:crar usuario
+//guradar:crear usuario
 
 if(isset($_POST['crear_usuario'])){
     $nombre=$_POST['nombre'];
@@ -103,9 +103,13 @@ if (isset($_POST['editar_perfil'])){
     $foto=$ared->real_escape_string($_POST['foto']);
 
     //youtube.com/watch?v=Ct6K4wRjlQQ
-    $lista2="SELECT * FROM empleados WHERE Nombre='".$_SESSION['Nombre']."'";
-    $row=$lista->fetch_assoc();
+    $lista="INSERT INTO empleados(Id_empleado, Nombre, Contraseña, Fecha_nacimiento, Telefono, Fotografia, Id_cargo) 
+    VALUES ('', '$nombre', '$contraseña', '$fecha', '$telefono', NULL, '$cargo')";
+    $resultado= mysqli_query($ared,$lista) or die ("error: ". mysqli_error($ared));
 
- 
+    $pass=$contraseña==$contraseña2;
+    if ($pass){
+        header("location:/usuarios/gerente/editar-perfil.php");
+    }
 }
 ?>

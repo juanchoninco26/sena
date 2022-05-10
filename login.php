@@ -22,7 +22,7 @@
                 <div class="img-centro">
                     <img src="imagenes/360.png">
                 </div>
-                <form class="formulario" action="/php/login3.php" method="POST">
+                <form class="formulario" action="/php/login2.php" method="POST">
                     <div class="letra2">
                         <h1>INICIAR SESIÓN</h1>
                     </div>
@@ -35,10 +35,11 @@
                         <input type="password" placeholder="" name="password"> 
                     </div>
                     <button type="submit" class="login" name="loguin"><a>Login</a></button>
-                   <!-- los link (asesor y contador) son solo para dar referencia a esas secciones despues se eliminaran-->
+                   <!-- los link (asesor y contador) son solo para dar referencia a esas secciones despues se eliminaran
                     <a href="/usuarios/asesor/reservaciones.php">Asesor</a>
-                    <a href="/usuarios/contador/estadisticas.php">Contador</a>
+                    <a href="/usuarios/contador/estadisticas.php">Contador</a>-->
                 </form>
+                <script></script>
             </div>
         </div>
     </div>    

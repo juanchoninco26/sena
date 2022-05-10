@@ -10,6 +10,7 @@
     <title>puntos turista</title>
 </head>
 <body>
+    <?php session_start()?>
     <?php 
     include '/xampp/xampp/htdocs/360/ruta360/php/include/menu.php';
     ?>
