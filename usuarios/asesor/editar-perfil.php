@@ -11,10 +11,12 @@
 </head>
 <body>
     <?php 
+    //hola como esta
     include '/xampp/xampp/htdocs/360/ruta360/php/include/menu-asesor.php'
     ?>
     <?php  
     include '/xampp/xampp/htdocs/360/ruta360/php/vista/editar-perfil.php';
     ?>
+    
 </body>
 </html>
