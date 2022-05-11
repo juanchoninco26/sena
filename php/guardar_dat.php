@@ -23,7 +23,17 @@ if (isset($_POST['editar-sitios'])) {
         echo 'mal';
     }
 }
+//guardar: editar sitios - editar paquetes
+if (isset($_POST['editar-sitios'])){
+   $nombre=$_POST[''];
+   $rutas=$_POST[''];
+   $precio=$_POST[''];
+   $descripcion=$_POST[''];
 
+   $lista="INSERT INTO paquetes_turisticos() VALUES()";
+
+
+}
 //guardar:promociones
 if (isset($_POST['promociones'])){
     
