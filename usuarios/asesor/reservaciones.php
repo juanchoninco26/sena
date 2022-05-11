@@ -15,8 +15,8 @@
 session_start();
 if ($_SESSION['Id_cargo'] ==true ){
 ?>
-   <?php include '/xampp/xampp/htdocs/360/ruta360/php/include/menu-asesor.php'?>
-   <?php include '/xampp/xampp/htdocs/360/ruta360/php/vista/reservaciones.php'  ?>
+   <?php include '/xampp/xampp/htdocs/360/ruta360/php/include/menu-asesor.php';?>
+   <?php include '/xampp/xampp/htdocs/360/ruta360/php/vista/reservaciones.php';?>
 <?php } else{
     header('Location:/login.php'); ;
 } ?>
