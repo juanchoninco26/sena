@@ -76,13 +76,35 @@ ol li{
 }
 .contenedor2{
     width: 380px;
-    height: 240px;
+    height: 315px;
     background: rgba(255, 255, 255, 0.350);
     border-radius: 15px;
 }
 .paquetes{
     padding-top: 0.1px;
     margin: 20px;
+}
+.slider{
+    display: flex;
+    height:23px;
+    margin-bottom: 15px;
+}
+.slider .img{
+    color: rgb(0, 128, 0);
+}
+.t-paquetes {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    
+}
+.sub-t-paquete p{
+    margin-right: 10px;
+    padding: 2px;
+    color: white;
+    background: green;
+    border-radius: 5px;
 }
 .formulario1 {
     display: block;

@@ -27,14 +27,31 @@
                 <div class="edpq">
                     <h3>Editar Paquetes</h3>
                 </div>
-                <div>
+                <div class="slider">
+                 <img src="/imagenes/izquierda.svg" alt="" class="img">
+                  <div class="t-paquetes">
                     <!-- tipos de paquetes -->
+                 
+                    <?php 
+                     $consult='SELECT*FROM paquetes_turisticos;';
+                     $result=mysqli_query($ared,$consult);
+
+                     while($ver=mysqli_fetch_array($result)){ ?>
+                     <div class="sub-t-paquete">
+                        <p>&nbsp<?php echo $ver['Id_turista'];?>&nbsp</p>   
+                     </div>
+                 
+                    <?php }?>
+                  </div>
+                 <img src="/imagenes/derecha.svg" alt="">
                 </div>
                 <form class="formulario1" action="/php/guardar_dat.php" method="post">
-                    <p>Nombre: <input type="text" placeholder=""></p> 
-                    <p>Rutas:  <input type="text">
-                    <p>Precio: <input type="text"></p> 
-                    <p>Descripción: <textarea name="" id="" cols="20" rows="1"></textarea></p>
+                    <p>C.C Turista  <input type="text" name="turista" ></p> 
+                    <p>Nombre: <input type="text" name="nombre" placeholder=""></p> 
+                    <p>Rutas:  <input type="text" name="rutas" ></p> 
+                    <p>Precio: <input type="text" name="precio" ></p>
+                    <p>Punto paquete:  <input type="text" name="puntos" ></p>  
+                    <p>Descripción: <textarea name="descripcion" id="" cols="20" rows="1"></textarea></p>
                     <input type="submit" value="guardar" name="paquetes">
                 </form>
             </div>

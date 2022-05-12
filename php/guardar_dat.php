@@ -24,13 +24,20 @@ if (isset($_POST['editar-sitios'])) {
     }
 }
 //guardar: editar sitios - editar paquetes
-if (isset($_POST['editar-sitios'])){
-   $nombre=$_POST[''];
-   $rutas=$_POST[''];
-   $precio=$_POST[''];
-   $descripcion=$_POST[''];
+if (isset($_POST['paquetes'])){
+   $nombre=$_POST['nombre'];
+   $turista=$_POST['turista'];
+   $rutas=$_POST['rutas'];
+   $precio=$_POST['precio'];
+   $puntos=$_POST['puntos'];
+   $descripcion=$_POST['descripcion'];
 
-   $lista="INSERT INTO paquetes_turisticos() VALUES()";
+   $lista="INSERT INTO paquetes_turisticos(Cod_paquete,Nombre,Rutas,Costo,Descripcion,Punto_paquete,Id_turista) 
+   VALUES('','$nombre','$rutas','$precio','$descripcion','$puntos','$turista')";
+   $resultado=mysqli_query($ared,$lista) or die("error:". mysqli_error($ared));
+   if ($resultado){
+       echo "<script>alert('hola')</script>";
+   }
 
 
 }
