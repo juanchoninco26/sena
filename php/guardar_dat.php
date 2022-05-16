@@ -130,22 +130,29 @@ if (isset($_POST['editar_perfil'])){
         $resultado= mysqli_query($ared,$lista) or die ("error: ". mysqli_error($ared));
 
         if ($resultado) {
-            echo "<script>";
-           // echo "confirm('datos actualizados')";
-            echo "</script>";
-            //header("location:/login.php"); 
+            session_unset();
+            session_destroy();
+            header("location:/login.php"); 
          }else{
             echo "error". mysqli_error($ared);
         }
         
     }else{
-        //echo "<script >";
-        echo "<script>";
-        echo "let text;";
-        echo "if (confirm('Press a button!') == true) {";
-        echo "  text = 'You pressed OK!'; }";
-        echo "</script>";
-        //echo "</script>";
+        session_start();
+        $nombre1= $_SESSION['Nombre'];
+        $consulta="SELECT *FROM empleados where Nombre='$nombre1'";
+        $cons=mysqli_query($ared,$consulta);
+        $rows=mysqli_fetch_array($cons);
+        if($rows['Id_cargo']==1){
+            echo "<script src='/script/mensaje1.js'> </script>";
+        }
+        if($rows['Id_cargo']==2){
+            echo "<script src='/script/mensaje2.js'> </script>";
+        }
+        if($rows['Id_cargo']==3){
+            echo "<script src='/script/mensaje3.js'> </script>";
+        }
+        
     } 
 }
 ?>

@@ -2,18 +2,11 @@
         <div class="sec2">
             <div class="sub-sec2">
                 <div class="p">
-                    <p>Perfil Actual</p>
+                    <p>Perfil Actual:</p>
                 </div>
-                <div class="subcaja2">
-                    <div> 
-                        <h3>Administrador</h3>
-                        <p>Leandro Zuleta</p>
-                    </div>
-                    <div class="perfil">
-                        <img src="/imagenes/user.svg" alt="">
-                    </div>
-                </div>
+                
             </div>
+            
             <div class="subcaja3">
             <div>
                
@@ -22,7 +15,8 @@
                 //ver video:https://www.youtube.com/watch?v=9BLoMGO-XcU
                 //el video muestra quien inicia el software
                 //session_start() esta en el: php/loguin
-                echo "<h3>Usuario</h3>";
+                
+                echo "<h3>USUARIO</h3>";
             
                 if($nombre=$_SESSION['Nombre']){
                     echo "<p>$nombre</p>";
@@ -64,7 +58,7 @@
                         <p>Fecha de nacimiento</p>
                         <input type="text" name="edad" id="" value="<?php echo $rows['Fecha_nacimiento'];?>">
                           <div>
-                            <input type="submit" value="Actualizar" name="editar_perfil">
+                            <input type="submit" value="Actualizar" name="editar_perfil" onclick="alert('datos actualizados');">
                           </div>
                     </div> 
                     <div class="min-dat">
@@ -86,7 +80,7 @@
                             }
                             if ($rows['Id_cargo']==3) {
                                 echo "Contador";                       
-                         }
+                            }
 
                         } 
                         ?>
