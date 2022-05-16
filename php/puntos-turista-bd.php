@@ -9,9 +9,8 @@ $ared = new mysqli(
 );
 
 $ared -> set_charset("utf8");
-/*if (isset($ared)){
-    echo 'bien';
-}else{
+
+if (!isset($ared)){
     echo 'mal';
-}*/
+}
 ?>

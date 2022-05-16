@@ -1,5 +1,6 @@
 <?php 
 include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php';
+
 //ver video:https://www.youtube.com/watch?v=pn2v9lPakHQ
 
 //guardar: editar sitios 
@@ -112,21 +113,39 @@ if(isset($_POST['crear_usuario'])){
 //editar perfil
 if (isset($_POST['editar_perfil'])){
     $nombre=$ared->real_escape_string($_POST['nombre']);
+    $cedula=$ared->real_escape_string($_POST['cedula']);
     $contraseña=$ared->real_escape_string($_POST['contraseña']);
     $contraseña2=$ared->real_escape_string($_POST['repcontraseña']);
     $fecha=$ared->real_escape_string($_POST['edad']);
     $telefono=$ared->real_escape_string($_POST['telefono']);
-    $cargo=$ared->real_escape_string($_POST['cargo']);
+    //$cargo=$ared->real_escape_string($_POST['cargo']);
     $foto=$ared->real_escape_string($_POST['foto']);
-
+    
     //youtube.com/watch?v=Ct6K4wRjlQQ
-    $lista="INSERT INTO empleados(Id_empleado, Nombre, Contraseña, Fecha_nacimiento, Telefono, Fotografia, Id_cargo) 
-    VALUES ('', '$nombre', '$contraseña', '$fecha', '$telefono', NULL, '$cargo')";
-    $resultado= mysqli_query($ared,$lista) or die ("error: ". mysqli_error($ared));
+    //$lista="SELECT * FROM empleados WHERE Id_empleado = $cedula";
+    if ($contraseña==$contraseña2){
+        session_start();
+        $nombre1= $_SESSION['Nombre'];
+        $lista="UPDATE empleados SET Nombre = '$nombre', Contraseña='$contraseña', Fecha_nacimiento='$fecha', Telefono='$telefono', Fotografia=NULL WHERE Id_empleado = '$cedula'"; 
+        $resultado= mysqli_query($ared,$lista) or die ("error: ". mysqli_error($ared));
 
-    $pass=$contraseña==$contraseña2;
-    if ($pass){
-        header("location:/usuarios/gerente/editar-perfil.php");
-    }
+        if ($resultado) {
+            echo "<script>";
+           // echo "confirm('datos actualizados')";
+            echo "</script>";
+            //header("location:/login.php"); 
+         }else{
+            echo "error". mysqli_error($ared);
+        }
+        
+    }else{
+        //echo "<script >";
+        echo "<script>";
+        echo "let text;";
+        echo "if (confirm('Press a button!') == true) {";
+        echo "  text = 'You pressed OK!'; }";
+        echo "</script>";
+        //echo "</script>";
+    } 
 }
 ?>
