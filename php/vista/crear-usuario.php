@@ -1,14 +1,4 @@
 <div class="sec2">
-        <h2>Usuario actual</h2>
-        <div class="subcaja2">
-            <div>
-                <h3>Administrador</h3>
-                <p>Leandro Zuleta</p>
-            </div>
-            <div class="perfil">
-                <img src="/imagenes/user.svg" alt="">
-            </div>
-        </div>
         <div class="otros-user">
             <div class="titulo">
                 <h2>Otros Usuarios</h2>
@@ -30,6 +20,7 @@
         </div>
     </div>
     <div class="sec3">
+    <h2>Perfil actual:</h2>
         <div class="subcaja3">
         <div> 
                 <?php 
