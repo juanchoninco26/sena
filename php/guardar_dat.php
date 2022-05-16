@@ -1,6 +1,6 @@
 <?php 
 include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php';
-
+session_start();
 //ver video:https://www.youtube.com/watch?v=pn2v9lPakHQ
 
 //guardar: editar sitios 
@@ -91,7 +91,7 @@ if (isset($_POST['guardar_punt'])){
  }
 }
 
-//guradar:crear usuario
+//guardar:crear usuario
 
 if(isset($_POST['crear_usuario'])){
     $nombre=$_POST['nombre'];
@@ -118,15 +118,15 @@ if (isset($_POST['editar_perfil'])){
     $contraseña2=$ared->real_escape_string($_POST['repcontraseña']);
     $fecha=$ared->real_escape_string($_POST['edad']);
     $telefono=$ared->real_escape_string($_POST['telefono']);
-    //$cargo=$ared->real_escape_string($_POST['cargo']);
+    $correo=$ared->real_escape_string($_POST['correo']);
     $foto=$ared->real_escape_string($_POST['foto']);
     
     //youtube.com/watch?v=Ct6K4wRjlQQ
-    //$lista="SELECT * FROM empleados WHERE Id_empleado = $cedula";
+    
     if ($contraseña==$contraseña2){
-        session_start();
+        
         $nombre1= $_SESSION['Nombre'];
-        $lista="UPDATE empleados SET Nombre = '$nombre', Contraseña='$contraseña', Fecha_nacimiento='$fecha', Telefono='$telefono', Fotografia=NULL WHERE Id_empleado = '$cedula'"; 
+        $lista="UPDATE empleados SET Nombre = '$nombre', Contraseña='$contraseña', Fecha_nacimiento='$fecha', Telefono='$telefono', Fotografia=NULL, correo='$correo' WHERE  Id_empleado = '$cedula'"; 
         $resultado= mysqli_query($ared,$lista) or die ("error: ". mysqli_error($ared));
 
         if ($resultado) {
@@ -138,7 +138,6 @@ if (isset($_POST['editar_perfil'])){
         }
         
     }else{
-        session_start();
         $nombre1= $_SESSION['Nombre'];
         $consulta="SELECT *FROM empleados where Nombre='$nombre1'";
         $cons=mysqli_query($ared,$consulta);

@@ -62,8 +62,10 @@
                           </div>
                     </div> 
                     <div class="min-dat">
-                    <p>Telefono</p>
+                        <p>Telefono</p>
                         <input type= "number" name="telefono" id="" value="<?php echo $rows['Telefono'];?>">
+                        <p>Correo</p>
+                        <input type= "text" name="correo" id="" value="<?php echo $rows['correo'];?>">
                         <p>Cargo</p>
                         <?php 
                         function cargo(){

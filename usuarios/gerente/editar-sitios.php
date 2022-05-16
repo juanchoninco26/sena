@@ -15,11 +15,13 @@
 <?php 
 session_start();
 if ($_SESSION['Id_cargo'] ==true ){
-?>
-    <!-- php contiene el munu-->
+?> 
+   
     <?php 
     include '/xampp/xampp/htdocs/360/ruta360/php/include/menu.php';
     ?>
+
+    <!-- php contiene el munu-->
     <?php 
     include '/xampp/xampp/htdocs/360/ruta360/php/vista/editar-sitios.php';
     ?>

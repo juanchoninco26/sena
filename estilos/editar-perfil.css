@@ -6,6 +6,9 @@ body{
     grid-template-columns:auto ;
     grid-template-rows:30% 60%;
 }
+.men{
+    width: 100%;
+}
 .sec2{
     display: flex;
     align-items: center;
@@ -16,16 +19,6 @@ body{
     margin-bottom: 10px;
     font-weight: 800;
     margin-right: 200px;
-}
-
-.subcaja2 h3,p{
-    margin: 0px;
-    margin-left:0px;
-
-}
-.perfil img{
-    width: 50px;
-    height: 40px;
 }
 .subcaja3{
     background:rgba(255, 255, 255, 0.342);
