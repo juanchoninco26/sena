@@ -35,7 +35,9 @@ body{
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-around;   
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 7px;   
 }
 .lista ol li button{
     color: white;
