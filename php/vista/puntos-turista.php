@@ -2,7 +2,15 @@
         <div class="pun-habilt">
             <div class="titulo">
                 <p>Puntos habilitados</p>
-                <img src="/imagenes/buscador.svg" alt="">
+                <a onclick="mostrar()"><img src="/imagenes/buscador.svg" alt="" id="buscar"></a>
+            </div>
+            <div id="buscador">
+                    <div class="centrar">
+                      <input type="search" name="" id="search">
+                      <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
+                      <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
+                    </div> 
+                    <script src="/script/mostrar.js"></script>
             </div>
             <div class="lista">
                 <ol>

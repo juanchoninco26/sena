@@ -42,10 +42,19 @@
             </div>
         </div>
         <div class="anteriores">
-            <div class="txt-prom">
+             <div class="txt-prom">
                 <p>Promociones anteriores</p>
-                <img src="/imagenes/buscador.svg" alt="">
-            </div>
+                 <a onclick="mostrar()"><img src="/imagenes/buscador.svg" alt="" id="buscar"></a>
+             </div>
+                <div id="buscador">
+                    <div class="centrar">
+                      <input type="search" name="" id="search">
+                      <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
+                      <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
+                    </div> 
+                </div>
+                <script src="/script/mostrar.js"></script>
+            
             <div class="lista">
                 <ol>
                     <!-- mostrar datos de la BD -->

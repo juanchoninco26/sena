@@ -80,15 +80,40 @@ body{
 .anteriores::-webkit-scrollbar{
     width:1px;
 }
-.anteriores img{
-    width: 30px;
-    height: 30px;
-}
 .txt-prom{
     text-align: center;
     font-size: 18pt;
     display: flex;
     justify-content: space-around;
+}
+.anteriores img{
+    width: 30px;
+    height: 30px;
+}
+#buscador{
+    display:none;
+}
+#buscador #buscar {
+    width: 28px;
+    height: 28px;
+    margin-left: 1px;
+    
+}
+#buscador #esconder{
+    width: 20px;
+    height: 28px;
+    padding: 2px;
+    margin-left: 10px;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centrar #buscar1{
+    width: 28px;
+    height: 28px;  
 }
 .lista{
     width: 100%;

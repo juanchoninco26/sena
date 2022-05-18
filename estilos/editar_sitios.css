@@ -20,6 +20,50 @@ body::-webkit-scrollbar{
     background: rgba(255, 255, 255, 0.350);
     border-radius:15px;
 }
+.sitios{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+.sitios p{
+    text-align:center;
+    color: green;
+    margin-top: 10px;
+    font-size: 18pt;
+    font-weight:700;
+}
+.sitios img{
+    width: 30px;
+    height: 30px;
+    padding-top: 15px;
+    color: white;
+}
+#buscador{
+    display:none;
+}
+#buscador #buscar {
+    width: 28px;
+    height: 28px;
+    margin-left: 1px;
+    
+}
+#buscador #esconder{
+    width: 20px;
+    height: 28px;
+    padding: 2px;
+    margin-left: 10px;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centrar #buscar1{
+    width: 28px;
+    height: 28px;  
+}
 .contenedor1 ol li{
     background:white;
     width: 285px;;
@@ -47,24 +91,6 @@ ol li{
     font-size: 11pt;
 }
 
-.sitios{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
-}
-.sitios p{
-    text-align:center;
-    color: green;
-    margin-top: 10px;
-    font-size: 18pt;
-    font-weight:700;
-}
-.sitios img{
-    width: 30px;
-    height: 30px;
-    color: white;
-}
 .editar-sitios{
     width:380px;
     height:300px;

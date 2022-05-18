@@ -1,14 +1,22 @@
-<div class="contenedor1">
+    <div class="contenedor1">
         <!-- sitios actuales -->
         <div class="mincontenedor">
                 <div class="sitios">
                     <p>Sitos actuales</p>
-                    <img src="/imagenes/buscador.svg" alt="">
+                    <a onclick="mostrar()"><img src="/imagenes/buscador.svg" alt="" id="buscar"></a>
+                 </div>
+                <div id="buscador">
+                    <div class="centrar">
+                      <input type="search" name="" id="search">
+                      <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
+                      <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
+                    </div> 
+                    <script src="/script/mostrar.js"></script>
                 </div>
-            <div class="editar-sitios">
-              <ol>
+             <div class="editar-sitios">
+               <ol>
                   <!-- mostrar datos de la BD -->
-              <?php 
+                 <?php 
                     $consult ="SELECT*FROM lugares_turisticos;"; 
                     $resutados = mysqli_query($ared, $consult);
 
@@ -18,8 +26,8 @@
                     <li><p><?php echo $mostrar['Nombre'];?></p><button><a onclick="return confirm('estas seguro de eliminar este dato?')" href="/php/eliminar.php?Cod_lugar_turistico=<?php echo $mostrar ['Cod_lugar_turistico'];?>">x Quitar</a></button></li>
                  <?php } ?>
                  
-              </ol>
-            </div>
+                </ol>
+             </div>
         </div>
         <div class="contenedor2">
             <!-- editar paquetes -->
@@ -59,9 +67,9 @@
     </div>
 
     <div class="contenedortres">
-        <!-- administrador -->
-         <div class="subcaja2">
-            <div class="cja"> 
+            <!-- administrador -->
+            <div class="subcaja2">
+              <div class="cja"> 
                 <?php 
                 //ver en minuto 49,16: https://www.youtube.com/watch?v=fCTd8ilXZGI            
                 //ver video:https://www.youtube.com/watch?v=9BLoMGO-XcU
@@ -72,11 +80,11 @@
                     echo "<p>$nombre</p>";
                     } 
                 ?>
-             </div>
-            <div class="perfil">
+              </div>
+              <div class="perfil">
                 <img src="/imagenes/user.svg" alt="">
+              </div>
             </div>
-         </div>
         <div class="agr-sitios">
             <div class="txt-sitio">
                 <h3>Agregar Sitios</h3>
