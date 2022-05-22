@@ -1,4 +1,4 @@
-function mensaje() {
+ function mensaje() {
   if (confirm("error! las contraseñas no conciden") == true) {
   window.location.href='/usuarios/gerente/editar-perfil.php';
  } else {

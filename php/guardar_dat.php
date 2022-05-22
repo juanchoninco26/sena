@@ -99,14 +99,30 @@ if(isset($_POST['crear_usuario'])){
     $nacimiento=$_POST['edad'];
     $telefono=$_POST['telefono'];
     $cargo=$_POST['cargo'];
-    $fotografia=$_POST['foto'];
+
+    $fotografia = getimagesize($_FILES['foto']['tmp_name']);
+    $fotografia=$_FILES['foto']['tmp_name'];
+    $imgcontenido=addslashes(file_get_contents($fotografia));
 
     $lista="INSERT INTO empleados(Id_empleado, Nombre, Contraseña, Fecha_nacimiento, Telefono, Fotografia, Id_cargo) 
-    VALUES ('', '$nombre', '$contraseña', '$nacimiento', '$telefono', NULL, '$cargo')";
+    VALUES ('', '$nombre', '$contraseña', '$nacimiento', '$telefono', '$imgcontenido', '$cargo')";
     $resultado= mysqli_query($ared,$lista) or die ("error: ". mysqli_error($ared));
 
-    if($resultado){
-        echo "bien";
+    if ($resultado){
+        $nombre1= $_SESSION['Nombre'];
+        $consulta="SELECT *FROM empleados where Nombre='$nombre1'";
+        $cons=mysqli_query($ared,$consulta);
+        $rows=mysqli_fetch_array($cons);
+        if($rows['Id_cargo']==1){
+            header('Location: /usuarios/gerente/crear-usuario.php');
+        }
+        if($rows['Id_cargo']==2){
+            header('Location: /usuarios/asesor/crear-usuario.php');
+        }
+        if($rows['Id_cargo']==3){
+            header('Location: /usuarios/contador/crear-usuario.php');
+        }
+        
     }
 }
 
@@ -119,14 +135,17 @@ if (isset($_POST['editar_perfil'])){
     $fecha=$ared->real_escape_string($_POST['edad']);
     $telefono=$ared->real_escape_string($_POST['telefono']);
     $correo=$ared->real_escape_string($_POST['correo']);
-    $foto=$ared->real_escape_string($_POST['foto']);
+    
+    $fotografia = getimagesize($_FILES["foto"]["tmp_name"]);
+    $fotografia=$_FILES['foto']['tmp_name'];
+    $imgcontenido=addslashes(file_get_contents($_FILES['foto']['tmp_name']));
     
     //youtube.com/watch?v=Ct6K4wRjlQQ
     
     if ($contraseña==$contraseña2){
         
         $nombre1= $_SESSION['Nombre'];
-        $lista="UPDATE empleados SET Nombre = '$nombre', Contraseña='$contraseña', Fecha_nacimiento='$fecha', Telefono='$telefono', Fotografia=NULL, correo='$correo' WHERE  Id_empleado = '$cedula'"; 
+        $lista="UPDATE empleados SET Nombre = '$nombre', Contraseña='$contraseña', Fecha_nacimiento='$fecha', Telefono='$telefono', Fotografia='$imgcontenido', correo='$correo' WHERE  Id_empleado = '$cedula'"; 
         $resultado= mysqli_query($ared,$lista) or die ("error: ". mysqli_error($ared));
 
         if ($resultado) {
@@ -143,7 +162,7 @@ if (isset($_POST['editar_perfil'])){
         $cons=mysqli_query($ared,$consulta);
         $rows=mysqli_fetch_array($cons);
         if($rows['Id_cargo']==1){
-            echo "<script src='/script/mensaje1.js'> </script>";
+            echo "<script src='/script/mensaje1.js'></script>";
         }
         if($rows['Id_cargo']==2){
             echo "<script src='/script/mensaje2.js'> </script>";

@@ -24,10 +24,21 @@
                ?>
              </div>
                 <div class="perfil">
-                    <img src="/imagenes/user.svg" alt="">
+                    <div class="img">
+                    <?php
+                      include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php'; 
+                        $nombre1= $_SESSION['Nombre'];
+                        $result = $ared->query("SELECT * FROM empleados WHERE Nombre = '$nombre1'");
+                        while($row=mysqli_fetch_assoc($result)){
+                            
+                    ?>
+                      <img src="data:image/jpg;base64,<?php echo base64_encode($row['Fotografia']);?>">
+                    <?php }?>
+                    </div>
                 </div>
             </div>
         </div>
+        
         <div class="sec3">
             <div class="caj">
                 <form class="mod-datos" action="/php/guardar_dat.php" method="post">
@@ -40,8 +51,7 @@
                             $nombre1= $_SESSION['Nombre'];
                             $consulta="SELECT *FROM empleados where Nombre='$nombre1'";
                             $cons=mysqli_query($ared,$consulta);
-                              while($rows=mysqli_fetch_array($cons)) {
-
+                            while($rows=mysqli_fetch_array($cons)) {
                             ?>
                     <div class="dat">
                         <div class="texto">
@@ -88,11 +98,15 @@
                         ?>
                         <input type="text" name="cargo" id="" value="<?php echo cargo();?>" disabled>
                         <p>Foto</p>
-                        <input type="file" name="foto" id="" value="<?php echo $rows['Fotografia'];?>">
+                        <input type="file" name="foto" id="seleccionArchivos">
+                        <br>
+                        <img id="imagenPrevisualizacion">
+                        <br>
                         <p>* al actualizar los datos tendra que iniciar <br>sesion nuevamente</p>
                     </div>
                 <?php }   ?>
-                </form>   
+                </form>  
+                <script src="/script/mostrar.js"></script> 
             </div>
         </div>
     </div>

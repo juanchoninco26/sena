@@ -10,7 +10,7 @@
                       <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
                       <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
                     </div> 
-                    <script src="/script/mostrar.js"></script>
+                    
                 </div>
             <div class="lista">
                 <ol>
@@ -29,7 +29,6 @@
         </div>
     </div>
     <div class="sec3">
-    <h2>Perfil actual:</h2>
         <div class="subcaja3">
         <div> 
                 <?php 
@@ -44,17 +43,18 @@
             ?>
            </div>
             <div class="perfil">
-                <img src="/imagenes/user.svg" alt="">
+            <img src="/imagenes/user.svg" alt="">
             </div>
         </div>
+        <br>
         <div class="agre-user">
             <div class="titulo">
-                <h2>Agregar Usuario</h2>
+                <p>Agregar Usuario</p>
             </div>
             <?php 
             $result =mysqli_query($ared, "SELECT Id_cargo,Nombre_cargo FROM cargo");
             ?>
-            <form class="add-user" action="/php/guardar_dat.php" method="POST">
+            <form class="add-user" action="/php/guardar_dat.php" method="POST" enctype="multipart/form-data">
                 <p>Nombre</p>
                 <input type="text" name="nombre" id="">
                 <p>Contraseña</p>
@@ -74,10 +74,16 @@
                     ?>
                 </select>
                 <p>Fotografria</p>
-                <input type="file" name="foto" id="">
+                <input type="file" name="foto" id="seleccionArchivos">
+                <br>
+                <img id="imagenPrevisualizacion">
+                <br>
               <div>
-                <input type="submit" value="guardar" name="crear_usuario"> 
+                <input type="submit" value="guardar" name="crear_usuario" onclick="guardarUsuario()"> 
               </div> 
             </form>
+            <!-- script para mostrar las imagenes-->
+            <script src="/script/mostrar.js"></script>
+            
         </div>
     </div>

@@ -20,16 +20,6 @@ body{
 .otros-user::-webkit-scrollbar{
     width: 1px;
 }
-.titulo{
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-}
-.titulo h2{
-    margin-right: 10px;
-}
 .titulo #buscar{
     width: 28px;
     height: 28px;
@@ -93,7 +83,6 @@ body{
     margin-left: 30px;
     color:green;
 }
-
 .subcaja3{
     background:rgba(255, 255, 255, 0.342);
     width: 260px;
@@ -130,6 +119,20 @@ body{
     height: 22px;
     border-radius: 5px;
 }
+.titulo{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.titulo p{
+    margin-right: 10px;
+    font-size: 18pt;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: -10px;
+}
 .add-user{
     padding: 20px;
 }
@@ -139,5 +142,9 @@ body{
     height: 20px;
     margin-bottom: 6px;
     border-radius: 5px;
+}
+.add-user #imagenPrevisualizacion{
+    width: 80px;
+    height: 80px;
 }
 
