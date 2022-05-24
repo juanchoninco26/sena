@@ -12,7 +12,7 @@
 <body>
 <?php 
 session_start();
-if ($_SESSION['Id_cargo'] ==true ){
+if ($_SESSION['Id_cargo'] ==2){
 ?>  
     <!--el menu se encuentra en la carpeta include-->
     <?php include '/xampp/xampp/htdocs/360/ruta360/php/include/menu-asesor.php'?>

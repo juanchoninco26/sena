@@ -14,7 +14,7 @@
 <body>
 <?php 
 session_start();
-if ($_SESSION['Id_cargo'] ==true ){
+if ($_SESSION['Id_cargo'] ==1){
 ?> 
    
     <?php 
