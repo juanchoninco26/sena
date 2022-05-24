@@ -14,9 +14,9 @@ if (isset($_POST['editar-sitios'])) {
 
     //insertar datos en la tabla
     $lista = "INSERT INTO lugares_turisticos (Cod_lugar_turistico, Nombre, Descripcion_corta , Descripcion_larga , Precio, Ubicacion , Punto_lugar , Id_turista) 
-    VALUES (NULL,'$nombre','$desc1','$desc2','$precio',/*POINT ''*/ NULL,'$punto','1004146970')";
+    VALUES (NULL,'$nombre','$desc1','$desc2','$precio',/*POINT ''*/NULL,'$punto',NULL)";
     $resultado = mysqli_query($ared,$lista) or die("error:". mysqli_error($ared));
-
+    
     //comprobamos que el resulatado sea correcto para recargar la pagina con header 
     if ($resultado) {
         header('Location: /usuarios/gerente/editar-sitios.php');

@@ -1,4 +1,4 @@
-<footer id="menu">
+    <footer id="menu">
         <nav class="caja">
             <ul class="subcaja">
                 <li><a href="reservaciones.php">Reservaciones</a></li> 
