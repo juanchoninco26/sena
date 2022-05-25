@@ -29,9 +29,30 @@
             </ol>
           </div>
       </div>
+      <br>
+      <div class="caja2">
+        <div class="parrafo">
+          <p>Usar puntos acomulados (12 sitios)</p>
+        </div>
+      </div>
   </div>
   <div class="contenedor2">
-
+    <div class="info">
+      <div class="usuario">
+        <h3>usuario</h3>
+        <p>nombre</p>
+      </div>
+      <div class="foto">
+        <img src="/imagenes/user.svg" alt="">
+      </div>
+    </div>
+    <div class="codigo">
+      <div class="tex">
+        <h3>codigo del punto</h3>
+        <h1>374347374</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, eaque facilis perferendis assumenda aliquam repellat laborum. Sunt tenetur molestiae ipsa nobis odit minus recusandae fuga odio. Nihil ab hic expedita.</p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
