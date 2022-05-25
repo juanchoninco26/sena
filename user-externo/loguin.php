@@ -22,7 +22,7 @@
                 <div class="img-centro">
                     <img src="/imagenes/360.png">
                 </div>
-                <form class="formulario" action="/php/login2.php" method="POST">
+                <form class="formulario" action="" method="POST">
                     <div class="letra2">
                         <h1>INICIAR SESIÓN</h1>
                     </div>
@@ -34,7 +34,7 @@
                         <h2>Contraseña</h2>
                         <input type="password" placeholder="" name="password"> 
                     </div>
-                    <button type="submit" class="login" name="loguin"><a>Entrar</a></button>
+                    <button type="submit" class="login" name="loguin-extern"><a>Entrar</a></button>
                     <p>¿No tienes una cuenta?<a href="/user-externo/registrarse.php">Crear una.</a></p>
                 </form>
                 <script></script>

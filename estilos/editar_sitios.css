@@ -1,22 +1,20 @@
-
 body{
     display: flex;
-    align-items: center;
-    height: 100%;
+    overflow: hidden;
 }
-body::-webkit-scrollbar{
-    width: 2px;
-    background: green;
+.contenedor1::-webkit-scrollbar{
+    width: 1px;
 }
 .contenedor1{
     width:33%;
     height:auto;
     margin-left:-15px;
+    overflow: auto;
     
 }
 .mincontenedor{
     width:380px;
-    height:340px;
+    height:400px;
     background: rgba(255, 255, 255, 0.350);
     border-radius:15px;
 }
@@ -109,6 +107,7 @@ ol li{
 .paquetes{
     padding-top: 0.1px;
     margin: 20px;
+    padding-bottom: 150px;
 }
 .slider{
     display: flex;
@@ -155,7 +154,7 @@ ol li{
     width: 30%;
     height: auto;
     padding: 0;
-    margin:0;
+    margin-top: 50px;
 }
 
 .subcaja2{

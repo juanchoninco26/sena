@@ -1,0 +1,37 @@
+.body{
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/imagenes/mirador.jpg);
+    background-repeat: no repeat;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+.contenedor1{
+    width: 33%;
+    display: block;
+}
+.caja1{
+    width: 340px;
+    height: 300px;
+    margin-left: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.353);
+    border-radius:15px;
+}
+.titulo{
+    padding-top: 3px;
+    color: white;
+    font-size: 15pt;
+    font-weight: 700;
+}.lista ol li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+li:hover{
+    background: white;
+}
+.contenedor2{
+    width: 33%;
+}
+
