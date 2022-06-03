@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/estilos/user-externo/men-user-extern.css" rel="stylesheet" type="text/css">
     <link href="/estilos/user-externo/puntos.css" rel="stylesheet" type="text/css">
-    <title>Document</title>
+    <title>Puntos</title>
 </head>
 <body class="body">
   <div class="menu">
@@ -48,9 +48,25 @@
     </div>
     <div class="codigo">
       <div class="tex">
-        <h3>codigo del punto</h3>
-        <h1>374347374</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, eaque facilis perferendis assumenda aliquam repellat laborum. Sunt tenetur molestiae ipsa nobis odit minus recusandae fuga odio. Nihil ab hic expedita.</p>
+        <p class="p">Codigo del punto</p>
+        <p class="p2">374347374</p>
+        <p class="p3">Puedes uzar este codigo de descuento en cualquiera de nuestros sitios o paquetes.<br> <strong>No es reutilizable.</strong></p>
+      </div>
+    </div>
+    <br>
+    <div class="sitio">
+      <div class="formulario">
+        <form action="" class="form">
+         <p>Seleccionar sitio</p>
+         <input type="text" name="" id="">
+         <p>Seleccionar paquete</p>
+         <input type="text" name="" id="">
+         <br>
+         <br>
+         <div class="enviar">
+           <input type="button" value="Enviar" >
+         </div>
+       </form>
       </div>
     </div>
   </div>

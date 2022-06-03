@@ -1,0 +1,112 @@
+body{
+    background: rgb(200, 219, 157);
+    display: flex;  
+}
+.menu{
+    margin-top: 16px;
+}
+.contenedor1{
+    width: 33%;
+    display: block;
+    margin-left:50px;
+}
+.caja1{
+    width: fit-content;
+    height: 400px;
+    margin-top: 60px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.353);
+    border-radius:15px;
+}
+.titulo{
+    padding-top: 3px;
+    color: white;
+    font-size: 15pt;
+    font-weight: 700;
+}
+.lista ol{
+    width: 350px;
+    margin-right: 40px;
+    padding-bottom: 3px;
+}
+.lista ol li{
+    background: white;
+    list-style: none;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 7px;
+}
+ol li a{
+    background: rgb(4, 176, 4);
+    font-size: 12pt;
+    padding: 1px 30px;
+    border-radius: 10px;
+}
+.contenedor2{
+    width: 33%;
+    margin-left: 50px;
+    
+}
+.info{
+    background: rgb(10, 82, 10);
+    width: 230px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.info .usuario h3{
+    margin: 0px;
+}
+.info .usuario p{
+    margin: 1px;
+}
+.foto img{
+    width: 50px;
+    height: 40px;
+}
+
+.caja2{
+    width: fit-content;
+    height: 400px;
+    margin-top: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.353);
+    border-radius:15px;
+}
+.titulo2{
+    padding-top: 3px;
+    color: white;
+    font-size: 15pt;
+    font-weight: 700;
+}
+.lista2 ol{
+    width: 300px;
+    margin-right: 40px;
+    padding-bottom: 3px;
+}
+.lista2 ol li{
+    background: white;
+    list-style: none;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 7px;
+}
+.lista2 ol li a{
+    background: rgb(4, 176, 4);
+    font-size: 12pt;
+    padding: 1px 30px;
+    border-radius: 10px;
+}
