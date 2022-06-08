@@ -9,12 +9,36 @@
     <title>Carrito Expres</title>
 </head>
 <body>
-    <div class="">
+    <div class="menu-">
     <?php 
     include '/xampp/xampp/htdocs/360/ruta360/php/include/men-user-extern.php';
     ?>
     </div>
-    
-    
+    <div class="content2">
+        <div class="carrito">
+            <div class="img-car">
+                <div >
+                    <img src="/imagenes/carrito.svg" alt="" width="50px" height="50px">
+                </div>
+                <p>Carrito</p>
+            </div>
+            <div class="us">
+              <div class="info">
+               <div class="usuario">
+                 <h3>usuario</h3>
+                 <p>nombre</p>
+               </div>
+               <div class="foto">
+                 <img src="/imagenes/user.svg" alt="">
+               </div>
+              </div>
+            </div>
+        </div>
+        <div class="">
+            <div>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
