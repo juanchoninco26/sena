@@ -28,23 +28,39 @@
         </div>
         <div class="contenedor">
           <div class="caja-card">
-           <div class="card"> 
-             <div class="">
-               <div>
-                 <p></p>
-                 <p></p>
+           <div class="card">
+             <div class="content1">
+
+             </div> 
+             <div class="content2">
+               <div class="letras">
+                <p><span>50%</span></p>
+                <p>En avistamientos de aves</p>
                </div>
              </div>
            </div>
            <div class="card">
-             <div class="">
+             <div class="content1">
 
+             </div> 
+             <div class="content2">
+               <div class="letras">
+                <p><span>50%</span></p>
+                <p>En avistamientos de aves</p>
+               </div>
              </div>
            </div>
            <div class="card">
-             <div class="">
+             <div class="content1">
 
+             </div> 
+             <div class="content2">
+               <div class="letras">
+                <p><span>50%</span></p>
+                <p>En avistamientos de aves</p>
+               </div>
              </div>
+           </div>
            </div>
           </div>
         </div>
