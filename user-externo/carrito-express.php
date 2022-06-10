@@ -34,9 +34,11 @@
               </div>
             </div>
         </div>
-        <div class="">
-            <div>
+        <div class="productos1">
+            <div class="product">
+                <div class="info-">
 
+                </div>
             </div>
         </div>
     </div>
