@@ -65,11 +65,11 @@ body{
     width: 600px;
     height: 300px;
     background: white;
+    padding: 30px;
     border-radius: 15px;
 }
 .content2   .info-{
-    width:90%;
-    height: 90%;
-    margin: 30px;
+    width:100px;
+    height: 100px;
     background: rgb(44, 42, 42);
 }
