@@ -71,5 +71,27 @@ body{
 .content2   .info-{
     width:100px;
     height: 100px;
+    padding: 5px;
+    color: white;
     background: rgb(44, 42, 42);
+}
+.content2 .info- .boton{
+    width: 100%;
+    height: 10px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.content2   .info- button{
+    font-weight: 300;
+    display: block;
+    align-items: center;
+    float: right;
+    border: none;
+    border-radius: 5px;
+    background: rgb(192, 16, 16);
+    color: white;
+}
+.content2   .info- p{
+    text-align: center;
 }

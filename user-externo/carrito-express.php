@@ -38,7 +38,8 @@
         <div class="productos1">
             <div class="product">
                 <div class="info-">
-
+                    <div class="boton"><button>X Quitar</button></div>
+                    <div><p>mano del Gigante</p></div>
                 </div>
             </div>
         </div>
