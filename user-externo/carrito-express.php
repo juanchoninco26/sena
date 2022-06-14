@@ -66,6 +66,12 @@
                     <div><p>mano del Gigante</p></div>
                 </div>
             </div>
+            <br>
+            <div class="compra">
+                <div class="total"><p>Total: <span>$800.000</span></p></div>
+                <br>
+                <div><input type="button" value="Comprar" class="botn-compra"></div>
+            </div>
         </div>
     </div>
 </body>

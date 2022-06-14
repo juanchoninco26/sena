@@ -60,6 +60,11 @@ body{
     display: block;
     align-items: center;
     justify-content: center;
+
+}
+.productos1::-webkit-scrollbar{
+    width: 0;
+    background: green;
 }
 .product{
     width: 600px;
@@ -99,6 +104,23 @@ body{
 .content2   .info- p{
     text-align: center;
 }
-.spacio{
-    width: 30px;
+.compra .total{
+    width: fit-content;
+    border:solid 2px;
+    border-color: green;
+    border-radius: 5px;
+}
+.compra .total p{
+    margin: 3px;
+    color: green;
+}
+.botn-compra{
+    padding: 4px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 130px;
+    font-weight: 500;
+    font-size: 13pt;
 }
