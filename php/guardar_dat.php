@@ -1,5 +1,5 @@
 <?php 
-include '/xampp/xampp/htdo../360/ruta360/php/puntos-turista-bd.php';
+include '/xampp/xampp/htdo/360/ruta360/php/puntos-turista-bd.php';
 session_start();
 //ver video:https://www.youtube.com/watch?v=pn2v9lPakHQ
 
