@@ -36,7 +36,7 @@
         </div>
         <div class="reservas">
             <div class="subreservas">
-                <div>
+                <div class="res">
                   <h3>reservas pendientes</h3>  
                 </div>
                 <ol>
