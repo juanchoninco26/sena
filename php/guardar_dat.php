@@ -1,5 +1,5 @@
 <?php 
-include '/xampp/xampp/htdo/360/ruta360/php/puntos-turista-bd.php';
+include '..\php\puntos-turista-bd.php';
 session_start();
 //ver video:https://www.youtube.com/watch?v=pn2v9lPakHQ
 
@@ -19,7 +19,16 @@ if (isset($_POST['editar-sitios'])) {
     
     //comprobamos que el resulatado sea correcto para recargar la pagina con header 
     if ($resultado) {
-        header('Location: /usuarios/gerente/editar-sitios.php');
+        if ($_SESSION['Id_cargo'] ==1){
+            header('Location: /usuarios/gerente/editar-sitios.php');
+        }
+        if ($_SESSION['Id_cargo'] ==2){
+            header('Location: /usuarios/asesor/editar-sitios.php');
+        }
+        if ($_SESSION['Id_cargo'] ==3){
+            header('Location: /usuarios/contador/editar-sitios.php');
+        }
+        
     }else {
         echo 'mal';
     }
@@ -60,8 +69,15 @@ if (isset($_POST['promociones'])){
     $resultado= mysqli_query($ared,$lista) or die("error:". mysqli_error($ared));
 
     if ($resultado) {
-        //echo "bien";
-        header('Location: /usuarios/gerente/promociones.php');
+        if ($_SESSION['Id_cargo'] ==1){
+            header('Location: /usuarios/gerente/promociones.php');
+        }
+        if ($_SESSION['Id_cargo'] ==2){
+            header('Location: /usuarios/asesor/promociones.php');
+        }
+        if ($_SESSION['Id_cargo'] ==3){
+            header('Location: /usuarios/contador/promociones.php');
+        }
     }else{
         echo "mal";
     }
@@ -84,8 +100,16 @@ if (isset($_POST['guardar_punt'])){
     
     //comprobamos que el resulatado sea correcto para recargar la pagina con header 
    if ($resultado){
-       //echo 'correcto';
-       header('Location: /usuarios/gerente/puntos-turista.php');
+       if ($_SESSION['Id_cargo'] ==1){
+        header('Location: /usuarios/gerente/puntos-turista.php');
+       }
+       if ($_SESSION['Id_cargo'] ==2){
+        header('Location: /usuarios/asesor/puntos-turista.php');
+       }
+       if ($_SESSION['Id_cargo'] ==3){
+        header('Location: /usuarios/contador/puntos-turista.php');
+       }
+       
    }else{ 
    echo 'mal';
  }

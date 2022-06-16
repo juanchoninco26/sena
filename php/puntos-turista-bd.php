@@ -1,4 +1,4 @@
-<?php
+<?php 
 //ver video:https://www.youtube.com/watch?v=pn2v9lPakHQ
 $ared = new mysqli(
     "localhost", //link
@@ -8,7 +8,7 @@ $ared = new mysqli(
     2526       //puerto
 );
 
-$ared -> set_charset("utf8");
+$ared -> set_charset ("utf8");
 
 if (!isset($ared)){
     echo 'mal';

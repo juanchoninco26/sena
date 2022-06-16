@@ -5,6 +5,17 @@ function ocultar() {
     document.getElementById('buscador').style.display='none';
 }
 
+function guardarUsuario() {
+  alert('usuario guardado correctamente');
+}
+
+function obtener(){
+  $("table").on("click",".btn", function() {
+    console.log("ID del elemento td: ", $(this).parent().attr("id"));
+  });
+}
+
+
 const $seleccionArchivos = document.querySelector("#seleccionArchivos"),
   $imagenPrevisualizacion = document.querySelector("#imagenPrevisualizacion");
 
@@ -24,6 +35,4 @@ $seleccionArchivos.addEventListener("change", () => {
   // Y a la fuente de la imagen le ponemos el objectURL
   $imagenPrevisualizacion.src = objectURL;
 });
-function guardarUsuario() {
-  alert('usuario guardado correctamente');
-}
+

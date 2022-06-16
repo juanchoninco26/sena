@@ -42,13 +42,14 @@
                 <ol>
                 <?php 
                 
-                     $consult="SELECT* FROM reservas";
+                     $consult="SELECT * FROM reservas";
                      $resultados= mysqli_query($ared,$consult);
 
         
-                     while ($mostrar=mysqli_fetch_array($resultados)){;
+                     while ($mostrar=mysqli_fetch_array($resultados)){; 
+                        //$_SESSION['reservas']=$mostrar['id_reservas'];
                 ?>
-                    <li><p><?php echo $mostrar['id_reservas'];?></p><a href="">confirmar</a><a href="">eliminar</a></li>
+                    <li><p class="tx" onclick="obtener()"><?php echo $mostrar['id_reservas'];?></p><a href="/php/confirmar.php?confirmar=<?php echo $mostrar ['confirmar'];?>">Confirmar</a><a href="/php/confirmar.php?reprogramar=<?php echo $mostrar ['reprogramar'];?>">Reprogramar</a></li>
                     <?php }?>
                 </ol>
             </div>
@@ -70,3 +71,4 @@
             </div>
         </div>
     </div>
+    <script src="/script/mostrar.js"></script>
