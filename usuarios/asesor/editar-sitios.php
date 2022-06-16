@@ -12,9 +12,15 @@
     <title>editar sitios</title>
 </head>
 <body>
+<?php 
+session_start();
+if ($_SESSION['Id_cargo'] ==2){
+?>
 <?php include '/xampp/xampp/htdocs/360/ruta360/php/include/menu-asesor.php'?>
 <?php 
-    include '/xampp/xampp/htdocs/360/ruta360/php/vista/editar-sitios.php';
-    ?>
+    include '/xampp/xampp/htdocs/360/ruta360/php/vista/editar-sitios.php';?>
+<?php } else{
+    header('Location:/login.php'); 
+} ?>
 </body>
 </html>

@@ -9,24 +9,26 @@
             <div> 
                 <?php 
                 //ver en minuto 49,16: https://www.youtube.com/watch?v=fCTd8ilXZGI
-                session_start();
                 
-                if($row=$_SESSION['Id_cargo']==1){
-                    echo "<h3>Administrador</h3>";
-                }if($row=$_SESSION['Id_cargo']==2){
-                    echo "<h3>Asesor</h3>";
-                }if($row=$_SESSION['Id_cargo']==3){
-                    echo "<h3>Contador</h3>";
-                }
+                $consulta1="SELECT * FROM empleados";
+                $resultados1= mysqli_query($ared,$consulta1);
+                $filasb= mysqli_fetch_array($resultados1);
 
-                         
+                $a=$_SESSION['admin'];
+                if($a==1){
+                    echo "<h3>Administrador</h3>";
+                }elseif($a==2){
+                    echo "<h3>Aaa</h3>";
+                }
                 //ver video:https://www.youtube.com/watch?v=9BLoMGO-XcU
                 //el video muestra quien inicia el software
                 //session_start() esta en el: php/loguin
-            
-                $nombre=$_SESSION['username'];  
+                if($nombre=$_SESSION['Nombre']){
                 echo "<p>$nombre</p>";
+                } 
+                
             ?>
+            
             </div>
             <div class="perfil">
                 <img src="/imagenes/user.svg" alt="">
@@ -40,13 +42,14 @@
                 <ol>
                 <?php 
                 
-                     $consult="SELECT* FROM reservas";
+                     $consult="SELECT * FROM reservas";
                      $resultados= mysqli_query($ared,$consult);
 
-                     
-                     while ($mostrar=mysqli_fetch_array($resultados)){;
+        
+                     while ($mostrar=mysqli_fetch_array($resultados)){; 
+                        //$_SESSION['reservas']=$mostrar['id_reservas'];
                 ?>
-                    <li><p><?php echo $mostrar['id_reservas'];?></p><a href="">confirmar</a><a href="">eliminar</a></li>
+                    <li><p class="tx" onclick="obtener()"><?php echo $mostrar['id_reservas'];?></p><a href="/php/confirmar.php?confirmar=<?php echo $mostrar ['confirmar'];?>">Confirmar</a><a href="/php/confirmar.php?reprogramar=<?php echo $mostrar ['reprogramar'];?>">Reprogramar</a></li>
                     <?php }?>
                 </ol>
             </div>
@@ -68,3 +71,4 @@
             </div>
         </div>
     </div>
+    <script src="/script/mostrar.js"></script>

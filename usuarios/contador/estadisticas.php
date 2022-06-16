@@ -10,11 +10,18 @@
     <title>estadisticas</title>
 </head>
 <body>
+<?php 
+session_start();
+if ($_SESSION['Id_cargo'] ==3 ){
+?>
     <?php  
     include '/xampp/xampp/htdocs/360/ruta360/php/include/menu-contador.php';
     ?>
     <?php  
     include '/xampp/xampp/htdocs/360/ruta360/php/vista/estadisticas.php';
     ?>
+<?php } else{
+    header('Location:/login.php'); 
+} ?>
 </body>
 </html>
