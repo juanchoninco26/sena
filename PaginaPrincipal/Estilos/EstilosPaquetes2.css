@@ -1,0 +1,257 @@
+body { 
+    background-repeat: repeat-y;
+    background-size: 100% ;
+    background-position:0px 30%;
+}
+
+body::before {
+    position: absolute;
+    content: "";
+    inset:0;
+    background-color: rgba(142, 194, 120, 0.7);
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header img {
+    position: relative;
+}
+
+h1{
+    margin-left: 160px;
+    color: #06330C;
+    font-size: 35px;
+    line-height: 180px;
+    padding-top: 50px;
+    position: relative;
+}
+
+#menu-h {
+    width:50%;
+    height:60px;
+    padding: 8px;
+    border-radius: 15px;
+    background-color: hsl(128, 79%, 11%);
+    position: relative;
+} 
+
+#menu-h ul {
+    display: flex;
+    text-align: center;
+    margin:auto;
+    font-size: 25px;
+    float: left;
+    list-style: none;
+    padding: 0px;
+    margin: 2px;
+}
+
+#menu-h a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+    margin-left: 33px;
+}
+
+ header ul li :hover{
+    background-color:#A9DFBF;
+}
+
+main {
+    width: 100%;
+    height: 400px;
+    display: flex;
+ }
+
+ main .caja {
+    width: 300px;
+    height: 360px;
+    border-radius: 20px;
+    background: #34495E;
+    margin-top: 30px;
+    margin-left: 70px;
+    position: relative;
+}
+
+.img .img2  img {
+    height: 220px;
+    border-radius: 20px 20px 0px 0px;
+    width: 100px;
+    position: relative;
+}
+
+.subcaja .texto h3{
+    font-size: 40px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -20px;
+    margin-left: -40px;
+}
+
+main h2 {
+   color: black;
+   line-height: 15px;
+   position: relative;
+}
+
+main p {
+    color: black;
+    font-size: 20px;
+    line-height: 25px;
+    position: relative;
+}
+ 
+main h4 {
+    font-size: 15px;
+    width: 220px;
+    margin-top: 60px;
+    color: black;
+    margin-left: 600px;
+    position:relative;
+}
+
+#Comprar {
+    background-color:#23ac35;
+    width:140px;
+    height:60px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-left: 500px;
+    margin-top: 55px;
+    position: relative;
+}
+
+#Comprar ul {
+    display: flex;
+    text-align: center;
+    font-size: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+#Comprar a {
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    text-align:left;
+    line-height: 60px;
+}
+
+#Comprar ul:hover {
+    background-color:#A9DFBF;
+    border-radius: 10px;
+}
+
+#Valor {
+    width:140px;
+    height:50px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-left: 400px;
+    border-color: #06330C;
+    position: relative;
+}
+
+.Valor  {
+    display: flex;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 250px;
+    margin-top: -70px;
+    }
+
+.Valor h5 {
+    font-family:Arial, Helvetica, sans-serif;
+    color:black;
+    text-decoration: none;
+    text-align:center;
+    line-height: 50px;
+    font-size: 30px;
+    border-style:solid;
+    border-color: #23ac35;
+    border-radius: 15px;
+    border-width: 5px;
+    width: 220px;
+    position: relative;
+}
+
+
+.carousel {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.texto {
+    margin-left: 70px;
+    margin-top: 30px;
+    width: 840px;
+    height: 250px;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor:pointer;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+footer h4{
+    color: #06330C;
+    margin-left: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 450px;
+    position: relative;
+}
+
+footer h5{
+    text-align: right;
+    margin-left: 350px;
+    color: #06330C;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 450px;
+    position: relative;
+}
+
+.redes {
+    align-items: center;
+    display: block;
+    margin-bottom: 450px;
+    position: relative;
+}
+
+.redes .sociales{
+    text-align: center;
+    line-height: 100px;
+    display: block;
+}
+
+.redes .sociales li{
+    display: inline-block;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.redes img:hover {
+    background-color:#A9DFBF;
+    border-radius: 20px;
+}
+
