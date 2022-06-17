@@ -41,7 +41,6 @@
                  </div>
                 <ol>
                 <?php 
-                
                      $consult="SELECT * FROM reservas";
                      $resultados= mysqli_query($ared,$consult);
 
