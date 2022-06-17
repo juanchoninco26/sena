@@ -13,7 +13,6 @@ function obtener(){
   $("table").on("click",".btn", function() {
     console.log("ID del elemento td: ", $(this).parent().attr("id"));
   });
-  
 }
 
 

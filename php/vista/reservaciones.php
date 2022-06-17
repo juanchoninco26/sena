@@ -36,9 +36,9 @@
         </div>
         <div class="reservas">
             <div class="subreservas">
-                <div class="res">
-                  <h3>reservas pendientes</h3>  
-                </div>
+                 <div >
+                   <h3>reservas pendientes</h3>  
+                 </div>
                 <ol>
                 <?php 
                 
