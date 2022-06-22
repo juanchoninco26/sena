@@ -1,24 +1,66 @@
-
 body{
     display: flex;
-    align-items: center;
-    height: 100%;
+    overflow: hidden;
 }
-body::-webkit-scrollbar{
-    width: 2px;
-    background: green;
+.contenedor1::-webkit-scrollbar{
+    width: 1px;
 }
 .contenedor1{
     width:33%;
     height:auto;
     margin-left:-15px;
+    overflow: auto;
     
 }
 .mincontenedor{
     width:380px;
-    height:340px;
+    height:400px;
     background: rgba(255, 255, 255, 0.350);
     border-radius:15px;
+}
+.sitios{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+.sitios p{
+    text-align:center;
+    color: green;
+    margin-top: 10px;
+    font-size: 18pt;
+    font-weight:700;
+}
+.sitios img{
+    width: 30px;
+    height: 30px;
+    padding-top: 15px;
+    color: white;
+}
+#buscador{
+    display:none;
+}
+#buscador #buscar {
+    width: 28px;
+    height: 28px;
+    margin-left: 1px;
+    
+}
+#buscador #esconder{
+    width: 20px;
+    height: 28px;
+    padding: 2px;
+    margin-left: 10px;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centrar #buscar1{
+    width: 28px;
+    height: 28px;  
 }
 .contenedor1 ol li{
     background:white;
@@ -47,24 +89,6 @@ ol li{
     font-size: 11pt;
 }
 
-.sitios{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
-}
-.sitios p{
-    text-align:center;
-    color: green;
-    margin-top: 10px;
-    font-size: 18pt;
-    font-weight:700;
-}
-.sitios img{
-    width: 30px;
-    height: 30px;
-    color: white;
-}
 .editar-sitios{
     width:380px;
     height:300px;
@@ -76,13 +100,33 @@ ol li{
 }
 .contenedor2{
     width: 380px;
-    height: 240px;
+    height: 315px;
     background: rgba(255, 255, 255, 0.350);
     border-radius: 15px;
 }
 .paquetes{
     padding-top: 0.1px;
     margin: 20px;
+    padding-bottom: 150px;
+}
+.slider{
+    display: flex;
+    height:23px;
+    margin-bottom: 15px;
+}
+.t-paquetes {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    
+}
+.sub-t-paquete p{
+    margin-right: 10px;
+    padding: 2px;
+    color: white;
+    background: green;
+    border-radius: 5px;
 }
 .formulario1 {
     display: block;
@@ -110,7 +154,7 @@ ol li{
     width: 30%;
     height: auto;
     padding: 0;
-    margin:0;
+    margin-top: 50px;
 }
 
 .subcaja2{

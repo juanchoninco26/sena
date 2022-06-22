@@ -1,14 +1,22 @@
-<div class="contenedor1">
+    <div class="contenedor1">
         <!-- sitios actuales -->
         <div class="mincontenedor">
                 <div class="sitios">
                     <p>Sitos actuales</p>
-                    <img src="/imagenes/buscador.svg" alt="">
+                    <a onclick="mostrar()"><img src="/imagenes/buscador.svg" alt="" id="buscar"></a>
+                 </div>
+                <div id="buscador">
+                    <div class="centrar">
+                      <input type="search" name="" id="search">
+                      <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
+                      <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
+                    </div> 
+                    <script src="/script/mostrar.js"></script>
                 </div>
-            <div class="editar-sitios">
-              <ol>
+             <div class="editar-sitios">
+               <ol>
                   <!-- mostrar datos de la BD -->
-              <?php 
+                 <?php 
                     $consult ="SELECT*FROM lugares_turisticos;"; 
                     $resutados = mysqli_query($ared, $consult);
 
@@ -18,8 +26,8 @@
                     <li><p><?php echo $mostrar['Nombre'];?></p><button><a onclick="return confirm('estas seguro de eliminar este dato?')" href="/php/eliminar.php?Cod_lugar_turistico=<?php echo $mostrar ['Cod_lugar_turistico'];?>">x Quitar</a></button></li>
                  <?php } ?>
                  
-              </ol>
-            </div>
+                </ol>
+             </div>
         </div>
         <div class="contenedor2">
             <!-- editar paquetes -->
@@ -27,14 +35,31 @@
                 <div class="edpq">
                     <h3>Editar Paquetes</h3>
                 </div>
-                <div>
+                <div class="slider">
+                 <img src="/imagenes/izquierda.svg" alt="" class="img">
+                  <div class="t-paquetes">
                     <!-- tipos de paquetes -->
+                 
+                    <?php 
+                     $consult='SELECT*FROM paquetes_turisticos;';
+                     $result=mysqli_query($ared,$consult);
+
+                     while($ver=mysqli_fetch_array($result)){ ?>
+                     <div class="sub-t-paquete">
+                        <p>&nbsp<?php echo $ver['Id_turista'];?>&nbsp</p>   
+                     </div>
+                 
+                    <?php }?>
+                  </div>
+                 <img src="/imagenes/derecha.svg" alt="">
                 </div>
                 <form class="formulario1" action="/php/guardar_dat.php" method="post">
-                    <p>Nombre: <input type="text" placeholder=""></p> 
-                    <p>Rutas:  <input type="text">
-                    <p>Precio: <input type="text"></p> 
-                    <p>Descripción: <textarea name="" id="" cols="20" rows="1"></textarea></p>
+                    <p>C.C Turista  <input type="text" name="turista" ></p> 
+                    <p>Nombre: <input type="text" name="nombre" placeholder=""></p> 
+                    <p>Rutas:  <input type="text" name="rutas" ></p> 
+                    <p>Precio: <input type="text" name="precio" ></p>
+                    <p>Punto paquete:  <input type="text" name="puntos" ></p>  
+                    <p>Descripción: <textarea name="descripcion" id="" cols="20" rows="1"></textarea></p>
                     <input type="submit" value="guardar" name="paquetes">
                 </form>
             </div>
@@ -42,32 +67,24 @@
     </div>
 
     <div class="contenedortres">
-        <!-- administrador -->
-         <div class="subcaja2">
-            <div class="cja"> 
+            <!-- administrador -->
+            <div class="subcaja2">
+              <div class="cja"> 
                 <?php 
-                //ver en minuto 49,16: https://www.youtube.com/watch?v=fCTd8ilXZGI
-                session_start();
-                if($row=$_SESSION['Id_cargo']==1){
-                    echo "<h3>Administrador</h3>";
-                }elseif($row=$_SESSION['Id_cargo']==2){
-                    echo "<h3>Asesor</h3>";
-                }elseif($row=$_SESSION['Id_cargo']==3){
-                    echo "<h3>Contador</h3>";
-                }
-                             
+                //ver en minuto 49,16: https://www.youtube.com/watch?v=fCTd8ilXZGI            
                 //ver video:https://www.youtube.com/watch?v=9BLoMGO-XcU
                 //el video muestra quien inicia el software
                 //session_start() esta en el: php/loguin
             
-                $nombre=$_SESSION['username'];  
-                echo "<p>$nombre</p>";
+                if($nombre=$_SESSION['Nombre']){
+                    echo "<p>$nombre</p>";
+                    } 
                 ?>
-             </div>
-            <div class="perfil">
+              </div>
+              <div class="perfil">
                 <img src="/imagenes/user.svg" alt="">
+              </div>
             </div>
-         </div>
         <div class="agr-sitios">
             <div class="txt-sitio">
                 <h3>Agregar Sitios</h3>

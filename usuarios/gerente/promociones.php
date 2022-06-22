@@ -10,11 +10,17 @@
     <title>promociones</title>
 </head>
 <body>
-    <?php 
-    include '/xampp/xampp/htdocs/360/ruta360/php/include/menu.php';
-    ?>
-        <?php 
-    include '/xampp/xampp/htdocs/360/ruta360/php/vista/promociones.php';
-    ?>
+<?php 
+session_start();
+if ($_SESSION['Id_cargo'] ==1){
+?>
+
+<?php include '/xampp/xampp/htdocs/360/ruta360/php/include/menu.php';?>
+<?php include '/xampp/xampp/htdocs/360/ruta360/php/vista/promociones.php';?>
+
+<?php } else{
+    header('Location:/login.php'); 
+} ?>
+
 </body>
 </html>

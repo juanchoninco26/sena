@@ -6,6 +6,9 @@ body{
     grid-template-columns:auto ;
     grid-template-rows:30% 60%;
 }
+.men{
+    width: 100%;
+}
 .sec2{
     display: flex;
     align-items: center;
@@ -15,8 +18,9 @@ body{
     font-size: 14pt;
     margin-bottom: 10px;
     font-weight: 800;
+    margin-right: 200px;
 }
-.subcaja2{
+.subcaja3{
     background:rgba(255, 255, 255, 0.342);
     width: 260px;
     height: 45px;
@@ -26,26 +30,6 @@ body{
     display: flex;
     justify-content: space-around;
     border: 3px solid green;
-    margin-right: 200px;
-    
-}
-.subcaja2 h3,p{
-    margin: 0px;
-    margin-left:0px;
-}
-.perfil img{
-    width: 50px;
-    height: 40px;
-}
-.subcaja3{
-    background:rgb(10, 82, 10);
-    width: 230px;
-    height: 45px;
-    padding: 10px;
-    border-radius: 15px;
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: space-around;
     
 }
 .subcaja3 h3,p{
@@ -98,5 +82,9 @@ body{
 }
 .min-dat{
     margin: 5px;
+}
+.min-dat #imagenPrevisualizacion{
+    width: 80px;
+    height: 80px;
 }
 

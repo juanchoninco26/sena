@@ -27,22 +27,14 @@
         <div class="subcaja2">
             <div> 
                 <?php 
-                //ver en minuto 49,16: https://www.youtube.com/watch?v=fCTd8ilXZGI
-                session_start();
-                if($row=$_SESSION['Id_cargo']==1){
-                    echo "<h3>Administrador</h3>";
-                }elseif($row=$_SESSION['Id_cargo']==2){
-                    echo "<h3>Asesor</h3>";
-                }elseif($row=$_SESSION['Id_cargo']==3){
-                    echo "<h3>Contador</h3>";
-                }
-                             
+                //ver en minuto 49,16: https://www.youtube.com/watch?v=fCTd8ilXZGI       
                 //ver video:https://www.youtube.com/watch?v=9BLoMGO-XcU
                 //el video muestra quien inicia el software
                 //session_start() esta en el: php/loguin
             
-                $nombre=$_SESSION['username'];  
-                echo "<p>$nombre</p>";
+                if($nombre=$_SESSION['Nombre']){
+                    echo "<p>$nombre</p>";
+                    } 
             ?>
             </div>
             <div class="perfil">
@@ -50,10 +42,19 @@
             </div>
         </div>
         <div class="anteriores">
-            <div class="txt-prom">
+             <div class="txt-prom">
                 <p>Promociones anteriores</p>
-                <img src="/imagenes/buscador.svg" alt="">
-            </div>
+                 <a onclick="mostrar()"><img src="/imagenes/buscador.svg" alt="" id="buscar"></a>
+             </div>
+                <div id="buscador">
+                    <div class="centrar">
+                      <input type="search" name="" id="search">
+                      <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
+                      <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
+                    </div> 
+                </div>
+                <script src="/script/mostrar.js"></script>
+            
             <div class="lista">
                 <ol>
                     <!-- mostrar datos de la BD -->

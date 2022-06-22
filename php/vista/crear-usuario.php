@@ -1,18 +1,17 @@
 <div class="sec2">
-        <h2>Usuario actual</h2>
-        <div class="subcaja2">
-            <div>
-                <h3>Administrador</h3>
-                <p>Leandro Zuleta</p>
-            </div>
-            <div class="perfil">
-                <img src="/imagenes/user.svg" alt="">
-            </div>
-        </div>
         <div class="otros-user">
             <div class="titulo">
                 <h2>Otros Usuarios</h2>
+                <a onclick="mostrar()"><img src="/imagenes/buscador.svg" alt="" id="buscar"></a>
             </div>
+            <div id="buscador">
+                    <div class="centrar">
+                      <input type="search" name="" id="search">
+                      <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
+                      <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
+                    </div> 
+                    
+                </div>
             <div class="lista">
                 <ol>
                 <?php
@@ -33,36 +32,29 @@
         <div class="subcaja3">
         <div> 
                 <?php 
-                //ver en minuto 49,16: https://www.youtube.com/watch?v=fCTd8ilXZGI
-                session_start();
-                if($row=$_SESSION['Id_cargo']==1){
-                    echo "<h3>Administrador</h3>";
-                }elseif($row=$_SESSION['Id_cargo']==2){
-                    echo "<h3>Asesor</h3>";
-                }elseif($row=$_SESSION['Id_cargo']==3){
-                    echo "<h3>Contador</h3>";
-                }
-                             
+                //ver en minuto 49,16: https://www.youtube.com/watch?v=fCTd8ilXZGI            
                 //ver video:https://www.youtube.com/watch?v=9BLoMGO-XcU
                 //el video muestra quien inicia el software
                 //session_start() esta en el: php/loguin
             
-                $nombre=$_SESSION['username'];  
-                echo "<p>$nombre</p>";
+                if($nombre=$_SESSION['Nombre']){
+                    echo "<p>$nombre</p>";
+                    } 
             ?>
            </div>
             <div class="perfil">
-                <img src="/imagenes/user.svg" alt="">
+            <img src="/imagenes/user.svg" alt="">
             </div>
         </div>
+        <br>
         <div class="agre-user">
             <div class="titulo">
-                <h2>Agregar Usuario</h2>
+                <p>Agregar Usuario</p>
             </div>
             <?php 
             $result =mysqli_query($ared, "SELECT Id_cargo,Nombre_cargo FROM cargo");
             ?>
-            <form class="add-user" action="/php/guardar_dat.php" method="POST">
+            <form class="add-user" action="/php/guardar_dat.php" method="POST" enctype="multipart/form-data">
                 <p>Nombre</p>
                 <input type="text" name="nombre" id="">
                 <p>Contraseña</p>
@@ -82,10 +74,16 @@
                     ?>
                 </select>
                 <p>Fotografria</p>
-                <input type="file" name="foto" id="">
+                <input type="file" name="foto" id="seleccionArchivos">
+                <br>
+                <img id="imagenPrevisualizacion">
+                <br>
               <div>
-                <input type="submit" value="guardar" name="crear_usuario"> 
+                <input type="submit" value="guardar" name="crear_usuario" onclick="guardarUsuario()"> 
               </div> 
             </form>
+            <!-- script para mostrar las imagenes-->
+            <script src="/script/mostrar.js"></script>
+            
         </div>
     </div>

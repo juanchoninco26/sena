@@ -10,12 +10,18 @@
     <title>reservaciones</title>
 </head>
 <body>
-    <?php 
+<?php
+session_start();
+if ($_SESSION['Id_cargo'] ==1 ){
+?>
+<?php 
     include '/xampp/xampp/htdocs/360/ruta360/php/include/menu.php';
-    ?>
-   <?php
+?>
+<?php
    include '/xampp/xampp/htdocs/360/ruta360/php/vista/reservaciones.php' 
-   ?>
-
+?>
+<?php } else{
+    header('Location:/login.php'); ;
+} ?>
 </body>
 </html>
