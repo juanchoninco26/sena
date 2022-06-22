@@ -1,5 +1,4 @@
 <?php include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php'?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

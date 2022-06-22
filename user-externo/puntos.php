@@ -1,3 +1,4 @@
+<?php include '../php/puntos-turista-bd.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,11 +22,15 @@
           </div>
           <div class="lista">
             <ol>
-              <li><p>ejemplo1</p><a href="">usar</a></li>
-              <li><p>ejemplo1</p><a href="">usar</a></li>
-              <li><p>ejemplo1</p><a href="">usar</a></li>
-              <li><p>ejemplo1</p><a href="">usar</a></li>
-              <li><p>ejemplo1</p><a href="">usar</a></li>
+              <?php 
+                $consult ="SELECT * FROM generarpuntos"; 
+                $resutados = mysqli_query($ared, $consult);
+              
+                while ($mostrar = mysqli_fetch_array($resutados)) {?>
+
+              <li><p><?php echo $mostrar['puntos_manualmente'];?></p><a href="/php/--.php?id=<?php echo $mostrar['Cod_descuento'];?>">usar</a></li>
+
+              <?php } ?>
             </ol>
           </div>
       </div>
@@ -49,18 +54,45 @@
     <div class="codigo">
       <div class="tex">
         <p class="p">Codigo del punto</p>
-        <p class="p2">374347374</p>
+        <?php 
+          $consult ="SELECT * FROM generarpuntos"; 
+          $resutados = mysqli_query($ared, $consult);
+          if ($mostrar = mysqli_fetch_array($resutados)) {?>
+        <p class="p2"><?php echo $mostrar['Cod_descuento'];?></p>
+        <?php } ?>
         <p class="p3">Puedes uzar este codigo de descuento en cualquiera de nuestros sitios o paquetes.<br> <strong>No es reutilizable.</strong></p>
       </div>
     </div>
     <br>
     <div class="sitio">
       <div class="formulario">
-        <form action="" class="form">
+        <?php 
+          $result =mysqli_query($ared, "SELECT Cod_lugar_turistico,Nombre FROM lugares_turisticos");
+        ?>
+        <form action="/php/confirmar.php" class="form" method="POST">
          <p>Seleccionar sitio</p>
-         <input type="text" name="" id="">
+         <select name="sitio" id="">
+          <?php 
+            while ($fila = $result->fetch_assoc()):
+              $id = $fila['Cod_lugar_turistico'];
+              $nombre=$fila['Nombre'];
+              echo "<option value=$id>$nombre</option>";
+            endwhile;
+          ?>
+         </select>
          <p>Seleccionar paquete</p>
-         <input type="text" name="" id="">
+         <?php 
+          $result =mysqli_query($ared, "SELECT Cod_paquete,Nombre FROM paquetes_turisticos");
+        ?>
+         <select name="paquetes" id="">
+          <?php 
+            while ($fila = $result->fetch_assoc()):
+              $id = $fila['Cod_paquete'];
+              $nombre=$fila['Nombre'];
+              echo "<option value=$id>$nombre</option>";
+            endwhile;
+          ?>
+         </select>
          <br>
          <br>
          <div class="enviar">
