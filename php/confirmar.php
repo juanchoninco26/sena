@@ -43,5 +43,10 @@ if (isset($_GET['reprogramar'])){
     } else {
        die('error:'. $ared ->error);
     }
+    //puntos: user-externo 
+    if (isset($_POST['Enviar'])){
+        $sitios=$_POST['sitio'];
+        $paquete=$_POST['paquetes'];
+    }
 }
 ?>

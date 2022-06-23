@@ -21,7 +21,7 @@
                     while ($mostrar = mysqli_fetch_array($resutados)) {?>
                 
                      
-                    <li> <?php echo $mostrar['puntos_manualmente'];?> <button><a onclick="return confirm('estas seguro de eliminar este dato?')" href="/php/elim-punt-turist.php?id=<?php echo $mostrar['Cod_descuento'];?>">x Quitar</a></button></li>
+                    <li><?php echo $mostrar['puntos_manualmente'];?><button><a onclick="return confirm('estas seguro de eliminar este dato?')" href="/php/elim-punt-turist.php?id=<?php echo $mostrar['Cod_descuento'];?>">x Quitar</a></button></li>
                  <?php } ?>
                 </ol>
                 

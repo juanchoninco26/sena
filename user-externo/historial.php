@@ -1,3 +1,4 @@
+<?php include '../php/puntos-turista-bd.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,15 +18,18 @@
   <div class="contenedor1">
     <div class="caja1">
           <div class="titulo">
-              <p>Puntos en sitios visitados</p>
+              <p>sitios visitados</p>
           </div>
           <div class="lista">
             <ol>
-              <li><p>ejemplo1</p><a href="">usar</a></li>
-              <li><p>ejemplo1</p><a href="">usar</a></li>
-              <li><p>ejemplo1</p><a href="">usar</a></li>
-              <li><p>ejemplo1</p><a href="">usar</a></li>
-              <li><p>ejemplo1</p><a href="">usar</a></li>
+              <?php 
+                 $consult ="SELECT * FROM paquetes_turisticos"; 
+                 $resutados = mysqli_query($ared, $consult);
+             
+                 while ($mostrar = mysqli_fetch_array($resutados)) {?>
+
+              <li><p><?php echo $mostrar['Nombre'];?></p><a href="">usar</a></li>
+              <?php } ?>
             </ol>
           </div>
       </div>
@@ -46,11 +50,13 @@
           </div>
           <div class="lista2">
             <ol>
-              <li><p>ejemplo1</p><a href="">abrir</a></li>
-              <li><p>ejemplo1</p><a href="">abrir</a></li>
-              <li><p>ejemplo1</p><a href="">abrir</a></li>
-              <li><p>ejemplo1</p><a href="">abrir</a></li>
-              <li><p>ejemplo1</p><a href="">abrir</a></li>
+            <?php 
+                 $consult ="SELECT * FROM paquetes_turisticos"; 
+                 $resutados = mysqli_query($ared, $consult);
+             
+                 while ($mostrar = mysqli_fetch_array($resutados)) {?>
+              <li><p>echo $mostrar['Nombre'];</p><a href="">abrir</a></li>
+              <?php } ?>
             </ol>
           </div>
       </div>

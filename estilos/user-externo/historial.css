@@ -33,7 +33,7 @@ body{
 .lista ol li{
     background: white;
     list-style: none;
-    height: 40px;
+    height: auto;
     border-radius: 10px;
     display: flex;
     align-items: center;
