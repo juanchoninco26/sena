@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/Trabajo Sena/SENA/estilos/EstilosPaquetes.css">
 </head>
 <body>
+<body background="/Trabajo Sena/SENA/imagenes/FondoCielo.png.jpg" bgcolor="aqua"></body>
     <header>
         <div> 
            <img src="/Trabajo Sena/SENA/imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 

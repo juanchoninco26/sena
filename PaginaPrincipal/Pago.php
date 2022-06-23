@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Pago</title>
-    <link rel="stylesheet" href="/Trabajo Sena/SENA/Estilos/EstilosPago.css">
+    <link rel="stylesheet" href="/Trabajo Sena/SENA/estilos/EstilosPago.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
  
 </head>
 <body>
+<body background="/Trabajo Sena/SENA/imagenes/FondoChica.png" bgcolor="aqua"></body>
     <header>
         <div> 
            <img src="/Trabajo Sena/SENA/imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
