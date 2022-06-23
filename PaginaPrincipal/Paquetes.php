@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Página Paquetes</title>
-    <link rel="stylesheet" href="/ruta360/usuarios/PaginaPrincipal/Estilos/EstilosPaquetes.css">
+    <link rel="stylesheet" href="/Trabajo Sena/SENA/estilos/EstilosPaquetes.css">
 </head>
 <body>
     <header>
         <div> 
-           <img src="/ruta360/imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
+           <img src="/Trabajo Sena/SENA/imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
            <h1>Ruta 360 Gigante</h1>
         </div>
  
         <nav id="menu-h">
           <ul>
-            <li><a target="blank" href="/ruta360/usuarios/PaginaPrincipal/Index.php"><img src="/ruta360/imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
-            <li><a target="blank" href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Sitios.php">Sitios</a></li>
-            <li><a target="blank" href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Paquetes.php">Paquetes</a></li>
-            <li><a target="blank" href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Carrito.php"><img src="/ruta360/imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
+            <li><a target="blank" href="/Trabajo Sena/SENA/Index.php"><img src="/Trabajo Sena/SENA/imagenes/home.png.png" style="width: 22px; height:22px;">Inicio</a></li>
+            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Sitios.php">Sitios</a></li>
+            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Paquetes.php">Paquetes</a></li>
+            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Carrito.php"><img src="/Trabajo Sena/SENA/imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
            </ul>
         </nav>
     </header>
@@ -28,7 +28,7 @@
                 <div class="caja"> 
                     <div class="img">
                       <div class="img2">
-                        <a href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Paquetes2.php"><img src="/ruta360/imagenes/Mirador.png" alt=""></a>
+                        <a href="/Trabajo Sena/SENA/PaginaPrincipal/Paquetes2.php"><img src="/Trabajo Sena/SENA/imagenes/Mirador.png" alt=""></a>
                        </div>
                     </div> 
                      <div class="subcaja">
@@ -46,7 +46,7 @@
                     <div class="caja"> 
                         <div class="img">
                           <div class="img2">
-                            <img src="/ruta360/imagenes/SanAgustín.png" alt="">
+                            <img src="/Trabajo Sena/SENA/imagenes/SanAgustín.png" alt="">
                            </div>
                         </div> 
                          <div class="subcaja">
@@ -60,7 +60,7 @@
                         <div class="caja"> 
                             <div class="img">
                               <div class="img2">
-                                <img src="/ruta360/imagenes/" alt="">
+                                <img src="/Trabajo Sena/SENA/imagenes/" alt="">
                                </div>
                             </div> 
                              <div class="subcaja">
@@ -74,7 +74,7 @@
                             <div class="caja"> 
                                 <div class="img">
                                   <div class="img2">
-                                    <img src="/ruta360/imagenes/" alt="">
+                                    <img src="/Trabajo Sena/SENA/imagenes/" alt="">
                                    </div>
                                 </div> 
                                  <div class="subcaja">
@@ -94,10 +94,10 @@
 
     <div class="redes">
       <ul class="sociales">
-       <li><a href="https://www.facebook.com/Ruta360gigante/"><img src="/ruta360/imagenes/LogoFacebook.png.png"width="50px" height="50px"></a></li> 
-       <li><a href="https://www.instagram.com/ruta360gigante/"><img src="/ruta360/imagenes/LogoInstagram.png.png"width="50px" height="50px"></a></li>
-       <li><a href="https://api.whatsapp.com/send?phone=573203432927&app=facebook&entry_point=page_cta"><img src="/ruta360/imagenes/LogoWhatsapp.png.png"width="50px" height="50px"></a></li>
-       <li><a href="https://www.youtube.com/channel/UCYC0Syd3ESTtsBigvNC7oyg"><img src="/ruta360/imagenes/LogoYouTube.png.png"width="50px" height="50px"></a></li>
+       <li><a href="https://www.facebook.com/Ruta360gigante/"><img src="/Trabajo Sena/SENA/imagenes/LogoFacebook.png.png"width="50px" height="50px"></a></li> 
+       <li><a href="https://www.instagram.com/ruta360gigante/"><img src="/Trabajo Sena/SENA/imagenes/LogoInstagram.png.png"width="50px" height="50px"></a></li>
+       <li><a href="https://api.whatsapp.com/send?phone=573203432927&app=facebook&entry_point=page_cta"><img src="/Trabajo Sena/SENA/imagenes/LogoWhatsapp.png.png"width="50px" height="50px"></a></li>
+       <li><a href="https://www.youtube.com/channel/UCYC0Syd3ESTtsBigvNC7oyg"><img src="/Trabajo Sena/SENA/imagenes/LogoYouTube.png.png"width="50px" height="50px"></a></li>
        <br> 
      </div>
  </footer>
