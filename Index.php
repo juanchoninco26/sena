@@ -7,22 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Página Principal</title>
-    <link rel="stylesheet" href="/ruta360/usuarios/PaginaPrincipal/Estilos/Estilos.css">
+    <link rel="stylesheet" href="/SENA/PaginaPrincipal/Estilos/Estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 </head>
 <body>  
    <header>
           <div> 
-          <img src="/ruta360/imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
+          <img src="/imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
           <h1>Ruta 360 Gigante</h1>
        </div>
 
        <nav id="menu-h">
          <ul>
-           <li><a target="blank" href="/ruta360/usuarios/PaginaPrincipal/Index.php"><img src="/ruta360/imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
+           <li><a target="blank" href="/ruta360/usuarios/PaginaPrincipal/Index.php"><img src="/imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
            <li><a target="blank" href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Sitios.php">  Sitios</a></li>
            <li><a target="blank" href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Paquetes.php">  Paquetes</a></li>
-           <li><a target="blank" href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Carrito.php"><img src="/ruta360/imagenes/LC-PNG.png" style="width: 24px; height: 24px;">  Carrito</a></li>
+           <li><a target="blank" href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Carrito.php"><img src="/imagenes/LC-PNG.png" style="width: 24px; height: 24px;">  Carrito</a></li>
           </ul>
        </nav>
    </header>
@@ -30,7 +30,7 @@
          <main>
            <div class="Imagen">
              <div class="imagen2"> 
-                <img src="/ruta360/imagenes/Imagen_principal.png.png" alt="">
+                <img src="/imagenes/Imagen_principal.png.png" alt="">
               </div>
            </div>  
              
