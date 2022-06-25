@@ -71,7 +71,7 @@
         ?>
         <form action="/php/confirmar.php" class="form" method="POST">
          <p>Seleccionar sitio</p>
-         <select name="sitio" id="">
+         <select name="sitio" id="selectSitio">
           <?php 
             while ($fila = $result->fetch_assoc()):
               $id = $fila['Cod_lugar_turistico'];
@@ -96,7 +96,7 @@
          <br>
          <br>
          <div class="enviar">
-           <input type="button" value="Enviar" >
+           <input type="button" value="Enviar" id="botonEnviar">
          </div>
        </form>
       </div>

@@ -12,7 +12,7 @@
 <body>
   <div class="menu">
     <?php 
-    include '/xampp/xampp/htdocs/360/ruta360/php/include/men-user-extern.php';
+    include '../../php/include/men-user-extern.php';
     ?>
   </div>
   <div class="contenedor1">

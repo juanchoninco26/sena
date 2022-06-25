@@ -145,8 +145,9 @@ ol li a{
 .sitio .formulario .form{
     padding: 20px 0px;
 }
-.sitio input{
+.sitio select{
     width: 230px;
+    height:30px;
     border-radius:7px;
 }
 .sitio .enviar{
@@ -154,11 +155,18 @@ ol li a{
     justify-content: end;
     border: none;
 }
-.enviar input{
+.enviar select{
     width: 60px;
     background: green;
     color: white;
     border: none;
     font-weight: 600;
     padding: 8px;
+}
+#botonEnviar{
+    background:green;
+    color: white;
+    border: none;
+    padding: 7px;
+    border-radius:8px;
 }
