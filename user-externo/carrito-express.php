@@ -38,34 +38,16 @@
         <br>
         <div class="productos1">
             <div class="product">
+                <?php  
+                    $consult ="SELECT * FROM lugares_turisticos"; 
+                    $resutados = mysqli_query($ared, $consult);
+                    while ($mostrar = mysqli_fetch_array($resutados)) {
+                ?>
                 <div class="info-">
                     <div class="boton"><button>X Quitar</button></div>
-                    <div><p>mano del Gigante</p></div>
+                    <div><p><?php echo $mostrar['Nombre']; ?></p></div>
                 </div>
-                <div class="info-">
-                    <div class="boton"><button>X Quitar</button></div>
-                    <div><p>mano del Gigante</p></div>
-                </div>
-                <div class="info-">
-                    <div class="boton"><button>X Quitar</button></div>
-                    <div><p>mano del Gigante</p></div>
-                </div>
-                <div class="info-">
-                    <div class="boton"><button>X Quitar</button></div>
-                    <div><p>mano del Gigante</p></div>
-                </div>
-                <div class="info-">
-                    <div class="boton"><button>X Quitar</button></div>
-                    <div><p>mano del Gigante</p></div>
-                </div>
-                <div class="info-">
-                    <div class="boton"><button>X Quitar</button></div>
-                    <div><p>mano del Gigante</p></div>
-                </div>
-                <div class="info-">
-                    <div class="boton"><button>X Quitar</button></div>
-                    <div><p>mano del Gigante</p></div>
-                </div>
+                <?php } ?>
             </div>
             <br>
             <div class="compra">

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/estilos/user-externo/men-user-extern.css" rel="stylesheet" type="text/css">
     <link href="/estilos/editar-perfil.css" rel="stylesheet" type="text/css">
-    <title>Document</title>
+    <title>Editar perfil</title>
 </head>
 <body>
     <div class="menu-">

@@ -11,9 +11,9 @@
 </head>
 <body>
     <div class="menu-">
-    <?php 
-    include '/xampp/xampp/htdocs/360/ruta360/php/include/men-user-extern.php';
-    ?>
+      <?php 
+       include '/xampp/xampp/htdocs/360/ruta360/php/include/men-user-extern.php';
+      ?>
     </div>
     <div class="seccion1">
         <div class="info-user">
@@ -29,40 +29,22 @@
         </div>
         <div class="contenedor">
           <div class="caja-card">
-           <div class="card">
-             <div class="content1">
+            <?php 
+              $consult ="SELECT * FROM promociones"; 
+              $resutados = mysqli_query($ared, $consult);
+              while ($mostrar = mysqli_fetch_array($resutados)) {
+            ?>
+            <div class="card">
+              <div class="content1">
 
-             </div> 
-             <div class="content2">
-               <div class="letras">
-                <p><span>50%</span></p>
-                <p>En avistamientos de aves</p>
-               </div>
-             </div>
-           </div>
-           <div class="card">
-             <div class="content1">
-
-             </div> 
-             <div class="content2">
-               <div class="letras">
-                <p><span>50%</span></p>
-                <p>En avistamientos de aves</p>
-               </div>
-             </div>
-           </div>
-           <div class="card">
-             <div class="content1">
-
-             </div> 
-             <div class="content2">
-               <div class="letras">
-                <p><span>50%</span></p>
-                <p>En avistamientos de aves</p>
-               </div>
-             </div>
-           </div>
-           </div>
+              </div> 
+              <div class="content2">
+                <div class="letras">
+                  <p><?php echo $mostrar['Titulo']; ?></p>
+                </div>
+              </div>
+            </div>
+            <?php } ?>
           </div>
         </div>
     </div>

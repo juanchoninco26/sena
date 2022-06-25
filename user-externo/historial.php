@@ -55,7 +55,7 @@
                  $resutados = mysqli_query($ared, $consult);
              
                  while ($mostrar = mysqli_fetch_array($resutados)) {?>
-              <li><p>echo $mostrar['Nombre'];</p><a href="">abrir</a></li>
+              <li><p><?php echo $mostrar['Rutas'];?></p><a href="">abrir</a></li>
               <?php } ?>
             </ol>
           </div>

@@ -21,7 +21,7 @@
         <div class="contenedor">
             <div class="centrar">
                 <div class="img-centro">
-                    <img src="/imagenes/360.png">
+                    <img src="/imagenes/logo-360.png">
                 </div>
                 <form class="formulario" action="" method="POST">
                     <div class="letra2">

@@ -22,11 +22,21 @@
     border-radius:15px;
 }
 .titulo{
+    
     padding-top: 3px;
     color: white;
     font-size: 15pt;
     font-weight: 700;
 }
+.lista{
+    overflow: auto;
+    width: auto;
+    height: 310px;
+}
+.lista::-webkit-scrollbar{
+    width: 1px;
+}
+
 .lista ol{
     width: 350px;
     margin-right: 40px;

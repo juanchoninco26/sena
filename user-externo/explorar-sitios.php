@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/estilos/user-externo/men-user-extern.css" rel="stylesheet" type="text/css">
     <link href="/estilos/user-externo/explorar-sit.css" rel="stylesheet" type="text/css">
-    <title>Document</title>
+    <title>Explorar sitios</title>
 </head>
 <body>
 <div class="main">
@@ -41,7 +41,7 @@
     </div>
     <div class="container">
     <div class="subcontainer">
-            <p><strong>sitios</strong> locales</p>
+            <p><strong>sitios</strong> Regionales</p>
             <div class="imagenes">
                 <div>
                     <img src="/imagenes/cascada.jpg" alt="" width="90px" height="96px">
@@ -51,7 +51,7 @@
         </div>
     <div class="container">
     <div class="subcontainer">
-            <p><strong>sitios</strong> locales</p>
+            <p><strong>sitios</strong> Nacionales</p>
             <div class="imagenes">
                 <div>
                     <img src="/imagenes/cascada.jpg" alt="" width="90px" height="96px">

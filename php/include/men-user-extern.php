@@ -7,7 +7,7 @@
                 <li><a href="/user-externo/promociones.php" class="h">Promociones</a></li> 
                 <li><a href="/user-externo/carrito-express.php" class="h">Carrito Express</a></li> 
                 <li><a href="/user-externo/editar-perfil.php" class="h">Editar Perfil</a></li>
-                <button class="btn"><a href="/php/cerrar-secion.php" class="h">cerar sesión</a></button>
+                <button class="btn"><a href="/php/CerrarSesionWeb.php"  class="h">cerar sesión</a></button>
             </ul>
         </nav>
     </footer>

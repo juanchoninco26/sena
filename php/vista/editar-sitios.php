@@ -22,7 +22,6 @@
 
                     while ($mostrar = mysqli_fetch_array($resutados)) {?>
                 
-                
                     <li><p><?php echo $mostrar['Nombre'];?></p><button><a onclick="return confirm('estas seguro de eliminar este dato?')" href="/php/eliminar.php?Cod_lugar_turistico=<?php echo $mostrar ['Cod_lugar_turistico'];?>">x Quitar</a></button></li>
                  <?php } ?>
                  
