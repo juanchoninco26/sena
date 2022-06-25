@@ -361,8 +361,8 @@ footer h3{
     text-align: left;
 }
 
-.popup form .contenedor-inputs input {
-    width: 100%;
+.popup .contenedor-inputs .campo {
+    width: 80%;
     margin-bottom: 28px;
     height: 52px;
     line-height: 52px;
@@ -371,10 +371,12 @@ footer h3{
     border: 1px solid #BBBBBB;
 }
 
-.popup form .btn-sub {
+
+.popup .contenedor-inputs  .btn-sub {
     padding:  0 20px;
-    height: 40px;
-    line-height: 40px;
+    height: 55px;
+    line-height: 55px;
+    margin-right: -2px;
     border: none;
     color:#fff;
     background:#06330C;
@@ -475,7 +477,7 @@ footer h3{
 }
 
 .popup form .btn-submit:hover {
-	background: rgba(94,125,227, .9);
+	background: rgba(84, 159, 84, 0.9);
 }
 
 /* ------------------------- */

@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Página EstilosSitios2</title>   
+    <title>Página Sitios2</title>   
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="/ruta360/usuarios/PaginaPrincipal/Estilos/EstilosSitios2.css">
+    <link rel="stylesheet" href="/Trabajo Sena/SENA/estilos/EstilosSitios2.css">
 </head>
 <body>
+  <body background="/Trabajo Sena/SENA/imagenes/Mirador2.png" bgcolor="aqua"></body>
     <header>
         <div> 
-           <img src="/ruta360/imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
+           <img src="/Trabajo Sena/SENA/imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
            <h1>Ruta 360 Gigante</h1>
         </div>
  
         <nav id="menu-h">
           <ul>
-            <li><a target="blank" href="/ruta360/usuarios/PaginaPrincipal/Index.php"><img src="/ruta360/imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
-            <li><a target="blank" href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Sitios.php">  Sitios</a></li>
-            <li><a target="blank" href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Paquetes.php">  Paquetes</a></li>
-            <li><a target="blank" href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Carrito.php"><img src="/ruta360/imagenes/LC-PNG.png" style="width: 24px; height: 24px;">  Carrito</a></li>
+            <li><a target="blank" href="/Trabajo Sena/SENA/Index.php"><img src="/Trabajo Sena/SENA/imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
+            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Sitios.php">  Sitios</a></li>
+            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Paquetes.php">  Paquetes</a></li>
+            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Carrito.php"><img src="/Trabajo Sena/SENA/imagenes/LC-PNG.png" style="width: 24px; height: 24px;">  Carrito</a></li>
            </ul>
         </nav>
     </header>
@@ -80,13 +81,13 @@
 
             <nav id="Reserva"> 
               <ul>
-                <li><a href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Carrito.php"> Reservar Ahora </a></li>
+                <li><a href="/Trabajo Sena/SENA/PaginaPrincipal/Carrito.php"> Reservar Ahora </a></li>
               </ul>
             </nav>
 
             <nav id="Carrito"> 
              <ul>
-              <li><a target="blank" href=""><img src="/ruta360/imagenes/LC-PNG.png" style="width: 24px; height: 24px;"> Agregar al carrito</a></li>
+              <li><a target="blank" href=""><img src="/Trabajo Sena/SENA/imagenes/LC-PNG.png" style="width: 24px; height: 24px;"> Agregar al carrito</a></li>
              </ul>
            </nav>
 
@@ -98,14 +99,14 @@
          <aside>
             <nav id="boton"> 
                 <ul>
-                  <li><a href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Sitios.php"> <<< Volver </a></li>
+                  <li><a href="/Trabajo Sena/SENA/PaginaPrincipal/Sitios.php"> <<< Volver </a></li>
                 </ul>
               </nav>
 
               <div class="Ubicación">
                 <div class="Caja"> 
                 <ul>
-                 <a href="https://www.google.com/maps/place/Mirador+La+Mano+del+Gigante/@2.4144251,-75.4861108,15z/data=!4m5!3m4!1s0x0:0xc4466883657f3f23!8m2!3d2.4144251!4d-75.4861108"><img src="/ruta360/imagenes/Ubicación.png"></a>
+                 <a href="https://www.google.com/maps/place/Mirador+La+Mano+del+Gigante/@2.4144251,-75.4861108,15z/data=!4m5!3m4!1s0x0:0xc4466883657f3f23!8m2!3d2.4144251!4d-75.4861108"><img src="/Trabajo Sena/SENA/imagenes/Ubicación.png"></a>
                 </ul> 
                 </div>
               </div> 
@@ -116,13 +117,13 @@
                   <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="/ruta360/imagenes/ManoDelGigante.png" width="50%" height="300px" class="d-block w-100" alt="banner1">
+                        <img src="/Trabajo Sena/SENA/imagenes/ManoDelGigante.png" width="50%" height="300px" class="d-block w-100" alt="banner1">
                       </div>
                       <div class="carousel-item">
-                        <img src="/ruta360/imagenes/Manodelgigante2.png" width="50%" height="300px" class="d-block w-100" alt="banner2">
+                        <img src="/Trabajo Sena/SENA/imagenes/Manodelgigante2.png" width="50%" height="300px" class="d-block w-100" alt="banner2">
                       </div>
                       <div class="carousel-item">
-                        <img src="/ruta360/imagenes/ManoDelGigante3.png" width="50%" height="300px" class="d-block w-100" alt="banner3">
+                        <img src="/Trabajo Sena/SENA/imagenes/ManoDelGigante3.png" width="50%" height="300px" class="d-block w-100" alt="banner3">
                       </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
@@ -151,13 +152,13 @@
                               <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                   <div class="carousel-item active">
-                                    <a href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Sitios2.html"><img src="/ruta360/imagenes/Manodelgigante2.png" class="d-block w-100" alt="baneer1"></a>
+                                    <a href="/Trabajo Sena/SENA/PaginaPrincipal/Sitios2.html"><img src="/Trabajo Sena/SENA/imagenes/Manodelgigante2.png" class="d-block w-100" alt="baneer1"></a>
                                   </div>
                                   <div class="carousel-item">
-                                    <a href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Sitios2.html"><img src="/ruta360/imagenes/ManoDelGigante3.png" class="d-block w-100" alt="banner2"></a>
+                                    <a href="/Trabajo Sena/SENA/PaginaPrincipal/Sitios2.html"><img src="/Trabajo Sena/SENA/imagenes/ManoDelGigante3.png" class="d-block w-100" alt="banner2"></a>
                                   </div>
                                   <div class="carousel-item">
-                                    <a href="/ruta360/usuarios/PaginaPrincipal/Paginaphp/Sitios2.html"><img src="/ruta360/imagenes/ManoDelGigante4.png" class="d-block w-100" alt="banner3"></a>
+                                    <a href="/Trabajo Sena/SENA/PaginaPrincipal/Sitios2.html"><img src="/Trabajo Sena/SENA/imagenes/ManoDelGigante4.png" class="d-block w-100" alt="banner3"></a>
                                   </div>
                                 </div>
                               </div>
@@ -188,7 +189,7 @@
               <nav id="menu-h2"></nav>
               <div class="Logo">
                <div class="Logo2">
-               <li><a href="https://api.whatsapp.com/send?phone=573203432927&app=facebook&entry_point=page_cta"><img src="/ruta360/imagenes/LogoAsesor.png.png" width="60px" height="60px"></a></li>
+               <li><a href="https://api.whatsapp.com/send?phone=573203432927&app=facebook&entry_point=page_cta"><img src="/Trabajo Sena/SENA/imagenes/LogoAsesor.png.png" width="60px" height="60px"></a></li>
                </div>
               </div> 
             </ul>
@@ -197,15 +198,15 @@
           
         <div class="redes">
           <ul class="sociales">
-           <li><a href="https://www.facebook.com/Ruta360gigante/"><img src="/ruta360/imagenes/LogoFacebook.png.png"width="50px" height="50px"></a></li> 
-           <li><a href="https://www.instagram.com/ruta360gigante/"><img src="/ruta360/imagenes/LogoInstagram.png.png"width="50px" height="50px"></a></li>
-           <li><a href="https://api.whatsapp.com/send?phone=573203432927&app=facebook&entry_point=page_cta"><img src="/ruta360/imagenes/LogoWhatsapp.png.png"width="50px" height="50px"></a></li>
-           <li><a href="https://www.youtube.com/channel/UCYC0Syd3ESTtsBigvNC7oyg"><img src="/ruta360/imagenes/LogoYouTube.png.png"width="50px" height="50px"></a></li>
+           <li><a href="https://www.facebook.com/Ruta360gigante/"><img src="/Trabajo Sena/SENA/imagenes/LogoFacebook.png.png"width="50px" height="50px"></a></li> 
+           <li><a href="https://www.instagram.com/ruta360gigante/"><img src="/Trabajo Sena/SENA/imagenes/LogoInstagram.png.png"width="50px" height="50px"></a></li>
+           <li><a href="https://api.whatsapp.com/send?phone=573203432927&app=facebook&entry_point=page_cta"><img src="/Trabajo Sena/SENA/imagenes/LogoWhatsapp.png.png"width="50px" height="50px"></a></li>
+           <li><a href="https://www.youtube.com/channel/UCYC0Syd3ESTtsBigvNC7oyg"><img src="/Trabajo Sena/SENA/imagenes/LogoYouTube.png.png"width="50px" height="50px"></a></li>
            <br> 
           </ul>
          </div>
      </footer>
-     <script src="popup.js"></script>
+     <script src="/Trabajo Sena/SENA/script/popup.js"></script>
      
     </body>
     </html>
