@@ -3,5 +3,5 @@
         $_SESSION=[];
         session_unset();
         session_destroy();
-        header('Location:/user-externo/loguin.php');
+        header('Location:/PaginaPrincipal/login/login.php');
 ?>

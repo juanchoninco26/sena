@@ -1,4 +1,4 @@
-<?php include '../php/puntos-turista-bd.php';?>
+<?php include '../../php/puntos-turista-bd.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +36,7 @@
                         <input type="password" placeholder="" name="password"> 
                     </div>
                     <button type="submit" class="login" name="loguin-extern"><a>Entrar</a></button>
-                    <p>¿No tienes una cuenta?<a href="/user-externo/registrarse.php">Crear una.</a></p>
+                    <p>¿No tienes una cuenta?<a href="/PaginaPrincipal/login/registrarse.php">Crear una.</a></p>
                 </form>
                 <script></script>
             </div>
