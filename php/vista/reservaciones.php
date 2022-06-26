@@ -14,10 +14,10 @@
                 $resultados1= mysqli_query($ared,$consulta1);
                 $filasb= mysqli_fetch_array($resultados1);
 
-                $a=$_SESSION['admin'];
-                if($a==1){
+                $a=$_SESSION['Nombre'];
+                if($filasb['Id_cargo']==$a){
                     echo "<h3>Administrador</h3>";
-                }elseif($a==2){
+                }elseif($filasb['Id_cargo']==$a){
                     echo "<h3>Aaa</h3>";
                 }
                 //ver video:https://www.youtube.com/watch?v=9BLoMGO-XcU
