@@ -1,3 +1,5 @@
+<?php include ("../php/puntos-turista-bd.php")?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,32 +28,52 @@
     </header>
 
     <main>
-        <div class="Carrito"> 
+       <div class="Carrito"> 
         <img src="/Trabajo Sena/SENA/imagenes/Carrito2.png.png" alt="Carrito">
         </div>
         <h1>Carrito</h1> 
         <div class="Caja">
+        <form class="eliminarlugar" action="/Trabajo Sena/SENA/php/eliminarlugar.php" method="post">
+            <!-- mostrar datos de la BD -->
+            <?php 
+                    $consult ="SELECT*FROM turista_lugares_paquetes;"; 
+                    $resutados = mysqli_query($ared, $consult);
+
+                    while ($mostrar = mysqli_fetch_array($resutados)) {?>
            <div class="subcaja">
-               <div class="Barra">
-                <a href=""><h6>x Quitar</h6></a> 
-               </div> 
-               <h5>Mano del Gigante</h5> 
-           </div>
-             <h3>+</h3> 
+                   <li><p><?php echo $mostrar['Nombre'];?></p><button><a onclick="return confirm('estas seguro de eliminar este dato?')" href="/php/eliminarlugar.php?id_lugar=<?php echo $mostrar ['id_lugar'];?>">x Quitar</a></button></li>
+                </div> 
+                <h5>Mano del Gigante</h5> 
+                <h3>+</h3> 
+               </div>
+               <?php } ?>
+                          
+               <?php 
+                    $consult ="SELECT*FROM turista_lugares_paquetes;"; 
+                    $resutados = mysqli_query($ared, $consult);
+
+                    while ($mostrar = mysqli_fetch_array($resutados)) {?>
            <div class="subcaja1">
-           <div class="Barra">
-            <a href=""><h6>x Quitar</h6></a> 
-          </div> 
-          <h5>Mano del Gigante</h5>
-          </div>
-          <h3>+</h3> 
+                   <li><p><?php echo $mostrar['Nombre'];?></p><button><a onclick="return confirm('estas seguro de eliminar este dato?')" href="/php/eliminarlugar.php?id_paquete=<?php echo $mostrar ['id_paquete'];?>">x Quitar</a></button></li>
+                </div> 
+                <h5>Mano del Gigante</h5> 
+                <h3>+</h3> 
+               </div>
+               <?php } ?> 
+          
+               <?php 
+                    $consult ="SELECT*FROM turista_lugares_paquetes;"; 
+                    $resutados = mysqli_query($ared, $consult);
+
+                    while ($mostrar = mysqli_fetch_array($resutados)) {?>
            <div class="subcaja2">
-           <div class="Barra">
-            <a href=""><h6>x Quitar</h6></a> 
-          </div> 
-          <h5>Mano del Gigante</h5> 
-        </div>
-        <h3>+</h3> 
+                   <li><p><?php echo $mostrar['Nombre'];?></p><button><a onclick="return confirm('estas seguro de eliminar este dato?')" href="/php/eliminarlugar.php?id_promocion=<?php echo $mostrar ['id_promocion'];?>">x Quitar</a></button></li>
+                </div> 
+                <h5>Mano del Gigante</h5> 
+                <h3>+</h3> 
+               </div>
+               <?php } ?>
+           
            <div class="subcaja3">
            <div class="Barra">
             <a href=""><h6>x Quitar</h6></a> 
@@ -72,39 +94,13 @@
           <h5>Mano del Gigante</h5> 
         </div>  
         <h4>+</h4>
-           <div class="subcaja6">
-           <div class="Barra">
-            <a href=""><h6>x Quitar</h6></a> 
-          </div> 
-          <h5>Mano del Gigante</h5> 
-        </div>
-        <h4>+</h4> 
-           <div class="subcaja7">
-           <div class="Barra">
-            <a href=""><h6>x Quitar</h6></a> 
-          </div> 
-          <h5>Mano del Gigante</h5> 
-        </div>
-        <h4>+</h4> 
-           <div class="subcaja8">
-           <div class="Barra">
-            <a href=""><h6>x Quitar</h6></a> 
-          </div> 
-          <h5>Mano del Gigante</h5> 
-        </div> 
-        <h4>+</h4> 
-           <div class="subcaja9">
-           <div class="Barra">
-           <a href=""><h6>x Quitar</h6></a> 
-          </div> 
-          <h5>Mano del Gigante</h5> 
-        </div>
     </div>
-
+    
     <div class="Total">
         <h5>Total: 800.000</h5> 
+         </form>
       </div>
-
+    
       <nav id="Comprar"> 
         <ul>
           <li><a href="/Trabajo Sena/SENA/PaginaPrincipal/Pago.php"> Comprar </a></li>

@@ -1,4 +1,4 @@
-<?php include ("/xampp/htdocs/Trabajo Sena/sena/php/bd.php")?>
+<?php include ("./php/puntos-turista-bd.php")?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -89,7 +89,7 @@
                             cero estrés.</p> 
                               <div>
                               <div class="contenedor-inputs">
-                              <input type="email" class="campo" placeholder="Introduce tu correo electrónico" name="correo"> 
+                              <input autocomplete="off" type="email" class="campo" placeholder="Introduce tu correo electrónico" name="correo"> 
                               <input type="submit"
                               value="Suscribir" class="btn-sub" name="boton">
                              </div> 

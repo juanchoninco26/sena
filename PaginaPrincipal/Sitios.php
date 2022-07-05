@@ -1,3 +1,5 @@
+<?php include ("../php/puntos-turista-bd.php")?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +9,10 @@
     <title>Página Sitios</title>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="/Trabajo Sena/SENA/Estilos/EstilosSitios.css">
+    <link rel="stylesheet" href="/Trabajo Sena/SENA/estilos/EstilosSitios.css">
 </head>
 <body>
+<body background="/Trabajo Sena/SENA/imagenes/Recurso2.png.png" bgcolor="aqua"></body>
     <header>
         <div> 
            <img src="/Trabajo Sena/SENA/imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
@@ -18,10 +21,10 @@
  
         <nav id="menu-h">
           <ul>
-            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Index.php"><img src="/Trabajo Sena/SENA/imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
-            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Paginaphp/Sitios.php">Sitios</a></li>
-            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Paginaphp/Paquetes.php">Paquetes</a></li>
-            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Paginaphp/Carrito.php"><img src="/Trabajo Sena/SENA/imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
+            <li><a target="blank" href="/Trabajo Sena/SENA/Index.php"><img src="/Trabajo Sena/SENA/imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
+            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Sitios.php">Sitios</a></li>
+            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Paquetes.php">Paquetes</a></li>
+            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Carrito.php"><img src="/Trabajo Sena/SENA/imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
            </ul>
         </nav>
     </header>
