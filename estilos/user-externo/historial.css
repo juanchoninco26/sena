@@ -13,7 +13,7 @@ body{
 }
 .caja1{
     width: fit-content;
-    height: 400px;
+    height: 495px;
     margin-top: 60px;
     text-align: center;
     background: rgba(255, 255, 255, 0.353);
@@ -24,6 +24,13 @@ body{
     color: white;
     font-size: 15pt;
     font-weight: 700;
+}
+.lista{
+    overflow: auto;
+    height: 400px;
+}
+.lista::-webkit-scrollbar{
+    width: 1px;
 }
 .lista ol{
     width: 350px;
@@ -89,6 +96,14 @@ ol li a{
     font-size: 15pt;
     font-weight: 700;
 }
+.lista2{
+    width: auto;
+    height: 300px;
+    overflow: auto;
+}
+.lista2::-webkit-scrollbar{
+    width: 1px;
+}
 .lista2 ol{
     width: 300px;
     margin-right: 40px;
@@ -97,13 +112,14 @@ ol li a{
 .lista2 ol li{
     background: white;
     list-style: none;
-    height: 40px;
+    height: auto;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 10px;
     padding-right: 7px;
+    
 }
 .lista2 ol li a{
     background: rgb(4, 176, 4);

@@ -22,11 +22,21 @@
     border-radius:15px;
 }
 .titulo{
+    
     padding-top: 3px;
     color: white;
     font-size: 15pt;
     font-weight: 700;
 }
+.lista{
+    overflow: auto;
+    width: auto;
+    height: 310px;
+}
+.lista::-webkit-scrollbar{
+    width: 1px;
+}
+
 .lista ol{
     width: 350px;
     margin-right: 40px;
@@ -135,8 +145,9 @@ ol li a{
 .sitio .formulario .form{
     padding: 20px 0px;
 }
-.sitio input{
+.sitio select{
     width: 230px;
+    height:30px;
     border-radius:7px;
 }
 .sitio .enviar{
@@ -144,11 +155,18 @@ ol li a{
     justify-content: end;
     border: none;
 }
-.enviar input{
+.enviar select{
     width: 60px;
     background: green;
     color: white;
     border: none;
     font-weight: 600;
     padding: 8px;
+}
+#botonEnviar{
+    background:green;
+    color: white;
+    border: none;
+    padding: 7px;
+    border-radius:8px;
 }

@@ -1,4 +1,4 @@
-<?php include '../php/puntos-turista-bd.php';?>
+<?php include '../../php/puntos-turista-bd.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,7 @@
 <body>
   <div class="menu">
     <?php 
-    include '/xampp/xampp/htdocs/360/ruta360/php/include/men-user-extern.php';
+    include '../../php/include/men-user-extern.php';
     ?>
   </div>
   <div class="contenedor1">
@@ -55,7 +55,7 @@
                  $resutados = mysqli_query($ared, $consult);
              
                  while ($mostrar = mysqli_fetch_array($resutados)) {?>
-              <li><p>echo $mostrar['Nombre'];</p><a href="">abrir</a></li>
+              <li><p><?php echo $mostrar['Rutas'];?></p><a href="">abrir</a></li>
               <?php } ?>
             </ol>
           </div>

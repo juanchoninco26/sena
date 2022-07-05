@@ -1,4 +1,4 @@
-<?php include '../php/puntos-turista-bd.php';?>
+<?php include '../../php/puntos-turista-bd.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,7 @@
 <body>
     <div class="menu-">
     <?php 
-    include '/xampp/xampp/htdocs/360/ruta360/php/include/men-user-extern.php';
+    include '../../php/include/men-user-extern.php';
     ?>
     </div>
     <div class="content2">
@@ -38,34 +38,16 @@
         <br>
         <div class="productos1">
             <div class="product">
+                <?php  
+                    $consult ="SELECT * FROM lugares_turisticos"; 
+                    $resutados = mysqli_query($ared, $consult);
+                    while ($mostrar = mysqli_fetch_array($resutados)) {
+                ?>
                 <div class="info-">
                     <div class="boton"><button>X Quitar</button></div>
-                    <div><p>mano del Gigante</p></div>
+                    <div><p><?php echo $mostrar['Nombre']; ?></p></div>
                 </div>
-                <div class="info-">
-                    <div class="boton"><button>X Quitar</button></div>
-                    <div><p>mano del Gigante</p></div>
-                </div>
-                <div class="info-">
-                    <div class="boton"><button>X Quitar</button></div>
-                    <div><p>mano del Gigante</p></div>
-                </div>
-                <div class="info-">
-                    <div class="boton"><button>X Quitar</button></div>
-                    <div><p>mano del Gigante</p></div>
-                </div>
-                <div class="info-">
-                    <div class="boton"><button>X Quitar</button></div>
-                    <div><p>mano del Gigante</p></div>
-                </div>
-                <div class="info-">
-                    <div class="boton"><button>X Quitar</button></div>
-                    <div><p>mano del Gigante</p></div>
-                </div>
-                <div class="info-">
-                    <div class="boton"><button>X Quitar</button></div>
-                    <div><p>mano del Gigante</p></div>
-                </div>
+                <?php } ?>
             </div>
             <br>
             <div class="compra">

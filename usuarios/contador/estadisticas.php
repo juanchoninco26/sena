@@ -1,4 +1,4 @@
-<?php include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php'?>
+<?php include '../../php/puntos-turista-bd.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +15,10 @@ session_start();
 if ($_SESSION['Id_cargo'] ==3 ){
 ?>
     <?php  
-    include '/xampp/xampp/htdocs/360/ruta360/php/include/menu-contador.php';
+    include '../../php/include/menu-contador.php';
     ?>
     <?php  
-    include '/xampp/xampp/htdocs/360/ruta360/php/vista/estadisticas.php';
+    include '../../php/vista/estadisticas.php';
     ?>
 <?php } else{
     header('Location:/login.php'); 
