@@ -1,4 +1,4 @@
-<?php include '/xampp/htdocs/Trabajo Sena/SENA/php/bd.php';
+<?php include '../php/puntos-turista-bd.php';
 //programación de boton de promocion
 if (isset($_GET['Id_promocion'])) {
     $id=$_GET['Id_promocion'];
