@@ -1,3 +1,5 @@
+<?php include ("../php/puntos-turista-bd.php")?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,22 +11,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="/Trabajo Sena/SENA/estilos/EstilosSitios2.css">
+    <link rel="stylesheet" href="../estilos/EstilosSitios2.css">
 </head>
 <body>
-  <body background="/Trabajo Sena/SENA/imagenes/Mirador2.png" bgcolor="aqua"></body>
+  <body background="../imagenes/Mirador2.png" bgcolor="aqua"></body>
     <header>
         <div> 
-           <img src="/Trabajo Sena/SENA/imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
+           <img src="../imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
            <h1>Ruta 360 Gigante</h1>
         </div>
  
         <nav id="menu-h">
           <ul>
-            <li><a target="blank" href="/Trabajo Sena/SENA/Index.php"><img src="/Trabajo Sena/SENA/imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
-            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Sitios.php">  Sitios</a></li>
-            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Paquetes.php">  Paquetes</a></li>
-            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Carrito.php"><img src="/Trabajo Sena/SENA/imagenes/LC-PNG.png" style="width: 24px; height: 24px;">  Carrito</a></li>
+            <li><a target="blank" href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
+            <li><a target="blank" href="../PaginaPrincipal/Sitios.php">  Sitios</a></li>
+            <li><a target="blank" href="../PaginaPrincipal/Paquetes.php">  Paquetes</a></li>
+            <li><a target="blank" href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">  Carrito</a></li>
            </ul>
         </nav>
     </header>
@@ -81,13 +83,13 @@
 
             <nav id="Reserva"> 
               <ul>
-                <li><a href="/Trabajo Sena/SENA/PaginaPrincipal/Carrito.php"> Reservar Ahora </a></li>
+                <li><a href="../PaginaPrincipal/Carrito.php"> Reservar Ahora </a></li>
               </ul>
             </nav>
 
             <nav id="Carrito"> 
              <ul>
-              <li><a target="blank" href=""><img src="/Trabajo Sena/SENA/imagenes/LC-PNG.png" style="width: 24px; height: 24px;"> Agregar al carrito</a></li>
+              <li><a target="blank" href=""><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;"> Agregar al carrito</a></li>
              </ul>
            </nav>
 
@@ -99,14 +101,14 @@
          <aside>
             <nav id="boton"> 
                 <ul>
-                  <li><a href="/Trabajo Sena/SENA/PaginaPrincipal/Sitios.php"> <<< Volver </a></li>
+                  <li><a href="../PaginaPrincipal/Sitios.php"> <<< Volver </a></li>
                 </ul>
               </nav>
 
               <div class="Ubicación">
                 <div class="Caja"> 
                 <ul>
-                 <a href="https://www.google.com/maps/place/Mirador+La+Mano+del+Gigante/@2.4144251,-75.4861108,15z/data=!4m5!3m4!1s0x0:0xc4466883657f3f23!8m2!3d2.4144251!4d-75.4861108"><img src="/Trabajo Sena/SENA/imagenes/Ubicación.png"></a>
+                 <a href="https://www.google.com/maps/place/Mirador+La+Mano+del+Gigante/@2.4144251,-75.4861108,15z/data=!4m5!3m4!1s0x0:0xc4466883657f3f23!8m2!3d2.4144251!4d-75.4861108"><img src="../imagenes/Ubicación.png"></a>
                 </ul> 
                 </div>
               </div> 
@@ -117,13 +119,13 @@
                   <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="/Trabajo Sena/SENA/imagenes/ManoDelGigante.png" width="50%" height="300px" class="d-block w-100" alt="banner1">
+                        <img src="../imagenes/ManoDelGigante.png" width="50%" height="300px" class="d-block w-100" alt="banner1">
                       </div>
                       <div class="carousel-item">
-                        <img src="/Trabajo Sena/SENA/imagenes/Manodelgigante2.png" width="50%" height="300px" class="d-block w-100" alt="banner2">
+                        <img src="../imagenes/Manodelgigante2.png" width="50%" height="300px" class="d-block w-100" alt="banner2">
                       </div>
                       <div class="carousel-item">
-                        <img src="/Trabajo Sena/SENA/imagenes/ManoDelGigante3.png" width="50%" height="300px" class="d-block w-100" alt="banner3">
+                        <img src="../imagenes/ManoDelGigante3.png" width="50%" height="300px" class="d-block w-100" alt="banner3">
                       </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
@@ -152,13 +154,13 @@
                               <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                   <div class="carousel-item active">
-                                    <a href="/Trabajo Sena/SENA/PaginaPrincipal/Sitios2.html"><img src="/Trabajo Sena/SENA/imagenes/Manodelgigante2.png" class="d-block w-100" alt="baneer1"></a>
+                                    <a href="../PaginaPrincipal/Sitios2.html"><img src="../imagenes/Manodelgigante2.png" class="d-block w-100" alt="baneer1"></a>
                                   </div>
                                   <div class="carousel-item">
-                                    <a href="/Trabajo Sena/SENA/PaginaPrincipal/Sitios2.html"><img src="/Trabajo Sena/SENA/imagenes/ManoDelGigante3.png" class="d-block w-100" alt="banner2"></a>
+                                    <a href="../PaginaPrincipal/Sitios2.html"><img src="../imagenes/ManoDelGigante3.png" class="d-block w-100" alt="banner2"></a>
                                   </div>
                                   <div class="carousel-item">
-                                    <a href="/Trabajo Sena/SENA/PaginaPrincipal/Sitios2.html"><img src="/Trabajo Sena/SENA/imagenes/ManoDelGigante4.png" class="d-block w-100" alt="banner3"></a>
+                                    <a href="../PaginaPrincipal/Sitios2.html"><img src="../imagenes/ManoDelGigante4.png" class="d-block w-100" alt="banner3"></a>
                                   </div>
                                 </div>
                               </div>
