@@ -1,4 +1,4 @@
-<?php include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php'?>
+<?php include __DIR__.'/php/puntos-turista-bd.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +20,7 @@
         <div class="contenedor">
             <div class="centrar">
                 <div class="img-centro">
-                    <img src="imagenes/360.png">
+                    <img src="imagenes/logo-360.png">
                 </div>
                 <form class="formulario" action="/php/login2.php" method="POST">
                     <div class="letra2">

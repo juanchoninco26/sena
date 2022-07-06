@@ -1,4 +1,4 @@
-<?php include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php'?>
+<?php include '../../php/puntos-turista-bd.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,12 +18,12 @@ if ($_SESSION['Id_cargo'] ==1){
 ?> 
    
     <?php 
-    include '/xampp/xampp/htdocs/360/ruta360/php/include/menu.php';
+    include '../../php/include/menu.php';
     ?>
 
     <!-- php contiene el munu-->
     <?php 
-    include '/xampp/xampp/htdocs/360/ruta360/php/vista/editar-sitios.php';
+    include '../../php/vista/editar-sitios.php';
     ?>
 <?php } else{
     header('Location:/login.php'); 

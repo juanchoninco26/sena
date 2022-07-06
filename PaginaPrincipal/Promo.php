@@ -28,7 +28,11 @@
     </header>
    <main> 
        <div class="caja1">
+<<<<<<< HEAD
        <form class="promo" action="../php/promo.php" method="post">
+=======
+       <form class="promo" action="/Trabajo Sena/SENA/php/promo.php" method="post">
+>>>>>>> d9d0045b7a126d1d3159cbc59e2e40dbbc0100d9
           <h2>¡Promoción del mes!</h2>
           <div class="Parrafo">
             <ul> 
@@ -44,7 +48,11 @@
          </div>
       <aside>
             <div class="img2">
+<<<<<<< HEAD
               <img src="../imagenes/Imagen1.png" width="250px" height="360px" alt="" style="border-radius: 20px">
+=======
+              <img src="/Trabajo Sena/SENA/imagenes/Imagen1.png" width="250px" height="360px" alt="" style="border-radius: 20px">
+>>>>>>> d9d0045b7a126d1d3159cbc59e2e40dbbc0100d9
             </div>
 
          <div class="Botton">
