@@ -23,23 +23,23 @@
                 <div class="img-centro">
                     <img src="/imagenes/logo-360.png">
                 </div>
-                <form class="formulario" action="" method="POST">
+                <form class="formulario" action="/php/guardar_dat.php" method="POST">
                     <div class="user">
                         <h2>Nombre</h2>
-                        <input type="text" placeholder="" name="username">
+                        <input type="text" placeholder="" name="nombre">
                         <h2>Correo</h2>
-                        <input type="text" placeholder="" name="username">
+                        <input type="text" placeholder="" name="correo">
                         <h2>Identificación</h2>
-                        <input type="text" placeholder="" name="username"> 
+                        <input type="text" placeholder="" name="identificacion"> 
                     </div>
                     <div class="password">
                         <h2>Contraseña</h2>
-                        <input type="password" placeholder="" name="password">
+                        <input type="password" placeholder="" name="contraseña">
                         <div class="password">
                         <h2>Repetir&nbsp&nbspContraseña</h2>
-                        <input type="password" placeholder="" name="password">  
+                        <input type="password" placeholder="" name="repContraseña">  
                     </div>
-                    <button type="submit" class="login" name="loguin2"><a>Registrarse</a></button>
+                    <button type="submit" class="login" name="registrarse"><a>Registrarse</a></button>
                 </form>
                 <script></script>
             </div>

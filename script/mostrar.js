@@ -15,7 +15,6 @@ function obtener(){
   });
 }
 
-
 const $seleccionArchivos = document.querySelector("#seleccionArchivos"),
   $imagenPrevisualizacion = document.querySelector("#imagenPrevisualizacion");
 

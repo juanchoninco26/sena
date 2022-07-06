@@ -1,4 +1,6 @@
-<?php include '../../php/puntos-turista-bd.php'; ?>
+<?php include '../../php/puntos-turista-bd.php'; 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,8 +46,12 @@
   <div class="contenedor2">
     <div class="info">
       <div class="usuario">
-        <h3>usuario</h3>
-        <p>nombre</p>
+      <?php 
+              echo "<h3>usuario</h3>";
+                if($nombre=$_SESSION['Nombre']){
+                   echo "<p>$nombre</p>";
+                }
+            ?>
       </div>
       <div class="foto">
         <img src="/imagenes/user.svg" alt="">
