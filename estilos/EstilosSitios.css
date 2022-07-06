@@ -1,10 +1,9 @@
 body{
-    background:#DAF7A6; 
-    background-image: url(/ruta360/imagenes/Recurso2.png.png);
     background-repeat: repeat-y;
     background-repeat:no-repeat;
     background-position:top;
     background-size: 600px;
+    background-color:#DAF7A6; 
 }   
 
 header{
@@ -57,12 +56,18 @@ header a:hover{
 }
 
 main {
-   width: 100%;
+   width: auto;
    height: 400px;
-   display: flex;
-   overflow-x:auto;
+   overflow:auto;
+   margin-top:-10px;
+   display:flex;
+   justify-content: space-between;
 }
 
+main::-webkit-scrollbar {
+    width: 1px;
+    
+   }
 
 main .caja {
         width: 300px;
