@@ -1,3 +1,5 @@
+<?php include ("../php/puntos-turista-bd.php")?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +28,7 @@
     </header>
    <main> 
        <div class="caja1">
+       <form class="promo" action="/Trabajo Sena/SENA/php/promo.php" method="post">
           <h2>¡Promoción del mes!</h2>
           <div class="Parrafo">
             <ul> 
@@ -40,26 +43,14 @@
           </div>
          </div>
       <aside>
-         <div class="caja"> 
-         <div class="img">
-           <div class="img2">
-             <img src="/Trabajo Sena/SENA/imagenes/Mirador.png" alt="">
+            <div class="img2">
+              <img src="/Trabajo Sena/SENA/imagenes/Imagen1.png" width="250px" height="360px" alt="" style="border-radius: 20px">
             </div>
-         </div> 
-          <div class="subcaja">
-             <div class="texto">
-              <h2>Tierra de <br> 
-                 miradores</h2> 
-              <p>Mano del gigante, city<br> 
-                 tour, mirador la cacica,<br> 
-                 mirador brisas de mirt-<br>hayu 
-                 y senos de mirthayu.</p> 
-             </div>
-          </div>
-         </div>
+
          <div class="Botton">
             <a href="/Trabajo Sena/SENA/PaginaPrincipal/Carrito.php"><h5>Reservar</h5></a> 
            </div>
+           </form>
       </aside>   
    </main> 
  <body>
