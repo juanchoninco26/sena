@@ -4,6 +4,7 @@
 }
 body{
     display: flex;
+    background:rgb(200, 219, 157);
 }
 .body{
     display: grid;

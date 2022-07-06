@@ -18,7 +18,19 @@ echo (filter_var($correo[1], FILTER_VALIDATE_EMAIL) ? 'Es email' : 'No es email'
 
   //comprobamos que el resulatado sea correcto para recargar la pagina con header 
   if ($resultado) {
+<<<<<<< HEAD
     header("location:../Index.php");
+=======
+<<<<<<< HEAD
+    header("location:../Index.php");
+=======
+<<<<<<< HEAD
+    header("location:../Index.php");
+=======
+    header("location:/Trabajo Sena/SENA/Index.php");
+>>>>>>> e25be13d660ca10dee4791c05b8a23b5f7f7ee74
+>>>>>>> d9d0045b7a126d1d3159cbc59e2e40dbbc0100d9
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
 }else {
     echo 'mal';
 }

@@ -1,8 +1,32 @@
 <?php 
+
 include '..\php\puntos-turista-bd.php';
 session_start();
 //ver video:https://www.youtube.com/watch?v=pn2v9lPakHQ
 
+//reservaciones:reservas pendientes 
+if (isset($_POST['reprogramar'])){
+    $reprogramar=$_POST['reprogramar'];
+    $reserva=$_POST['reserva'];
+
+    $lista="UPDATE reservas SET reprogramar='$reprogramar' WHERE id_reservas = '$reserva'";
+    $resultado=mysqli_query($ared,$lista) or die("error:". mysqli_error($ared));
+
+    if ($resultado) {
+        if ($_SESSION['Id_cargo'] ==1){
+            header('Location: /usuarios/gerente/reservaciones.php');
+        }
+        if ($_SESSION['Id_cargo'] ==2){
+            header('Location: /usuarios/asesor/reservaciones.php');
+        }
+        if ($_SESSION['Id_cargo'] ==3){
+            header('Location: /usuarios/contador/reservaciones.php');
+        }
+        
+    }else {
+        echo 'mal';
+    }
+}
 //guardar: editar sitios 
 if (isset($_POST['editar-sitios'])) {
     $nombre=$_POST['nombre'];
@@ -123,13 +147,31 @@ if(isset($_POST['crear_usuario'])){
     $nacimiento=$_POST['edad'];
     $telefono=$_POST['telefono'];
     $cargo=$_POST['cargo'];
-
-    $fotografia = getimagesize($_FILES['foto']['tmp_name']);
-    $fotografia=$_FILES['foto']['tmp_name'];
-    $imgcontenido=addslashes(file_get_contents($fotografia));
+    $fotografia="";
+    if(isset ($_FILES['foto'])){
+       //como subir foto al servidor: https://www.youtube.com/watch?v=zFqOFTTQs20
+        $file=$_FILES['foto'];
+        $name=$file['name'];
+        $tipo=$file['type'];
+        $tamano=$file['size'];
+        $ruta=$file["tmp_name"];
+        $dimension=getimagesize($ruta);
+        $width=$dimension[0];
+        $height=$dimension[1];
+        $carpeta="../avatar";
+        if($tipo != "image/jpg" && $tipo != "image/JPG" && $tipo != "image/jpeg" && $tipo != "image/png"){
+            echo "el archivo subido no es una foto";
+        }else if($tamano > 3*1024*1024){
+            echo "el tamaño debe ser menor a 3MB";
+        }else{
+            $src = "$carpeta/$name";
+            move_uploaded_file($ruta,$src);
+            $fotografia="$carpeta/$name";
+        }
+    }
 
     $lista="INSERT INTO empleados(Id_empleado, Nombre, Contraseña, Fecha_nacimiento, Telefono, Fotografia, Id_cargo) 
-    VALUES ('', '$nombre', '$contraseña', '$nacimiento', '$telefono', '$imgcontenido', '$cargo')";
+    VALUES ('', '$nombre', '$contraseña', '$nacimiento', '$telefono', '$fotografia', '$cargo')";
     $resultado= mysqli_query($ared,$lista) or die ("error: ". mysqli_error($ared));
 
     if ($resultado){
@@ -159,23 +201,38 @@ if (isset($_POST['editar_perfil'])){
     $fecha=$ared->real_escape_string($_POST['edad']);
     $telefono=$ared->real_escape_string($_POST['telefono']);
     $correo=$ared->real_escape_string($_POST['correo']);
-    
-    $fotografia = getimagesize($_FILES["foto"]["tmp_name"]);
-    $fotografia=$_FILES['foto']['tmp_name'];
-    $imgcontenido=addslashes(file_get_contents($_FILES['foto']['tmp_name']));
-    
-    //youtube.com/watch?v=Ct6K4wRjlQQ
+    $fotografia=$_POST['foto'];
+     //youtube.com/watch?v=Ct6K4wRjlQQ
     
     if ($contraseña==$contraseña2){
+        //como subir foto al servidor: https://www.youtube.com/watch?v=zFqOFTTQs20
+        $file = $_FILES['foto'];
+        $name = $file['name'];
+        $tipo = $file['type'];
+        $tamano = $file['size'];
+        $ruta = $file["tmp_name"];
+        $dimension = getimagesize($ruta);
+        $width = $dimension[0];
+        $height = $dimension[1];
+        $carpeta = "../avatar";
+        if ($tipo != "image/jpg" && $tipo != "image/JPG" && $tipo != "image/jpeg" && $tipo != "image/png") {
+            echo "el archivo subido no es una foto";
+        } else if ($tamano > 3 * 1024 * 1024) {
+            echo "el tamaño debe ser menor a 3MB";
+        } else {
+            $src = "$carpeta/$name";
+            move_uploaded_file($ruta, $src);
+            $fotografia = "$carpeta/$name";
+        }
         
         $nombre1= $_SESSION['Nombre'];
-        $lista="UPDATE empleados SET Nombre = '$nombre', Contraseña='$contraseña', Fecha_nacimiento='$fecha', Telefono='$telefono', Fotografia='$imgcontenido', correo='$correo' WHERE  Id_empleado = '$cedula'"; 
+        $lista="UPDATE empleados SET Nombre = '$nombre', Contraseña='$contraseña', Fecha_nacimiento='$fecha', Telefono='$telefono', Fotografia='$fotografia', correo='$correo' WHERE  Id_empleado = '$cedula'"; 
         $resultado= mysqli_query($ared,$lista) or die ("error: ". mysqli_error($ared));
 
         if ($resultado) {
             session_unset();
             session_destroy();
-            header("location:/login.php"); 
+            header("location:/login.php");
          }else{
             echo "error". mysqli_error($ared);
         }
@@ -189,12 +246,30 @@ if (isset($_POST['editar_perfil'])){
             echo "<script src='/script/mensaje1.js'></script>";
         }
         if($rows['Id_cargo']==2){
-            echo "<script src='/script/mensaje2.js'> </script>";
+            echo "<script src='/script/mensaje2.js'></script>";
         }
         if($rows['Id_cargo']==3){
-            echo "<script src='/script/mensaje3.js'> </script>";
+            echo "<script src='/script/mensaje3.js'></script>";
         }
         
     } 
+}
+
+//--------------------- pagina principal ---------------------
+if(isset($_POST['registrarse'])){
+    $nombre=$ared->real_escape_string($_POST['nombre']);
+    $correo=$ared->real_escape_string($_POST['correo']);
+    $identifiacion=$ared->real_escape_string($_POST['identificacion']);
+    $contraseña=$ared->real_escape_string($_POST['contraseña']);
+    $repContraseña=$ared->real_escape_string($_POST['repContraseña']);
+
+    $lista="INSERT INTO registro_turista(id_turista,Nombre,Contraseña,Fecha_nacimiento,Telefono,Correo_electronico,Fotografia,Puntos_acumulados) 
+    VALUES ('$identifiacion','$nombre','$contraseña','','','','','')";
+    $resultado= mysqli_query($ared,$lista) or die ("error: ". mysqli_error($ared));
+
+    if ($resultado) {
+
+        header('Location: /PaginaPrincipal/login/registrarse.php');
+    }
 }
 ?>

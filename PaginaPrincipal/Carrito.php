@@ -29,11 +29,27 @@
 
     <main>
        <div class="Carrito"> 
+<<<<<<< HEAD
         <img src="../imagenes/Carrito2.png.png" alt="Carrito">
         </div>
         <h1>Carrito</h1> 
         <div class="Caja">
         <form class="eliminarlugar" action="../php/eliminarlugar.php" method="post">
+=======
+<<<<<<< HEAD
+        <img src="../imagenes/Carrito2.png.png" alt="Carrito">
+        </div>
+        <h1>Carrito</h1> 
+        <div class="Caja">
+        <form class="eliminarlugar" action="../php/eliminarlugar.php" method="post">
+=======
+        <img src="/Trabajo Sena/SENA/imagenes/Carrito2.png.png" alt="Carrito">
+        </div>
+        <h1>Carrito</h1> 
+        <div class="Caja">
+        <form class="eliminarlugar" action="/Trabajo Sena/SENA/php/eliminarlugar.php" method="post">
+>>>>>>> d9d0045b7a126d1d3159cbc59e2e40dbbc0100d9
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
             <!-- mostrar datos de la BD -->
             <?php 
                     $consult ="SELECT*FROM turista_lugares_paquetes;"; 

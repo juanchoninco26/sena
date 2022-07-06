@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 <?php include '../../php/puntos-turista-bd.php';?>
+=======
+<?php include '../../php/puntos-turista-bd.php';
+session_start();
+?>
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +51,11 @@
                     <?php
                       include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php'; 
                         $nombre1= $_SESSION['Nombre'];
+<<<<<<< HEAD
                         $result = $ared->query("SELECT * FROM empleados WHERE Nombre = '$nombre1'");
+=======
+                        $result = $ared->query("SELECT * FROM registro_turista WHERE Nombre = '$nombre1'");
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
                         while($row=mysqli_fetch_assoc($result)){
                             
                     ?>
@@ -66,7 +76,11 @@
         
                             
                             $nombre1= $_SESSION['Nombre'];
+<<<<<<< HEAD
                             $consulta="SELECT *FROM empleados where Nombre='$nombre1'";
+=======
+                            $consulta="SELECT *FROM registro_turista where Nombre='$nombre1'";
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
                             $cons=mysqli_query($ared,$consulta);
                             while($rows=mysqli_fetch_array($cons)) {
                             ?>
@@ -77,7 +91,11 @@
                         <p>Nombre</p>
                         <input type="text" name="nombre" id="" value="<?php echo $rows['Nombre'];?>">
                         <p>Cedula</p>
+<<<<<<< HEAD
                         <input type="text" name="cedula" id="" value="<?php echo $rows['Id_empleado'];?>" >
+=======
+                        <input type="text" name="cedula" id="" value="<?php echo $rows['id_turista'];?>" >
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
                         <p>Contraseña</p>
                         <input type="password" name="contraseña" id="" value="<?php echo $rows['Contraseña'];?>">
                         <p>Repetir Contraseña</p>
@@ -92,7 +110,11 @@
                         <p>Telefono</p>
                         <input type= "number" name="telefono" id="" value="<?php echo $rows['Telefono'];?>">
                         <p>Correo</p>
+<<<<<<< HEAD
                         <input type= "text" name="correo" id="" value="<?php echo $rows['correo'];?>">
+=======
+                        <input type= "text" name="correo" id="" value="<?php echo $rows['Correo_electronico'];?>">
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
                             
                         <p>Foto</p>
                         <input type="file" name="foto" id="seleccionArchivos">

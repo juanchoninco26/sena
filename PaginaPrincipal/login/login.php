@@ -23,7 +23,11 @@
                 <div class="img-centro">
                     <img src="/imagenes/logo-360.png">
                 </div>
+<<<<<<< HEAD
                 <form class="formulario" action="" method="POST">
+=======
+                <form class="formulario" action="/php/login2.php" method="POST">
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
                     <div class="letra2">
                         <h1>INICIAR SESIÓN</h1>
                     </div>
@@ -35,10 +39,17 @@
                         <h2>Contraseña</h2>
                         <input type="password" placeholder="" name="password"> 
                     </div>
+<<<<<<< HEAD
                     <button type="submit" class="login" name="loguin-extern"><a>Entrar</a></button>
                     <p>¿No tienes una cuenta?<a href="/PaginaPrincipal/login/registrarse.php">Crear una.</a></p>
                 </form>
                 <script></script>
+=======
+                    <button type="submit" class="login" id="login" name="loguin-extern"><a>Entrar</a></button>
+                    <p>¿No tienes una cuenta?<a href="/PaginaPrincipal/login/registrarse.php">Crear una.</a></p>
+                </form>
+                <script src='/script/mostrar.js'></script>
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
             </div>
         </div>
     </div>

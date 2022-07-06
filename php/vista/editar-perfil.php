@@ -25,15 +25,16 @@
              </div>
                 <div class="perfil">
                     <div class="img">
+                        <form action="/php/guardar_dat.php"  enctype="multipart/form-data">
                     <?php
                       include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php'; 
                         $nombre1= $_SESSION['Nombre'];
                         $result = $ared->query("SELECT * FROM empleados WHERE Nombre = '$nombre1'");
-                        while($row=mysqli_fetch_assoc($result)){
-                            
+                        while($row=mysqli_fetch_array($result)){
                     ?>
-                      <img src="data:image/jpg;base64,<?php echo base64_encode($row['Fotografia']);?>">
+                      <img src=".$row['Fotografia'].">
                     <?php }?>
+                         </form>
                     </div>
                 </div>
             </div>
@@ -41,13 +42,11 @@
         
         <div class="sec3">
             <div class="caj">
-                <form class="mod-datos" action="/php/guardar_dat.php" method="post">
+                <form class="mod-datos" action="/php/guardar_dat.php" method="post" enctype="multipart/form-data">
                             <?php 
                             include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php';
                             //youtube.com/watch?v=Ct6K4wRjlQQ
-                           //www.youtube.com/watch?v=0WJ_qFxeWCg
-        
-                            
+                           //www.youtube.com/watch?v=0WJ_qFxeWCg 
                             $nombre1= $_SESSION['Nombre'];
                             $consulta="SELECT *FROM empleados where Nombre='$nombre1'";
                             $cons=mysqli_query($ared,$consulta);

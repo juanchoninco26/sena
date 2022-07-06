@@ -39,4 +39,27 @@ if (isset($_POST['loguin'])){
             header('Location:/login.php');    
         }
 }
+if (isset($_POST['loguin-extern'])){
+    $nombre = $_POST['username'];
+    $contraseña=$_POST['password'];
+    session_start();
+    $_SESSION['Nombre']=$nombre;
+
+    $consulta="SELECT Nombre,Contraseña FROM registro_turista WHERE Nombre='$nombre' and Contraseña='$contraseña'";
+    $resultado= mysqli_query($ared,$consulta);
+    $filas= mysqli_fetch_array($resultado);
+
+        if($contraseña==$filas['Contraseña']){
+            header('Location:/PaginaPrincipal/login/puntos.php');    
+        }else{
+            echo '<script>
+            var opcion = confirm("Usuario o Contraseña Incorrecta ");
+            if (opcion == true) {
+                window.location.href = "/PaginaPrincipal/login/login.php";
+            } else {
+            window.location.href = "/PaginaPrincipal/login/login.php";
+            }
+            </script>';
+        }
+}
 ?>

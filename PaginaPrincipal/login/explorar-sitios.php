@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 <?php include '../../php/puntos-turista-bd.php';?>
+=======
+<?php include '../../php/puntos-turista-bd.php';
+session_start();
+?>
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +26,17 @@
         <div class="usercaja">
          <div class="info">
            <div class="usuario">
+<<<<<<< HEAD
              <h3>usuario</h3>
              <p>nombre</p>
+=======
+           <?php 
+              echo "<h3>usuario</h3>";
+                if($nombre=$_SESSION['Nombre']){
+                   echo "<p>$nombre</p>";
+                }
+            ?>
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
            </div>
            <div class="foto">
              <img src="/imagenes/user.svg" alt="">
