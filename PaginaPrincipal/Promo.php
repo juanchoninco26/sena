@@ -1,3 +1,5 @@
+<?php include ("../php/puntos-turista-bd.php")?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,27 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Página promoción</title>
-    <link rel="stylesheet" href="/Trabajo Sena/SENA/Estilos/EstilosPromo.css">
+    <link rel="stylesheet" href="../Estilos/EstilosPromo.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
    </head>
 <body>  
     <header>
         <div> 
-           <img src="/Trabajo Sena/SENA/imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
+           <img src="../imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
            <h1>Ruta 360 Gigante</h1>
         </div>
           
         <nav id="menu-h">
           <ul>
-            <li><a target="blank" href="/Trabajo Sena/SENA/Index.php"><img src="/Trabajo Sena/SENA/imagenes/home.png.png" style="width: 22px; height:22px;">Inicio</a></li>
-            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Sitios.php">Sitios</a></li>
-            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Carrito.php"><img src="/Trabajo Sena/SENA/imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
+            <li><a target="blank" href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;">Inicio</a></li>
+            <li><a target="blank" href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
+            <li><a target="blank" href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
+            <li><a target="blank" href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
            </ul>
         </nav>
     </header>
    <main> 
        <div class="caja1">
+       <form class="promo" action="../php/promo.php" method="post">
           <h2>¡Promoción del mes!</h2>
           <div class="Parrafo">
             <ul> 
@@ -40,26 +43,14 @@
           </div>
          </div>
       <aside>
-         <div class="caja"> 
-         <div class="img">
-           <div class="img2">
-             <img src="/Trabajo Sena/SENA/imagenes/Mirador.png" alt="">
+            <div class="img2">
+              <img src="../imagenes/Imagen1.png" width="250px" height="360px" alt="" style="border-radius: 20px">
             </div>
-         </div> 
-          <div class="subcaja">
-             <div class="texto">
-              <h2>Tierra de <br> 
-                 miradores</h2> 
-              <p>Mano del gigante, city<br> 
-                 tour, mirador la cacica,<br> 
-                 mirador brisas de mirt-<br>hayu 
-                 y senos de mirthayu.</p> 
-             </div>
-          </div>
-         </div>
+
          <div class="Botton">
-            <a href="/Trabajo Sena/SENA/PaginaPrincipal/Carrito.php"><h5>Reservar</h5></a> 
+            <a href="../PaginaPrincipal/Carrito.php"><h5>Reservar</h5></a> 
            </div>
+           </form>
       </aside>   
    </main> 
  <body>
@@ -70,10 +61,10 @@
      </div> 
       <div class="redes">
          <ul class="sociales">
-          <li><a href="https://www.facebook.com/Ruta360gigante/"><img src="/Trabajo Sena/SENA/imagenes/LogoFacebook.png.png"width="50px" height="50px"></a></li> 
-          <li><a href="https://www.instagram.com/ruta360gigante/"><img src="/Trabajo Sena/SENA/imagenes/LogoInstagram.png.png"width="50px" height="50px"></a></li>
-          <li><a href="https://api.whatsapp.com/send?phone=573203432927&app=facebook&entry_point=page_cta"><img src="/Trabajo Sena/SENA/imagenes/LogoWhatsapp.png.png"width="50px" height="50px"></a></li>
-          <li><a href="https://www.youtube.com/channel/UCYC0Syd3ESTtsBigvNC7oyg"><img src="/Trabajo Sena/SENA/imagenes/LogoYouTube.png.png"width="50px" height="50px"></a></li>
+          <li><a href="https://www.facebook.com/Ruta360gigante/"><img src="../imagenes/LogoFacebook.png.png"width="50px" height="50px"></a></li> 
+          <li><a href="https://www.instagram.com/ruta360gigante/"><img src="../imagenes/LogoInstagram.png.png"width="50px" height="50px"></a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=573203432927&app=facebook&entry_point=page_cta"><img src="../imagenes/LogoWhatsapp.png.png"width="50px" height="50px"></a></li>
+          <li><a href="https://www.youtube.com/channel/UCYC0Syd3ESTtsBigvNC7oyg"><img src="../imagenes/LogoYouTube.png.png"width="50px" height="50px"></a></li>
           <br> 
         </div>
    </footer>

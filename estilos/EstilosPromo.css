@@ -101,49 +101,8 @@ aside {
     border-radius: 20px;
 }
 
-
-.caja {
-    width: 230px;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    border-radius: 20px;
-    color:rgb(255,255,255);
-    justify-content: space-around;
-    background: #34495E;
-    margin-right: 300px;
-    margin-top: 50px;
-}
-
-.subcaja{
-    background: #34495E;
-    margin: 0;
-    padding: 0;
-    height: 180px;
-    border-radius: 20px;
-}
-
-.subcaja .texto h2{
-    font-size: 30px;
-    margin: 5px;
-    margin-left: 40px;
-    color: white;
-    background: #34495E;
-}
-
-
-aside .texto p {
-    color: white;
-    margin: 2px;
-    margin-left: 30px;
-    font-size:15px;
-    text-align: center;
-}
-
-.img img {
-    width: 230px;
-    height: 180px;
-    border-radius: 20px 20px 0px 0px;
+main aside .img2 {
+    margin-right: 100px;
 }
 
 body {

@@ -89,15 +89,18 @@ main h1 {
     display: flex;
 }
 
-.Caja h3 {
+.Caja form  h3 {
     color: #149425;
     font-size: 100px;
+    margin-left: 134px;
+    margin-top: -110px;
 }
 
-.Caja h4 {
+.Caja form h4 {
     color: #149425;
     font-size: 100px;
-    margin-top: 100px;
+    margin-top: -110px;
+    margin-left: 289px;
 }
 
 .Barra a {
@@ -106,7 +109,7 @@ main h1 {
     color: white;
 }
 
-.subcaja {
+form .subcaja {
     width: 90px;
     height: 85px;
     background: black;
@@ -142,13 +145,14 @@ main .Barra:hover{
     margin-left: 5px;
 }
 
-.subcaja1 {
+.Caja form .subcaja1 {
     width: 90px;
     height: 85px;
     background: black;
     border-radius: 15px;
     margin-top: 30px;
     padding: 5px;
+    margin-left: 45px;
 }
 
 .subcaja1 h5 {
@@ -176,13 +180,14 @@ main .Barra:hover{
     margin-left: 5px;
 }
 
-.subcaja3 {
+main .Caja form .subcaja3 {
     width: 90px;
     height: 85px;
-    background: black;
+    background: rgb(2, 2, 6);
     border-radius: 15px;
     margin-top: 30px;
     padding: 5px;
+    margin-left: 45px;
 }
 
 .subcaja3 h5 {
@@ -192,13 +197,14 @@ main .Barra:hover{
     margin-left: 5px;
 }
 
-.subcaja4 {
+main .Caja form .subcaja4 {
     width: 90px;
     height: 85px;
     background: black;
     border-radius: 15px;
-    margin-top: 30px;
+    margin-top: -103px;
     padding: 5px;
+    margin-left: 200px;
 }
 
 .subcaja4 h5 {
@@ -208,115 +214,17 @@ main .Barra:hover{
     margin-left: 5px;
 }
 
-.subcaja5 {
+main .Caja form .subcaja5 {
     width: 90px;
     height: 85px;
     background: black;
     border-radius: 15px;
-    margin-left: -730px;
-    margin-top: 130px;
+    margin-left: 357px;
+    margin-top: -85px;
     padding: 5px;
 }
 
 .subcaja5 h5 {
-    color: white;
-    font-size: 15px;
-    margin-top: 10px;
-    margin-left: 5px;
-}
-
-.subcaja6 {
-    width: 90px;
-    height: 85px;
-    background: black;
-    border-radius: 15px;
-    margin-top: 130px;
-    padding: 5px;
-}
-
-.subcaja6 h5 {
-    color: white;
-    font-size: 15px;
-    margin-top: 10px;
-    margin-left: 5px;
-}
-
-.subcaja7 {
-    width: 90px;
-    height: 85px;
-    background: black;
-    border-radius: 15px;
-    margin-top: 130px;
-    padding: 5px;
-}
-
-.subcaja7 h5 {
-    color: white;
-    font-size: 15px;
-    margin-top: 10px;
-    margin-left: 5px;
-}
-
-.subcaja8 {
-    width: 90px;
-    height: 85px;
-    background: black;
-    border-radius: 15px;
-    margin-top: 130px;
-    padding: 5px;
-}
-
-.subcaja8 h5 {
-    color: white;
-    font-size: 15px;
-    margin-top: 10px;
-    margin-left: 5px;
-}
-
-.subcaja9 {
-    width: 90px;
-    height: 85px;
-    background: black;
-    border-radius: 15px;
-    margin-top: 130px;
-    padding: 5px;
-}
-
-.subcaja9 h5 {
-    color: white;
-    font-size: 15px;
-    margin-top: 10px;
-    margin-left: 5px;
-}
-
-.subcaja10 {
-    width: 90px;
-    height: 85px;
-    background: black;
-    border-radius: 15px;
-    margin-left: 30px;
-    margin-top: 40px;
-    padding: 5px;
-}
-
-.subcaja10 h5 {
-    color: white;
-    font-size: 15px;
-    margin-top: 10px;
-    margin-left: 5px;
-}
-
-.subcaja11 {
-    width: 80px;
-    height: 80px;
-    background: black;
-    border-radius: 15px;
-    margin-left: 30px;
-    margin-top: 40px;
-    padding: 5px;
-}
-
-.subcaja11 h5 {
     color: white;
     font-size: 15px;
     margin-top: 10px;
