@@ -29,18 +29,45 @@
 
     <main>
        <div class="Carrito"> 
+<<<<<<< HEAD
         <img src="../imagenes/Carrito2.png.png" alt="Carrito">
         </div>
         <h1>Carrito</h1> 
         <div class="Caja">
         <form class="eliminarlugar" action="../php/eliminarlugar.php" method="post">
+=======
+<<<<<<< HEAD
+        <img src="../imagenes/Carrito2.png.png" alt="Carrito">
+        </div>
+        <h1>Carrito</h1> 
+        <div class="Caja">
+        <form class="eliminarlugar" action="../php/eliminarlugar.php" method="post">
+=======
+<<<<<<< HEAD
+        <img src="../imagenes/Carrito2.png.png" alt="Carrito">
+        </div>
+        <h1>Carrito</h1> 
+        <div class="Caja">
+        <form class="eliminarlugar" action="../php/eliminarlugar.php" method="post">
+=======
+        <img src="/Trabajo Sena/SENA/imagenes/Carrito2.png.png" alt="Carrito">
+        </div>
+        <h1>Carrito</h1> 
+        <div class="Caja">
+        <form class="eliminarlugar" action="/Trabajo Sena/SENA/php/eliminarlugar.php" method="post">
+>>>>>>> d9d0045b7a126d1d3159cbc59e2e40dbbc0100d9
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
+>>>>>>> f48882082773e3a22af3e8ba6fed53ad7d8effa0
             <!-- mostrar datos de la BD -->
             <?php 
                     $consult ="SELECT*FROM turista_lugares_paquetes;"; 
                     $resutados = mysqli_query($ared, $consult);
 
                     while ($mostrar = mysqli_fetch_array($resutados)) {?>
+<<<<<<< HEAD
            
+=======
+>>>>>>> f48882082773e3a22af3e8ba6fed53ad7d8effa0
            <div class="subcaja">
                    <li><p><?php echo $mostrar['Nombre'];?></p><button><a onclick="return confirm('estas seguro de eliminar este dato?')" href="/php/eliminarlugar.php?id_lugar=<?php echo $mostrar ['id_lugar'];?>">x Quitar</a></button></li>
                 </div> 
@@ -74,6 +101,32 @@
                 <h3>+</h3> 
                </div>
                <?php } ?>
+<<<<<<< HEAD
+=======
+           
+           <div class="subcaja3">
+           <div class="Barra">
+            <a href=""><h6>x Quitar</h6></a> 
+          </div> 
+          <h5>Mano del Gigante</h5>
+        </div>
+        <h3>+</h3> 
+           <div class="subcaja4">
+           <div class="Barra">
+            <a href=""><h6>x Quitar</h6></a> 
+          </div> 
+          <h5>Mano del Gigante</h5>
+        </div>
+          <div class="subcaja5">
+           <div class="Barra">
+            <a href=""><h6>x Quitar</h6></a> 
+          </div> 
+          <h5>Mano del Gigante</h5> 
+        </div>  
+        <h4>+</h4>
+    </div>
+    
+>>>>>>> f48882082773e3a22af3e8ba6fed53ad7d8effa0
     <div class="Total">
         <h5>Total: 800.000</h5> 
          </form>
