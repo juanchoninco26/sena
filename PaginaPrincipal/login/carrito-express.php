@@ -1,18 +1,9 @@
-<<<<<<< HEAD
 <?php
-=======
-<<<<<<< HEAD
-<?php include '../../php/puntos-turista-bd.php';?>
-=======
-<?php 
->>>>>>> 4a4671912a0e29421c49555da31ab8ba4f112b9f
 include '../../php/puntos-turista-bd.php';
 session_start();
 ?>
->>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +12,6 @@ session_start();
     <link href="/estilos/user-externo/carrito-expres.css" rel="stylesheet" type="text/css">
     <title>Carrito Expres</title>
 </head>
-
 <body>
     <div class="menu-">
         <?php
@@ -37,11 +27,9 @@ session_start();
                 <p>Carrito</p>
             </div>
             <div class="us">
-<<<<<<< HEAD
                 <div class="info">
                     <div class="usuario">
                         <?php
-
                         echo "<h3>usuario</h3>";
                         if ($nombre = $_SESSION['Nombre']) {
                             echo "<p>$nombre</p>";
@@ -50,6 +38,7 @@ session_start();
                     </div>
                     <div class="foto">
                         <?php
+                        
                         $nombre1 = $_SESSION['Nombre'];
                         $result = $ared->query("SELECT * FROM registro_turista WHERE Nombre = '$nombre1'");
                         while ($mostrar = mysqli_fetch_array($result)) {
@@ -58,27 +47,6 @@ session_start();
                         <?php } ?>
                     </div>
                 </div>
-=======
-              <div class="info">
-               <div class="usuario">
-<<<<<<< HEAD
-                 <h3>usuario</h3>
-                 <p>nombre</p>
-=======
-                <?php 
-                    
-                    echo "<h3>usuario</h3>";
-                    if($nombre=$_SESSION['Nombre']){
-                       echo "<p>$nombre</p>";
-                    } 
-                ?>
->>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
-               </div>
-               <div class="foto">
-                 <img src="/imagenes/user.svg" alt="">
-               </div>
-              </div>
->>>>>>> 4a4671912a0e29421c49555da31ab8ba4f112b9f
             </div>
         </div>
         <br>
