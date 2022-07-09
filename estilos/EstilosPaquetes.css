@@ -52,6 +52,9 @@ main {
    width: 100%;
    height: 400px;
    display: flex;
+   overflow:auto;
+   display:flex;
+   justify-content: space-between;
 }
 
 .caja {

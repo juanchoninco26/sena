@@ -23,6 +23,25 @@
                 <div class="img-centro">
                     <img src="/imagenes/logo-360.png">
                 </div>
+<<<<<<< HEAD
+                <form class="formulario" action="" method="POST">
+                    <div class="user">
+                        <h2>Nombre</h2>
+                        <input type="text" placeholder="" name="username">
+                        <h2>Correo</h2>
+                        <input type="text" placeholder="" name="username">
+                        <h2>Identificación</h2>
+                        <input type="text" placeholder="" name="username"> 
+                    </div>
+                    <div class="password">
+                        <h2>Contraseña</h2>
+                        <input type="password" placeholder="" name="password">
+                        <div class="password">
+                        <h2>Repetir&nbsp&nbspContraseña</h2>
+                        <input type="password" placeholder="" name="password">  
+                    </div>
+                    <button type="submit" class="login" name="loguin2"><a>Registrarse</a></button>
+=======
                 <form class="formulario" action="/php/guardar_dat.php" method="POST">
                     <div class="user">
                         <h2>Nombre</h2>
@@ -40,6 +59,7 @@
                         <input type="password" placeholder="" name="repContraseña">  
                     </div>
                     <button type="submit" class="login" name="registrarse"><a>Registrarse</a></button>
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
                 </form>
                 <script></script>
             </div>

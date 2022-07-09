@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 <?php
+=======
+<<<<<<< HEAD
+<?php include '../../php/puntos-turista-bd.php';?>
+=======
+<?php 
+>>>>>>> 4a4671912a0e29421c49555da31ab8ba4f112b9f
 include '../../php/puntos-turista-bd.php';
 session_start();
 ?>
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,6 +37,7 @@ session_start();
                 <p>Carrito</p>
             </div>
             <div class="us">
+<<<<<<< HEAD
                 <div class="info">
                     <div class="usuario">
                         <?php
@@ -49,6 +58,27 @@ session_start();
                         <?php } ?>
                     </div>
                 </div>
+=======
+              <div class="info">
+               <div class="usuario">
+<<<<<<< HEAD
+                 <h3>usuario</h3>
+                 <p>nombre</p>
+=======
+                <?php 
+                    
+                    echo "<h3>usuario</h3>";
+                    if($nombre=$_SESSION['Nombre']){
+                       echo "<p>$nombre</p>";
+                    } 
+                ?>
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
+               </div>
+               <div class="foto">
+                 <img src="/imagenes/user.svg" alt="">
+               </div>
+              </div>
+>>>>>>> 4a4671912a0e29421c49555da31ab8ba4f112b9f
             </div>
         </div>
         <br>

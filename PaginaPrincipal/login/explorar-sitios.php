@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+<?php include '../../php/puntos-turista-bd.php';?>
+=======
 <?php include '../../php/puntos-turista-bd.php';
 session_start();
 ?>
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,6 +24,7 @@ session_start();
         ?>
     </div>
     <div class="block">
+<<<<<<< HEAD
         <div class="user">
             <div class="usercaja">
                 <div class="info">
@@ -40,6 +45,36 @@ session_start();
                             <img src="<?php echo $mostrar['Fotografia']; ?>" alt="">
                         <?php } ?>
                     </div>
+=======
+    <div class="user">
+        <div class="usercaja">
+         <div class="info">
+           <div class="usuario">
+<<<<<<< HEAD
+             <h3>usuario</h3>
+             <p>nombre</p>
+=======
+           <?php 
+              echo "<h3>usuario</h3>";
+                if($nombre=$_SESSION['Nombre']){
+                   echo "<p>$nombre</p>";
+                }
+            ?>
+>>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
+           </div>
+           <div class="foto">
+             <img src="/imagenes/user.svg" alt="">
+           </div>
+         </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="subcontainer">
+            <p><strong>sitios</strong> locales</p>
+            <div class="imagenes">
+                <div>
+                    <img src="/imagenes/cascada.jpg" alt="" width="90px" height="96px">
+>>>>>>> 4a4671912a0e29421c49555da31ab8ba4f112b9f
                 </div>
             </div>
         </div>
