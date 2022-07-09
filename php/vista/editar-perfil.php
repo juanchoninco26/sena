@@ -25,16 +25,16 @@
              </div>
                 <div class="perfil">
                     <div class="img">
-                        <form action="/php/guardar_dat.php"  enctype="multipart/form-data">
+                    <form action="/php/guardar_dat.php"  enctype="multipart/form-data">
                     <?php
-                      include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php'; 
+                      include '../../php/puntos-turista-bd.php'; 
                         $nombre1= $_SESSION['Nombre'];
                         $result = $ared->query("SELECT * FROM empleados WHERE Nombre = '$nombre1'");
                         while($row=mysqli_fetch_array($result)){
                     ?>
-                      <img src=".$row['Fotografia'].">
+                      <img src="<?php echo $row['Fotografia'];?>">
                     <?php }?>
-                         </form>
+                    </form>
                     </div>
                 </div>
             </div>

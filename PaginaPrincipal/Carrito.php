@@ -29,19 +29,11 @@
 
     <main>
        <div class="Carrito"> 
-<<<<<<< HEAD
         <img src="../imagenes/Carrito2.png.png" alt="Carrito">
         </div>
         <h1>Carrito</h1> 
         <div class="Caja">
         <form class="eliminarlugar" action="../php/eliminarlugar.php" method="post">
-=======
-        <img src="/Trabajo Sena/SENA/imagenes/Carrito2.png.png" alt="Carrito">
-        </div>
-        <h1>Carrito</h1> 
-        <div class="Caja">
-        <form class="eliminarlugar" action="/Trabajo Sena/SENA/php/eliminarlugar.php" method="post">
->>>>>>> d9d0045b7a126d1d3159cbc59e2e40dbbc0100d9
             <!-- mostrar datos de la BD -->
             <?php 
                     $consult ="SELECT*FROM turista_lugares_paquetes;"; 
@@ -51,10 +43,11 @@
            <div class="subcaja">
                    <li><p><?php echo $mostrar['Nombre'];?></p><button><a onclick="return confirm('estas seguro de eliminar este dato?')" href="/php/eliminarlugar.php?id_lugar=<?php echo $mostrar ['id_lugar'];?>">x Quitar</a></button></li>
                 </div> 
+                <?php } ?>
                 <h5>Mano del Gigante</h5> 
                 <h3>+</h3> 
                </div>
-               <?php } ?>
+
                           
                <?php 
                     $consult ="SELECT*FROM turista_lugares_paquetes;"; 

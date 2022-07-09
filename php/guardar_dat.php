@@ -83,13 +83,31 @@ if (isset($_POST['promociones'])){
     $Descripcion_larga=$_POST['desc-larga'];
     $Fotografia_referencia=$_POST['foto'];
     $Rutas=$_POST['rutas'];
-    $Foto=$_POST['foto'];
-    
-
+    $fotografia=$_POST['foto'];
     $Porcentaje_descuento=$_POST['%desc'];
+
+    $file = $_FILES['foto'];
+    $name = $file['name'];
+    $tipo = $file['type'];
+    $tamano = $file['size'];
+    $ruta = $file["tmp_name"];
+    $dimension = getimagesize($ruta);
+    $width = $dimension[0];
+    $height = $dimension[1];
+    $carpeta = "../img_promociones";
+    $carpeta2="/img_promociones";
+    if ($tipo != "image/jpg" && $tipo != "image/JPG" && $tipo != "image/jpeg" && $tipo != "image/png") {
+        echo "el archivo subido no es una foto";
+    } else if ($tamano > 3 * 1024 * 1024) {
+        echo "el tamaño debe ser menor a 3MB";
+    } else {
+        $src = "$carpeta/$name";
+        move_uploaded_file($ruta, $src);
+        $fotografia = "$carpeta2/$name";
+    }
    
     $lista="INSERT INTO promociones(Id_promocion, Titulo, Descripcion_corta, Descripcion_larga, Fotografia_referencia, Rutas, Foto, Id_empleado, id_turista, Porcentaje_descuento) 
-    VALUES(NULL,'$Titulo','$Descripcion_corta','$Descripcion_larga','$Fotografia_referencia','$Rutas',NULL,NULL,NULL,'$Porcentaje_descuento')";
+    VALUES(NULL,'$Titulo','$Descripcion_corta','$Descripcion_larga','$fotografia','$Rutas',NULL,NULL,NULL,'$Porcentaje_descuento')";
     $resultado= mysqli_query($ared,$lista) or die("error:". mysqli_error($ared));
 
     if ($resultado) {
@@ -159,6 +177,7 @@ if(isset($_POST['crear_usuario'])){
         $width=$dimension[0];
         $height=$dimension[1];
         $carpeta="../avatar";
+        $carpeta2="/avatar";
         if($tipo != "image/jpg" && $tipo != "image/JPG" && $tipo != "image/jpeg" && $tipo != "image/png"){
             echo "el archivo subido no es una foto";
         }else if($tamano > 3*1024*1024){
@@ -166,7 +185,7 @@ if(isset($_POST['crear_usuario'])){
         }else{
             $src = "$carpeta/$name";
             move_uploaded_file($ruta,$src);
-            $fotografia="$carpeta/$name";
+            $fotografia="$carpeta2/$name";
         }
     }
 
@@ -215,6 +234,7 @@ if (isset($_POST['editar_perfil'])){
         $width = $dimension[0];
         $height = $dimension[1];
         $carpeta = "../avatar";
+        $carpeta2="/avatar";
         if ($tipo != "image/jpg" && $tipo != "image/JPG" && $tipo != "image/jpeg" && $tipo != "image/png") {
             echo "el archivo subido no es una foto";
         } else if ($tamano > 3 * 1024 * 1024) {
@@ -222,7 +242,7 @@ if (isset($_POST['editar_perfil'])){
         } else {
             $src = "$carpeta/$name";
             move_uploaded_file($ruta, $src);
-            $fotografia = "$carpeta/$name";
+            $fotografia = "$carpeta2/$name";
         }
         
         $nombre1= $_SESSION['Nombre'];

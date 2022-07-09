@@ -1,5 +1,4 @@
 <?php include ("../php/puntos-turista-bd.php")?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

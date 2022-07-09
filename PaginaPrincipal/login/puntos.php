@@ -54,7 +54,13 @@ session_start();
             ?>
       </div>
       <div class="foto">
-        <img src="/imagenes/user.svg" alt="">
+          <?php
+          $nombre1 = $_SESSION['Nombre'];
+          $result = $ared->query("SELECT * FROM registro_turista WHERE Nombre = '$nombre1'");
+          while ($mostrar = mysqli_fetch_array($result)) {
+          ?>
+            <img src="<?php echo $mostrar['Fotografia']; ?>" alt="">
+          <?php } ?>
       </div>
     </div>
     <div class="codigo">
