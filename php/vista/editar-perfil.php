@@ -16,8 +16,10 @@
                 //el video muestra quien inicia el software
                 //session_start() esta en el: php/loguin
                 
-                echo "<h3>USUARIO</h3>";
-            
+                include '../../php/include/cargo.php';
+                $cargo=cargo();
+                echo "<h3>$cargo</h3>";
+                
                 if($nombre=$_SESSION['Nombre']){
                     echo "<p>$nombre</p>";
                     } 
@@ -76,25 +78,6 @@
                         <p>Correo</p>
                         <input type= "text" name="correo" id="" value="<?php echo $rows['correo'];?>">
                         <p>Cargo</p>
-                        <?php 
-                        function cargo(){
-                            include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php';
-                            $nombre1= $_SESSION['Nombre'];
-                            $consulta="SELECT *FROM empleados where Nombre='$nombre1'";
-                            $cons=mysqli_query($ared,$consulta);
-                            $rows=mysqli_fetch_array($cons);
-                            if ($rows['Id_cargo']==1) {
-                                 echo "Gerente";                       
-                            }
-                            if ($rows['Id_cargo']==2) {
-                                echo "Asesor";                       
-                            }
-                            if ($rows['Id_cargo']==3) {
-                                echo "Contador";                       
-                            }
-
-                        } 
-                        ?>
                         <input type="text" name="cargo" id="" value="<?php echo cargo();?>" disabled>
                         <p>Foto</p>
                         <input type="file" name="foto" id="seleccionArchivos">

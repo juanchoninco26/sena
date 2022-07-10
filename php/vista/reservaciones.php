@@ -9,20 +9,13 @@
         <div>
             <?php
             //ver en minuto 49,16: https://www.youtube.com/watch?v=fCTd8ilXZGI
-
-            $consulta1 = "SELECT * FROM empleados";
-            $resultados1 = mysqli_query($ared, $consulta1);
-            $filasb = mysqli_fetch_array($resultados1);
-
-            $a = $_SESSION['Nombre'];
-            if ($filasb['Id_cargo'] == $a) {
-                echo "<h3>Administrador</h3>";
-            } elseif ($filasb['Id_cargo'] == $a) {
-                echo "<h3>Aaa</h3>";
-            }
             //ver video:https://www.youtube.com/watch?v=9BLoMGO-XcU
             //el video muestra quien inicia el software
             //session_start() esta en el: php/loguin
+            include '../../php/include/cargo.php';
+            $cargo=cargo();
+            echo "<h3>$cargo</h3>";
+            
             if ($nombre = $_SESSION['Nombre']) {
                 echo "<p>$nombre</p>";
             }
@@ -64,10 +57,8 @@
             </form>
             <ol>
                 <form action="/php/guardar_dat.php" method="POST" class="form">
-
-                    <li>
-                        <p class="tx"><?php $_SESSION['reservas'] = $mostrar['id_reservas'];
-                                        echo $mostrar['id_reservas']; ?></p><a href="/php/confirmar.php?confirmar=<?php echo $mostrar['confirmar']; ?>">Confirmar</a><a onclick="mostrar()">Reprogramar</a>
+                    <li onclick="" name="clik">
+                        <p class="tx"><?php $_SESSION['reservas'] = $mostrar['id_reservas']; echo $mostrar['id_reservas']; ?></p><a href="/php/confirmar.php?confirmar=<?php echo $mostrar['confirmar'];?>">Confirmar</a><a onclick="mostrar()">Reprogramar</a>
                     </li>
                 </form>
             </ol>

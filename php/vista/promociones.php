@@ -32,6 +32,10 @@
             //el video muestra quien inicia el software
             //session_start() esta en el: php/loguin
 
+            include '../../php/include/cargo.php';
+            $cargo=cargo();
+            echo "<h3>$cargo</h3>";
+            
             if ($nombre = $_SESSION['Nombre']) {
                 echo "<p>$nombre</p>";
             }
