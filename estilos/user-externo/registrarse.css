@@ -17,6 +17,19 @@ body::-webkit-scrollbar{
     align-items: center;
     justify-content: center;
 }
+.volver{
+    width: 70px;
+    height: 100%;
+    display: flex;
+    align-self: start;
+}
+.volver a{
+    padding: 10px;
+    font-size: 17pt;
+    color: white;
+    text-decoration: none;
+    align-self: start;
+}
 .raya{
     width:30%;
     height: 9px;

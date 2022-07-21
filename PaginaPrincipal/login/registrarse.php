@@ -12,6 +12,9 @@
 </head>
 <body >
 <div class="caja">
+        <div class="volver">
+           <a href="login.php">volver</a>
+        </div>
         <div> 
             <div class="letra">
                 <h1><strong>REGISTRO.</strong></h1>

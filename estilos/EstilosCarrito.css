@@ -78,7 +78,7 @@ main h1 {
     margin-top:-50px;
     margin-left: 20px;
 }
-
+/*desde aqui*/
 .Caja {
     background:white;
     width: 820px;
@@ -102,7 +102,23 @@ main h1 {
     margin-top: -110px;
     margin-left: 289px;
 }
-
+.eliminarlugar{
+    display: flex;
+}
+.eliminarlugar .subcaja button{
+    font-weight: 300;
+    display: block;
+    align-items: center;
+    float: right;
+    border: none;
+    border-radius: 5px;
+    background: rgb(192, 16, 16);
+    color: white;
+}
+.eliminarlugar .subcaja button a{
+    color: white;
+    text-decoration: none;
+}
 .Barra a {
     list-style: none;
     text-decoration: none;
@@ -111,7 +127,7 @@ main h1 {
 
 form .subcaja {
     width: 90px;
-    height: 85px;
+    height: fit-content;
     background: black;
     border-radius: 15px;
     margin-left: 45px;
