@@ -1,12 +1,13 @@
-<div class="grafico-centro">
+
+<div class="graficocentro">
     <div class="graficos">
-        <p>graficos</p>
+       <canvas id="myChart" width="auto" height="auto"></canvas>
     </div>
     <div class="graficos">
-        <p>graficos</p>
+       <canvas id="graficodos" width="auto" height="auto"></canvas>
     </div>
     <div class="graficos">
-        <p>graficos</p>
+       <canvas id="graficotres" width="auto" height="auto"></canvas>
     </div>
 </div>
 
@@ -44,4 +45,10 @@
     <div class="graficos">
         <p>graficos</p>
     </div>
+    
 </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/script/graficBarras.js"></script>
+<script src="/script/graficRadar.js"></script>
+
+

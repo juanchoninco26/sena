@@ -31,7 +31,7 @@
                     <?php
                       include '../../php/puntos-turista-bd.php'; 
                         $nombre1= $_SESSION['Nombre'];
-                        $result = $ared->query("SELECT * FROM empleados WHERE Nombre = '$nombre1'");
+                        $result = $ared->query ("SELECT * FROM empleados WHERE Nombre = '$nombre1'");
                         while($row=mysqli_fetch_array($result)){
                     ?>
                       <img src="<?php echo $row['Fotografia'];?>">

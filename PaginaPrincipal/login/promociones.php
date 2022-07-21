@@ -33,7 +33,7 @@ session_start();
         <div class="foto">
           <?php
           $nombre1 = $_SESSION['Nombre'];
-          $result = $ared->query("SELECT * FROM registro_turista WHERE Nombre = '$nombre1'");
+          $result = $ared->query ("SELECT * FROM registro_turista WHERE Nombre = '$nombre1'");
           while ($mostrar = mysqli_fetch_array($result)) {
           ?>
             <img src="<?php echo $mostrar['Fotografia']; ?>" alt="">
@@ -50,7 +50,7 @@ session_start();
         ?>
           <div class="card">
             <div class="content1">
-              <img src="<?php echo $mostrar['Fotografia_referencia']; ?>" alt="">
+              <img src="<?php echo $mostrar['Fotografia_referencia'];?>" alt="">
               <p><?php echo $mostrar['Titulo']; ?></p>
               <!--<div class="content2">
               <div class="letras">

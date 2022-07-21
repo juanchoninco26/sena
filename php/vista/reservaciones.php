@@ -40,16 +40,14 @@
             </div>
             <form action="/php/guardar_dat.php" method="POST">
                 <?php
-
                 $consult = "SELECT * FROM reservas";
                 $resultados = mysqli_query($ared, $consult);
-
 
                 while ($mostrar = mysqli_fetch_array($resultados)) {;
                     //$_SESSION['reservas']=$mostrar['id_reservas'];
                 ?>
                     <div id="buscador">
-                        <input type="date" name="reprogramar" id=""><button onclick="ocultar()">enviar</button>
+                        <input type="date" name="reprogramar" id=""><button onclick="ocultar()" >enviar</button>
                         <br>
                         <input type="hidden" name="reserva" value="<?php echo $mostrar['id_reservas']; ?>">
                         <br>
@@ -70,18 +68,23 @@
             <h3> Informacion</h3>
         </div>
         <div class="subinformacion">
-            <!--AQUI CODIGO PHP-->
-            <?php ?>
             <div class="cajita">
                 <p>ruta del cafe</p>
             </div>
+            <?php
+            /*$id=$_SESSION['reservas'];
+            $consult = "UPDATE reservas WHERE id_reservas='$id'";
+            $resultados = mysqli_query($ared, $consult);
+
+            if ($mostrar = mysqli_fetch_array($resultados)) {;*/
+            ?>
             <div class="letras">
                 <p><b>Nombre:</b>Michael Garcia</p>
                 <p><b>N. Identificacion:</b>10032014</p>
-                <p><b>N. Telefono:</b></p>
-                <p><b>Fecha:</b>24/05/2021</p>
+                <p><b>N. Telefono:</b>323234232</p>
+                <p><b>Fecha:</b><?php ?></p>
             </div>
-            <?php ?>
+            <?php //} ?>
         </div>
     </div>
 </div>

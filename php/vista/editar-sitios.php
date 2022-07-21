@@ -23,10 +23,9 @@
                     while ($mostrar = mysqli_fetch_array($resutados)) { ?>
 
                         <li>
-                            <p><?php echo $mostrar['Nombre']; ?></p><button><a onclick="return confirm('estas seguro de eliminar este dato?')" href="/php/eliminar.php?Cod_lugar_turistico=<?php echo $mostrar['Cod_lugar_turistico']; ?>">x Quitar</a></button>
+                            <p><?php echo $mostrar['Nombre']; ?></p><button><a onclick="return confirm('estas seguro de eliminar este dato?')"  href="/php/eliminar.php?Cod_lugar_turistico=<?php echo $mostrar['Cod_lugar_turistico']; ?>">x Quitar</a></button>
                         </li>
                     <?php } ?>
-
                 </ol>
             </div>
         </div>
@@ -34,13 +33,11 @@
             <!-- editar paquetes -->
             <div class="paquetes">
                 <div class="edpq">
-                    <h3>Editar Paquetes</h3>
+                    <h3><a href="/php/vista/editar-paquete-turista.php">Editar Paquetes Turista</a></h3>
                 </div>
                 <div class="slider">
-                    <img src="/imagenes/izquierda.svg" alt="" class="img">
                     <div class="t-paquetes">
                         <!-- tipos de paquetes -->
-
                         <?php
                         $consult = 'SELECT*FROM paquetes_turisticos;';
                         $result = mysqli_query($ared, $consult);
@@ -52,7 +49,6 @@
 
                         <?php } ?>
                     </div>
-                    <img src="/imagenes/derecha.svg" alt="">
                 </div>
                 <form class="formulario1" action="/php/guardar_dat.php" method="post">
                     <p>C.C Turista <input type="text" name="turista"></p>

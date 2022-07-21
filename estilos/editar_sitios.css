@@ -109,10 +109,14 @@ ol li{
     margin: 20px;
     padding-bottom: 150px;
 }
+.slider::-webkit-scrollbar{
+    width: 1px;
+}
 .slider{
     display: flex;
-    height:23px;
-    margin-bottom: 15px;
+    height:40px;
+    margin-bottom: 3px;
+    overflow: auto;
 }
 .t-paquetes {
     width: auto;

@@ -22,20 +22,6 @@
            <li><a target="blank" href="./PaginaPrincipal/Sitios.php">Sitios</a></li>
            <li><a target="blank" href="./PaginaPrincipal/Paquetes.php">Paquetes</a></li>
            <li><a target="blank" href="./PaginaPrincipal/Carrito.php"><img src="./imagenes/LC-PNG.png" style="width: 24px; height: 24px;">  Carrito</a></li>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-           <li><a target="blank" href="./PaginaPrincipal/Carrito.php"><img src="./imagenes/LC-PNG.png" style="width: 24px; height: 24px;">  Carrito</a></li>
-=======
-<<<<<<< HEAD
-           <li><a target="blank" href="./PaginaPrincipal/Carrito.php"><img src="./imagenes/LC-PNG.png" style="width: 24px; height: 24px;">  Carrito</a></li>
-=======
-           <li><a target="blank" href="./PaginaPrincipal/Carrito.php"><img src="/Trabajo Sena/SENA/imagenes/LC-PNG.png" style="width: 24px; height: 24px;">  Carrito</a></li>
->>>>>>> d9d0045b7a126d1d3159cbc59e2e40dbbc0100d9
->>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
->>>>>>> f48882082773e3a22af3e8ba6fed53ad7d8effa0
->>>>>>> 4a4671912a0e29421c49555da31ab8ba4f112b9f
           </ul>
        </nav>
    </header>
@@ -46,8 +32,7 @@
                 <img src="./imagenes/Imagen_principal.png.png" alt="">
               </div>
            </div>  
-             
-           
+            
            <aside>
             <div class="text">
               <h2>30%</h2>
