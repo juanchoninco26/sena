@@ -33,7 +33,7 @@
         </div>
         <h1>Carrito</h1> 
         <div class="Caja">
-        <form class="eliminarlugar" action="../php/eliminarlugar.php" method="post">
+        <form class="eliminarlugar" action="" method="post">
             <!-- mostrar datos de la BD -->
                 <?php 
                     $consult ="SELECT*FROM lugares_turisticos"; 
@@ -41,7 +41,7 @@
 
                     while ($mostrar = mysqli_fetch_array($resutados)) {?>
                 <div class="subcaja">
-                  <button><a onclick="return confirm('estas seguro de eliminar este dato?')" href="/php/eliminarlugar.php?id_lugar=<?php echo $mostrar ['id_lugar'];?>">comprar</a></button>
+                  <button><a href="/php/---?id_lugar=<?php echo $mostrar ['id_lugar'];?>">comprar</a></button>
                    <li><p><?php echo $mostrar['Nombre'];?></p></li>
                 </div> 
                <?php } ?>
