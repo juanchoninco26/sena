@@ -51,10 +51,6 @@
       <aside>
             <div class="img2">
               <img src="../imagenes/Imagen1.png" width="250px" height="360px" alt="" style="border-radius: 20px">
-
-              <img src="../imagenes/Imagen1.png" width="250px" height="360px" alt="" style="border-radius: 20px">
-
-              <img src="../imagenes/Imagen1.png" width="250px" height="360px" alt="" style="border-radius: 20px">
             </div>
 
          <div class="Botton">
