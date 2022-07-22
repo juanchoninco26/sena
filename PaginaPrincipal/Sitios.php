@@ -17,10 +17,10 @@
 <body background="../imagenes/Recurso2.png.png" bgcolor="aqua"></body>
 
 
-    <link rel="stylesheet" href="/Trabajo Sena/SENA/estilos/EstilosSitios.css">
+    <link rel="stylesheet" href="../estilos/EstilosSitios.css">
 </head>
 <body>
-<body background="/Trabajo Sena/SENA/imagenes/Recurso2.png.png" bgcolor="aqua"></body>
+<body background="../imagenes/Recurso2.png.png" bgcolor="aqua"></body>
     <header>
         <div> 
            <img src="../imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
@@ -33,11 +33,6 @@
             <li><a target="blank" href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
             <li><a target="blank" href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
             <li><a target="blank" href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
-
-            <li><a target="blank" href="/Trabajo Sena/SENA/Index.php"><img src="/Trabajo Sena/SENA/imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
-            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Sitios.php">Sitios</a></li>
-            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-            <li><a target="blank" href="/Trabajo Sena/SENA/PaginaPrincipal/Carrito.php"><img src="/Trabajo Sena/SENA/imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
            </ul>
         </nav>
     </header>
