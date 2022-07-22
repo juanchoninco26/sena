@@ -29,34 +29,40 @@
 
     <main>
         <div class="Carrito"> 
-          <img src="../imagenes/Carrito2.png.png" alt="Carrito">
+          <div><img src="../imagenes/Carrito2.png.png" alt="Carrito"></div>
+          
+          <div><h1>&nbsp&nbspCarrito</h1></div> 
         </div>
-        <h1>Carrito</h1> 
-        <div class="Caja">
-        <form class="eliminarlugar" action="" method="post">
-            <!-- mostrar datos de la BD -->
-                <?php 
-                    $consult ="SELECT*FROM lugares_turisticos"; 
-                    $resutados = mysqli_query($ared, $consult);
-
-                    while ($mostrar = mysqli_fetch_array($resutados)) {?>
-                <div class="subcaja">
-                  <button><a href="/php/---?id_lugar=<?php echo $mostrar ['id_lugar'];?>">comprar</a></button>
-                   <li><p><?php echo $mostrar['Nombre'];?></p></li>
-                </div> 
-               <?php } ?>
-        </form>
-        </div>
-          <div class="Total">
-            <h5>Total: 800.000</h5> 
-          </div>
-          <nav id="Comprar"> 
+        <br>
+        <div class="productos1">
+            <div class="product">
+                <?php
+                $consult = "SELECT * FROM lugares_turisticos";
+                $resutados = mysqli_query($ared, $consult);
+                while ($mostrar = mysqli_fetch_array($resutados)) {
+                ?>
+                    <div class="infom">
+                        <div class="boton"><button>X Quitar</button></div>
+                        <div>
+                            <p><?php echo $mostrar['Nombre'];?></p><p>$<?php echo $mostrar['Precio'];?></p>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+            <br>
+            <div class="compra">
+                <div class="total">
+                    <p>Total: <span>$800.000</span></p>
+                </div>
+                <br>
+                <nav id="Comprar"> 
            <ul>
              <li><a href="../PaginaPrincipal/Pago.php"> Comprar </a></li>
            </ul>
           </nav>
+            </div>
     </main>
-
+    
     <footer>
         <h4>Ruta 360 Gigante - todos los derechos reservados ©</h4> 
         <h5>Síguenos</h5> 

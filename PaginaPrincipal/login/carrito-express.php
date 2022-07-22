@@ -60,7 +60,7 @@ session_start();
                     <div class="info-">
                         <div class="boton"><button>X Quitar</button></div>
                         <div>
-                            <p><?php echo $mostrar['Nombre'];?></p>
+                            <p><?php echo $mostrar['Nombre'];?></p><p>$<?php echo $mostrar['Precio'];?></p>
                         </div>
                     </div>
                 <?php } ?>

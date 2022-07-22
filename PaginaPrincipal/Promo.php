@@ -29,20 +29,12 @@
    <main> 
        <div class="caja1">
        <form class="promo" action="../php/promo.php" method="post">
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
+
+
+
        <form class="promo" action="../php/promo.php" method="post">
-=======
-<<<<<<< HEAD
        <form class="promo" action="../php/promo.php" method="post">
-=======
-       <form class="promo" action="/Trabajo Sena/SENA/php/promo.php" method="post">
->>>>>>> d9d0045b7a126d1d3159cbc59e2e40dbbc0100d9
->>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
->>>>>>> f48882082773e3a22af3e8ba6fed53ad7d8effa0
->>>>>>> 4a4671912a0e29421c49555da31ab8ba4f112b9f
+
           <h2>¡Promoción del mes!</h2>
           <div class="Parrafo">
             <ul> 
@@ -59,20 +51,10 @@
       <aside>
             <div class="img2">
               <img src="../imagenes/Imagen1.png" width="250px" height="360px" alt="" style="border-radius: 20px">
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
+
               <img src="../imagenes/Imagen1.png" width="250px" height="360px" alt="" style="border-radius: 20px">
-=======
-<<<<<<< HEAD
+
               <img src="../imagenes/Imagen1.png" width="250px" height="360px" alt="" style="border-radius: 20px">
-=======
-              <img src="/Trabajo Sena/SENA/imagenes/Imagen1.png" width="250px" height="360px" alt="" style="border-radius: 20px">
->>>>>>> d9d0045b7a126d1d3159cbc59e2e40dbbc0100d9
->>>>>>> 12af2e34aa95221cb6e9e31341951a9a438141f8
->>>>>>> f48882082773e3a22af3e8ba6fed53ad7d8effa0
->>>>>>> 4a4671912a0e29421c49555da31ab8ba4f112b9f
             </div>
 
          <div class="Botton">
