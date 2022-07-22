@@ -1,4 +1,7 @@
-<?php include '../../php/puntos-turista-bd.php'?>
+<?php 
+include '../../php/puntos-turista-bd.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +15,7 @@
 <body>
 <?php
 session_start();
-if ($_SESSION['Id_cargo'] ==1 ){
+if ($_SESSION['Id_cargo']==1 ){
 ?>
 <?php 
     include '../../php/include/menu.php';

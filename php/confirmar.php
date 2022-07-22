@@ -5,8 +5,6 @@ session_start();
 if (isset($_GET['confirmar'])){
     $id=$_GET['confirmar'];
 
-
-
         $confirmar=1;
         $reservas=$_SESSION['reservas'];
         $query ="UPDATE reservas SET confirmar='$confirmar' WHERE id_reservas='$reservas'";

@@ -47,20 +47,40 @@
                     //$_SESSION['reservas']=$mostrar['id_reservas'];
                 ?>
                     <div id="buscador">
-                        <input type="date" name="reprogramar" id=""><button onclick="ocultar()" >enviar</button>
+                        <input type="date" name="reprogramar" id=""><button>enviar</button><button onclick="ocultar()" >X</button>
                         <br>
-                        <input type="hidden" name="reserva" value="<?php echo $mostrar['id_reservas']; ?>">
+                        <input type="hidden" name="reserva" value="<?php $_SESSION['idReserva']=$mostrar['reprogramar']; echo $mostrar['id_reservas']; ?>">
                         <br>
                     </div>
             </form>
             <ol>
                 <form action="/php/guardar_dat.php" method="POST" class="form">
-                    <li onclick="" name="clik">
-                        <p class="tx"><?php $_SESSION['reservas'] = $mostrar['id_reservas']; echo $mostrar['id_reservas']; ?></p><a href="/php/confirmar.php?confirmar=<?php echo $mostrar['confirmar'];?>">Confirmar</a><a onclick="mostrar()">Reprogramar</a>
+                    <li name="clik">
+                        <p onclick="cargardato(<?php $h=$mostrar['id_turista']; echo $h?>)" class="tx"><?php $_SESSION['turista'] = $mostrar['id_turista']; echo $mostrar['id_reservas']; ?></p><a href="/php/confirmar.php?confirmar=<?php echo $mostrar['confirmar'];?>">Confirmar</a><a onclick="mostrar()">Reprogramar</a>
                     </li>
+                    
                 </form>
             </ol>
         <?php } ?>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            //click para mostrar info de la persona seleccionada
+            //https://www.youtube.com/watch?v=Pf2gwnNyq1g
+            //se envia el id optenido a php\id.php
+            function cargardato(id){
+                var url='/php/id.php';
+                $.ajax({
+                    type:'POST',
+                    url:url,
+                    data:'id='+id,
+                    success:function(response){
+                        console.log(response);
+                        document.location.reload();         
+                    }
+                });
+            }
+        </script>
         </div>
     </div>
     <div class="informacion">
@@ -72,19 +92,20 @@
                 <p>ruta del cafe</p>
             </div>
             <?php
-            /*$id=$_SESSION['reservas'];
-            $consult = "UPDATE reservas WHERE id_reservas='$id'";
-            $resultados = mysqli_query($ared, $consult);
+            $id=$_SESSION['j'];
+            $reserva=$_SESSION['idReserva'];
 
-            if ($mostrar = mysqli_fetch_array($resultados)) {;*/
+            $consult = "SELECT * FROM registro_turista WHERE id_turista='$id'";
+            $resultados = mysqli_query($ared, $consult);
+            while($mostrar = mysqli_fetch_array($resultados)){
             ?>
             <div class="letras">
-                <p><b>Nombre:</b>Michael Garcia</p>
-                <p><b>N. Identificacion:</b>10032014</p>
-                <p><b>N. Telefono:</b>323234232</p>
-                <p><b>Fecha:</b><?php ?></p>
+                <p><b>Nombre:</b><?php echo $mostrar['Nombre'];?></p>
+                <p><b>N. Identificacion:</b><?php echo $id;?></p>
+                <p><b>N. Telefono:</b><?php echo $mostrar['Telefono'];?></p>
+                <p><b>Fecha:</b><?php echo $reserva;?></p>
             </div>
-            <?php //} ?>
+            <?php }?>
         </div>
     </div>
 </div>
