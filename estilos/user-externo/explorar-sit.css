@@ -59,14 +59,21 @@ body{
 .subcontainer{
     display: flex;
     align-items: center;
+    width: inherit;
     height: 120px;
 }
+
 .subcontainer p{
     width:90px;
     margin: 30px 12px;
 }
 .container .imagenes{
     display: flex;
+    overflow: auto;
+}
+.imagenes::-webkit-scrollbar{
+    width: 0;
+    height: 0;
 }
 .container .imagenes img{
     margin-right: 10px;

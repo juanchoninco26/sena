@@ -43,45 +43,58 @@ session_start();
                 </div>
             </div>
         </div>
+        <?php 
+        $sitios="sitios";
+        ?>
         <div class="container">
             <div class="subcontainer">
-                <p><strong>sitios</strong> locales</p>
-                <div class="imagenes">
-                    <div>
-                        <img src="/imagenes/cascada.jpg" alt="" width="90px" height="96px">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="subcontainer">
-                <p><strong>sitios</strong> Regionales</p>
-                <div class="imagenes">
-                    <div>
-                        <img src="/imagenes/cascada.jpg" alt="" width="90px" height="96px">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="subcontainer">
-                <p><strong>sitios</strong> Nacionales</p>
-                <div class="imagenes">
-                    <div>
-                        <img src="/imagenes/cascada.jpg" alt="" width="90px" height="96px">
-                    </div>
-                    <div>
-                        <img src="/imagenes/cascada.jpg" alt="" width="90px" height="96px">
-                    </div>
-                    <div>
-                        <img src="/imagenes/cascada.jpg" alt="" width="90px" height="96px">
-                    </div>
-                    <div>
-                        <img src="/imagenes/cascada.jpg" alt="" width="90px" height="96px">
-                    </div>
-                </div>
                 <div>
-                    <img src="/imagenes/derecha.svg" alt="">
+                    <p><strong>sitios</strong> locales</p>
+                </div>
+                <div class="imagenes">
+                    <?php
+                        $resultado3= $ared->query("SELECT * FROM $sitios");
+                        while($mostrar=mysqli_fetch_array($resultado3)){
+                    ?>
+                    <div>
+                        <img src="<?php echo $mostrar['locales'];?>" alt="" width="90px" height="96px">
+                    </div>
+                    <?php }?>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="subcontainer">
+                <div>
+                    <p><strong>sitios</strong> Regionales</p>
+                </div>
+                <div class="imagenes">
+                    <?php
+                        $resultado3= $ared->query("SELECT * FROM $sitios");
+                        while($mostrar=mysqli_fetch_array($resultado3)){
+                    ?>
+                    <div>
+                        <img src="<?php echo $mostrar['nacionales'];?>" alt="" width="90px" height="96px">
+                    </div>
+                    <?php }?>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="subcontainer">
+                <div>
+                    <p><strong>sitios</strong> Nacionales</p>
+                </div>
+                
+                <div class="imagenes">
+                    <?php 
+                        $resultado3= $ared->query("SELECT * FROM $sitios");
+                        while($mostrar=mysqli_fetch_array($resultado3)){
+                    ?>
+                    <div>
+                        <img src="<?php echo $mostrar['nacionales'];?>" alt="" width="90px" height="96px">
+                    </div>
+                    <?php }?>
                 </div>
             </div>
         </div>
