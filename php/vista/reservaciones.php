@@ -58,7 +58,6 @@
                     <li name="clik">
                         <p onclick="cargardato(<?php $h=$mostrar['id_turista']; echo $h?>)" class="tx"><?php $_SESSION['turista'] = $mostrar['id_turista']; echo $mostrar['id_reservas']; ?></p><a href="/php/confirmar.php?confirmar=<?php echo $mostrar['confirmar'];?>">Confirmar</a><a onclick="mostrar()">Reprogramar</a>
                     </li>
-                    
                 </form>
             </ol>
         <?php } ?>
@@ -74,7 +73,7 @@
                     type:'POST',
                     url:url,
                     data:'id='+id,
-                    success:function(response){
+                    success: function(response){
                         console.log(response);
                         document.location.reload();         
                     }
@@ -92,6 +91,7 @@
                 <p>ruta del cafe</p>
             </div>
             <?php
+            //el id se escuentra en: php/id.php
             $id=$_SESSION['j'];
             $reserva=$_SESSION['idReserva'];
 

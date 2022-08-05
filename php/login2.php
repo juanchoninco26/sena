@@ -43,7 +43,7 @@ if (isset($_POST['loguin-extern'])){
     $nombre = $_POST['username'];
     $contraseña=$_POST['password'];
     session_start();
-    $_SESSION['Nombre']=$nombre;
+    $_SESSION['usuarioExterno']=$nombre;
 
     $consulta="SELECT Nombre,Contraseña FROM registro_turista WHERE Nombre='$nombre' and Contraseña='$contraseña'";
     $resultado= mysqli_query($ared,$consulta);

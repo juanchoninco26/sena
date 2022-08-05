@@ -31,6 +31,7 @@ if (isset($_POST['click'])){
     $lista="UPDATE reservas SET reprogramar='$reprogramar' WHERE id_reservas = '$reserva'";
     $resultado=mysqli_query($ared,$lista) or die("error:". mysqli_error($ared));
 }
+
 //guardar: editar sitios 
 if (isset($_POST['editar-sitios'])) {
     $nombre=$_POST['nombre'];

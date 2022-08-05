@@ -5,7 +5,13 @@ session_start();
  que esta ubicado en php\vista\reservaciones.php
 
 */
-$_SESSION['j']=$_POST['id']; 
+$_SESSION['j']=$_POST['id'];
+
+function m(){
+    $_SESSION['codigoDescuento']=$_POST['ed'];
+}
+
+
 
 
 ?>
