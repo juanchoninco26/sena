@@ -40,7 +40,7 @@ session_start();
 
                     echo "<h3>USUARIO</h3>";
 
-                    if ($nombre = $_SESSION['Nombre']) {
+                    if ($nombre = $_SESSION['usuarioExterno']) {
                         echo "<p>$nombre</p>";
                     }
                     ?>
@@ -48,7 +48,7 @@ session_start();
                 <div class="perfil">
                     <div class="img">
                         <?php
-                        $nombre1 = $_SESSION['Nombre'];
+                        $nombre1 = $_SESSION['usuarioExterno'];
                         $result = $ared->query("SELECT * FROM registro_turista WHERE Nombre = '$nombre1'");
                         while ($mostrar = mysqli_fetch_array($result)) {
                         ?>
@@ -68,7 +68,7 @@ session_start();
                     //www.youtube.com/watch?v=0WJ_qFxeWCg
 
 
-                    $nombre1 = $_SESSION['Nombre'];
+                    $nombre1 = $_SESSION['usuarioExterno'];
                     $consulta = "SELECT *FROM registro_turista where Nombre='$nombre1'";
                     $cons = mysqli_query($ared, $consulta);
                     while ($rows = mysqli_fetch_array($cons)) {

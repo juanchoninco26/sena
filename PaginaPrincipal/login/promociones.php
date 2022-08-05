@@ -25,14 +25,14 @@ session_start();
         <div class="usuario">
           <?php
           echo "<h3>usuario</h3>";
-          if ($nombre = $_SESSION['Nombre']) {
+          if ($nombre = $_SESSION['usuarioExterno']) {
             echo "<p>$nombre</p>";
           }
           ?>
         </div>
         <div class="foto">
           <?php
-          $nombre1 = $_SESSION['Nombre'];
+          $nombre1 = $_SESSION['usuarioExterno'];
           $result = $ared->query ("SELECT * FROM registro_turista WHERE Nombre = '$nombre1'");
           while ($mostrar = mysqli_fetch_array($result)) {
           ?>
