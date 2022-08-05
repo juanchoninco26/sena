@@ -61,7 +61,7 @@ session_start();
 
         <div class="sec3">
             <div class="caj">
-                <form class="mod-datos" action="/php/guardar_dat.php" method="post">
+                <form class="mod-datos" action="/php/guardar_dat.php" method="post" enctype="multipart/form-data">
                     <?php
                     include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php';
                     //youtube.com/watch?v=Ct6K4wRjlQQ
@@ -88,7 +88,7 @@ session_start();
                             <p>Fecha de nacimiento</p>
                             <input type="text" name="edad" id="" value="<?php echo $rows['Fecha_nacimiento']; ?>">
                             <div>
-                                <input type="submit" value="Actualizar" name="editar_perfil" onclick="alert('datos actualizados');">
+                                <input type="submit" value="Actualizar" name="editar_usuario" onclick="alert('datos actualizados');">
                             </div>
                         </div>
                         <div class="min-dat">

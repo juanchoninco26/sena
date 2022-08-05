@@ -280,6 +280,7 @@ if (isset($_POST['editar_perfil'])){
 }
 
 //--------------------- pagina principal ---------------------
+//registro
 if(isset($_POST['registrarse'])){
     $nombre=$ared->real_escape_string($_POST['nombre']);
     $correo=$ared->real_escape_string($_POST['correo']);
@@ -295,5 +296,63 @@ if(isset($_POST['registrarse'])){
 
         header('Location: /PaginaPrincipal/login/registrarse.php');
     }
+}
+
+//editar perfil usuario web
+if (isset($_POST['editar_usuario'])){
+    $nombre=$ared->real_escape_string($_POST['nombre']);
+    $cedula=$ared->real_escape_string($_POST['cedula']);
+    $contraseña=$ared->real_escape_string($_POST['contraseña']);
+    $contraseña2=$ared->real_escape_string($_POST['repcontraseña']);
+    $fecha=$ared->real_escape_string($_POST['edad']);
+    $telefono=$ared->real_escape_string($_POST['telefono']);
+    $correo=$ared->real_escape_string($_POST['correo']);
+    $fotografia=$_POST['foto'];
+     //youtube.com/watch?v=Ct6K4wRjlQQ
+    
+    if ($contraseña==$contraseña2){
+        //como subir foto al servidor: https://www.youtube.com/watch?v=zFqOFTTQs20
+        $file = $_FILES['foto'];
+        $name = $file['name'];
+        $tipo = $file['type'];
+        $tamano = $file['size'];
+        $ruta = $file["tmp_name"];
+        $dimension = getimagesize($ruta);
+        $width = $dimension[0];
+        $height = $dimension[1];
+        $carpeta = "../avatar";
+        $carpeta2="/avatar";
+        if ($tipo != "image/jpg" && $tipo != "image/JPG" && $tipo != "image/jpeg" && $tipo != "image/png") {
+            echo "el archivo subido no es una foto";
+        } else if ($tamano > 3 * 1024 * 1024) {
+            echo "el tamaño debe ser menor a 3MB";
+        } else {
+            $src = "$carpeta/$name";
+            move_uploaded_file($ruta, $src);
+            $fotografia = "$carpeta2/$name";
+        }
+        
+        $nombre1= $_SESSION['Nombre'];
+        $lista="UPDATE registro_turista SET Nombre = '$nombre', Contraseña='$contraseña', Fecha_nacimiento='$fecha', Telefono='$telefono', Fotografia='$fotografia', Correo_electronico='$correo' WHERE  id_turista = '$cedula'"; 
+        $resultado= mysqli_query($ared,$lista) or die ("error: ". mysqli_error($ared));
+
+        if ($resultado) {
+            session_unset();
+            session_destroy();
+            header("location:/PaginaPrincipal/login/login.php");
+         }else{
+            echo "error". mysqli_error($ared);
+        }
+        
+    }else{
+        $nombre1= $_SESSION['Nombre'];
+        $consulta="SELECT *FROM registro_turista where Nombre='$nombre1'";
+        $cons=mysqli_query($ared,$consulta);
+        $rows=mysqli_fetch_array($cons);
+        if($rows['Id_cargo']==$rows['Id_cargo']){
+            echo "<script src='/script/mensaje1.js'></script>";
+        }
+        
+    } 
 }
 ?>
