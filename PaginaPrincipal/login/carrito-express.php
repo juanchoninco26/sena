@@ -4,6 +4,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@ session_start();
     <link href="/estilos/user-externo/carrito-expres.css" rel="stylesheet" type="text/css">
     <title>Carrito Expres</title>
 </head>
+
 <body>
     <div class="menu-">
         <?php
@@ -38,7 +40,7 @@ session_start();
                     </div>
                     <div class="foto">
                         <?php
-                        
+
                         $nombre1 = $_SESSION['usuarioExterno'];
                         $result = $ared->query("SELECT * FROM registro_turista WHERE Nombre = '$nombre1'");
                         while ($mostrar = mysqli_fetch_array($result)) {
@@ -53,22 +55,45 @@ session_start();
         <div class="productos1">
             <div class="product">
                 <?php
-                $consult = "SELECT * FROM lugares_turisticos";
-                $resutados = mysqli_query($ared, $consult);
-                while ($mostrar = mysqli_fetch_array($resutados)) {
+                if (isset($_SESSION['carrito'])) {
+                    $total = 0;
+                    $carrito_compras = $_SESSION['carrito'];
+                    for ($i = 0; $i <= count($carrito_compras) - 1; $i++) {
+                        if (isset($carrito_compras[$i])) {
+                            if ($carrito_compras[$i] != NULL) {
+                                $totals = $carrito_compras[$i]['precio'];
+                                $total = $total + ($totals * $carrito_compras[$i]['cantidad']);
                 ?>
-                    <div class="info-">
-                        <div class="boton"><button>X Quitar</button></div>
-                        <div>
-                            <p><?php echo $mostrar['Nombre'];?></p><p>$<?php echo $mostrar['Precio'];?></p>
-                        </div>
-                    </div>
-                <?php } ?>
+                                <div class="info-">
+                                    <div class="boton"><button>X Quitar</button></div>
+                                    <div>
+                                        <p><?php echo $carrito_compras[$i]['nombre']; ?></p>
+                                        <p>$<?php echo $carrito_compras[$i]['precio']; ?></p>
+                                    </div>
+                                </div>
+                <?php
+                            }
+                        }
+                        $_SESSION['total_carrito'] = $total;
+                    }
+                }
+                ?>
             </div>
             <br>
             <div class="compra">
                 <div class="total">
-                    <p>Total: <span>$800.000</span></p>
+                    <p>Total:
+                        <span>
+                            <?php
+                            if (!isset($_SESSION['total_carrito'])) {
+                                $_SESSION['total_carrito'] = 0;
+                            } else {
+                                $_SESSION['total_carrito'];
+                            }
+                            print_r($_SESSION['total_carrito']);
+                            ?>
+                        </span>
+                    </p>
                 </div>
                 <br>
                 <div><input type="button" value="Comprar" class="botn-compra"></div>

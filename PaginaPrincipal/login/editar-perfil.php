@@ -66,8 +66,6 @@ session_start();
                     include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php';
                     //youtube.com/watch?v=Ct6K4wRjlQQ
                     //www.youtube.com/watch?v=0WJ_qFxeWCg
-
-
                     $nombre1 = $_SESSION['usuarioExterno'];
                     $consulta = "SELECT *FROM registro_turista where Nombre='$nombre1'";
                     $cons = mysqli_query($ared, $consulta);

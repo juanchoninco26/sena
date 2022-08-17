@@ -1,4 +1,5 @@
 <?php 
+//muestra los cargos que hay en la BD
 function cargo(){
 include '../../php/puntos-turista-bd.php';
 $nombre1= $_SESSION['Nombre'];

@@ -6,10 +6,8 @@ session_start();
 
 */
 $_SESSION['j']=$_POST['id'];
+$_SESSION['codigoDescuento']=$_POST['ed'];
 
-function m(){
-    $_SESSION['codigoDescuento']=$_POST['ed'];
-}
 
 
 

@@ -1,4 +1,4 @@
-<?php include ("../php/puntos-turista-bd.php")?>
+<?php include ("../php/puntos-turista-bd.php"); session_start();?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,10 +23,40 @@
  
         <nav id="menu-h">
           <ul>
+          <?php
+                // contamos los productos agregados
+                if (isset($_SESSION['carrito'])) {
+                    $carrito_compras = $_SESSION['carrito'];
+                    for ($i = 0; $i <= count($carrito_compras) - 1; $i++) {
+                        if (isset($carrito_compras[$i])) {
+                            if ($carrito_compras[$i] != NULL) {
+                                if (!isset($carrito_compras['cantidad'])) {
+                                    $carrito_compras['cantidad'] = '0';
+                                } else {
+                                    $carrito_compras['cantidad'] = $carrito_compras['cantidad'];
+                                }
+                                $total_cantidad = $carrito_compras['cantidad'];
+                                $total_cantidad++;
+                                if (!isset($totalCantidad)) {
+                                    $totalCantidad = '0';
+                                } else {
+                                    $totalCantidad = $totalCantidad;
+                                }
+                                $totalCantidad += $total_cantidad;
+                            }
+                        }
+                    }
+                }
+                if (!isset($totalCantidad)) {
+                    $totalCantidad = '';
+                } else {
+                    $totalCantidad = $totalCantidad;
+                }
+                ?>
             <li><a target="blank" href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
             <li><a target="blank" href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
             <li><a target="blank" href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-            <li><a target="blank" href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">  Carrito</a></li>
+            <li><a target="blank" href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;"> <?php echo $totalCantidad; ?> Carrito</a></li>
            </ul>
         </nav>
     </header>
@@ -77,9 +107,21 @@
             </nav>
 
           <nav id="Carrito"> 
+          <form action="/php/carritoCompras.php" method="post">
+          <?php
+          //enviamos con el  formulario el nombre, precio y cantidad al carrito
+          $consulta = "SELECT * FROM lugares_turisticos WHERE Cod_lugar_turistico= 2";
+          $respuesta = mysqli_query($ared, $consulta);
+          while ($fila = mysqli_fetch_assoc($respuesta)){
+          ?>
+            <input  style="display: none" type="text" name="nombre" value="<?php echo $fila['Nombre'];?>">
+            <input  style="display: none" type="text" name="precio" value="<?php echo $fila['Precio'];?>">
+            <input  style="display: none" type="text" name="cantidad" value="1">
             <ul>
-              <li><a target="blank" href=""><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;"> Agregar al carrito</a></li>
+              <li><button class="btn_carrito" name="agregar2" type="submit" href=""><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;"> Agregar al carrito</button></li>
             </ul>
+          <?php }?>
+        </form>
           </nav>
 
           <div class="Valor">
