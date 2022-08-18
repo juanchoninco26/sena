@@ -1,5 +1,14 @@
-<?php include '../../php/puntos-turista-bd.php';
+<?php 
+include '../../php/puntos-turista-bd.php'; 
 session_start();
+$nombre1 = $_SESSION['usuarioExterno'];
+$consulta = "SELECT *FROM registro_turista where Nombre='$nombre1'";
+$cons = mysqli_query($ared, $consulta);
+while ($rows = mysqli_fetch_array($cons)) {
+    //se envia los datos del id
+    $_SESSION['turista_id'] = $rows['id_turista'];
+}
+//'../login/editar-perfil.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,10 +36,10 @@ session_start();
       <div class="lista">
         <ol>
           <?php
-          $consult = "SELECT * FROM generarpuntos";
+          //traemos la variable $_SESSION['turista_id'] de editar-perfil.php
+          $consult = "SELECT * FROM generarpuntos WHERE Id_turista='".$_SESSION['turista_id']."'";
           $resutados = mysqli_query($ared, $consult);
-
-          while ($mostrar = mysqli_fetch_array($resutados)) { ?>
+          while ($mostrar = mysqli_fetch_array($resutados)){?>
             <li>
                <p onclick="dato(<?php $var = $mostrar['Cod_descuento'];echo $var?>)"><?php echo $mostrar['puntos_manualmente']; ?></p><a href="/php/--.php?id=<?php echo $mostrar['Cod_descuento']; ?>">usar</a>
             </li>
@@ -84,12 +93,18 @@ session_start();
       <div class="tex">
         <p class="p">Codigo del punto</p>
         <?php
-            $ed = $_SESSION['j'];
-            $consult = "SELECT * FROM generarpuntos WHERE Cod_descuento='$ed'";
+            if(!isset($_SESSION['j'])){
+              $_SESSION['j']=0;
+            }
+            $consult = "SELECT * FROM generarpuntos WHERE Cod_descuento='".$_SESSION['j']."'";
             $resutados = mysqli_query($ared, $consult);
             if ($mostrar = mysqli_fetch_array($resutados)) { 
         ?>
-          <p class="p2"><?php echo $ed; ?></p>
+          <p class="p2">
+            <?php 
+              print_r($_SESSION['j']);
+            ?>
+          </p>
         <?php } ?>
         <p class="p3">Puedes uzar este codigo de descuento en cualquiera de nuestros sitios o paquetes.<br> <strong>No es reutilizable.</strong></p>
       </div>

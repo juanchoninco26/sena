@@ -19,7 +19,7 @@ session_start();
         include '../../php/include/men-user-extern.php';
         ?>
     </div>
-    
+
     <div class="body">
         <div class="sec2">
             <div class="sub-sec2">
@@ -61,16 +61,15 @@ session_start();
 
         <div class="sec3">
             <div class="caj">
-                <form class="mod-datos" action="/php/guardar_dat.php" method="post" enctype="multipart/form-data">
-                    <?php
-                    include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php';
-                    //youtube.com/watch?v=Ct6K4wRjlQQ
-                    //www.youtube.com/watch?v=0WJ_qFxeWCg
-                    $nombre1 = $_SESSION['usuarioExterno'];
-                    $consulta = "SELECT *FROM registro_turista where Nombre='$nombre1'";
-                    $cons = mysqli_query($ared, $consulta);
-                    while ($rows = mysqli_fetch_array($cons)) {
-                    ?>
+                <?php
+                //youtube.com/watch?v=Ct6K4wRjlQQ
+                //www.youtube.com/watch?v=0WJ_qFxeWCg
+                $nombre1 = $_SESSION['usuarioExterno'];
+                $consulta = "SELECT *FROM registro_turista where Nombre='$nombre1'";
+                $cons = mysqli_query($ared, $consulta);
+                while ($rows = mysqli_fetch_array($cons)) {
+                ?>
+                    <form class="mod-datos" action="/php/guardar_dat.php" method="post" enctype="multipart/form-data">
                         <div class="dat">
                             <div class="texto">
                                 <p>Modificar Datos</p>
@@ -78,7 +77,7 @@ session_start();
                             <p>Nombre</p>
                             <input type="text" name="nombre" id="" value="<?php echo $rows['Nombre']; ?>">
                             <p>Cedula</p>
-                            <input type="text" name="cedula" id="" value="<?php echo $rows['id_turista']; ?>">
+                            <input type="text" name="cedula" id="" value="<?php echo $row['id_turista']; ?>">
                             <p>Contraseña</p>
                             <input type="password" name="contraseña" id="" value="<?php echo $rows['Contraseña']; ?>">
                             <p>Repetir Contraseña</p>
@@ -102,8 +101,9 @@ session_start();
                             <br>
                             <p>* al actualizar los datos tendra que iniciar <br>sesion nuevamente</p>
                         </div>
-                    <?php }   ?>
-                </form>
+
+                    </form>
+                <?php } ?>
                 <script src="/script/mostrar.js"></script>
             </div>
         </div>
