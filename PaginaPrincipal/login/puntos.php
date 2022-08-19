@@ -21,8 +21,10 @@ while ($rows = mysqli_fetch_array($cons)) {
   <link href="/estilos/user-externo/puntos.css" rel="stylesheet" type="text/css">
   <title>Puntos</title>
 </head>
-
 <body class="body">
+  <?php 
+  if(isset($_SESSION['usuarioExterno'])==($_SESSION['NombreUsuarioExterno']) and ($_SESSION['passwordUser'])==($_SESSION['contraseñaUsuarioExterno'])){
+  ?>
   <div class="menu">
     <?php
     include '/xampp/xampp/htdocs/360/ruta360/php/include/men-user-extern.php';
@@ -148,7 +150,10 @@ while ($rows = mysqli_fetch_array($cons)) {
       </div>
     </div>
   </div>
-
+<?php } else{
+    header('Location:/PaginaPrincipal/login/login.php'); 
+    }
+    ?>
 </body>
 
 </html>

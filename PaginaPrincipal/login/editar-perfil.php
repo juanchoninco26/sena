@@ -14,6 +14,9 @@ session_start();
 </head>
 
 <body>
+<?php 
+  if(isset($_SESSION['usuarioExterno'])==($_SESSION['NombreUsuarioExterno']) and ($_SESSION['passwordUser'])==($_SESSION['contraseñaUsuarioExterno'])){
+  ?>
     <div class="menu-">
         <?php
         include '../../php/include/men-user-extern.php';
@@ -108,6 +111,6 @@ session_start();
             </div>
         </div>
     </div>
+    <?php } ?>
 </body>
-
 </html>

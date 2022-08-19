@@ -44,11 +44,13 @@ if (isset($_POST['loguin-extern'])){
     $contraseña=$_POST['password'];
     session_start();
     $_SESSION['usuarioExterno']=$nombre;
+    $_SESSION['passwordUser']=$contraseña;
 
     $consulta="SELECT Nombre,Contraseña FROM registro_turista WHERE Nombre='$nombre' and Contraseña='$contraseña'";
     $resultado= mysqli_query($ared,$consulta);
     $filas= mysqli_fetch_array($resultado);
-
+    $_SESSION['NombreUsuarioExterno']=$filas['Nombre'];
+    $_SESSION['contraseñaUsuarioExterno']=$filas['Contraseña'];
         if($contraseña==$filas['Contraseña']){
             header('Location:/PaginaPrincipal/login/puntos.php');    
         }else{

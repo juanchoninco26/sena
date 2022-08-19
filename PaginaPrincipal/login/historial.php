@@ -12,6 +12,10 @@ session_start();
     <title>Historial</title>
 </head>
 <body>
+<?php 
+  if(isset($_SESSION['usuarioExterno'])==($_SESSION['NombreUsuarioExterno']) and ($_SESSION['passwordUser'])==($_SESSION['contraseñaUsuarioExterno'])){
+  ?>
+  <?php ?>
   <div class="menu">
     <?php 
     include '../../php/include/men-user-extern.php';
@@ -74,5 +78,6 @@ session_start();
       </div>
    </div>
   </div>
+  <?php } ?>
 </body>
 </html>
