@@ -102,6 +102,8 @@ session_start();
             </div>
         </div>
     </div>
-<?php } ?>
+<?php }else{
+    header('Location:/PaginaPrincipal/login/login.php'); 
+    } ?>
 </body>
 </html>
