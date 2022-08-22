@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../estilos/EstilosPaquetes.css">
 </head>
 <body>
-<body background="../imagenes/FondoCielo.png.jpg" bgcolor="aqua"></body>
+<body background="../imagenes/FondoCielo.png.jpg"></body>
     <header>
         <div> 
            <img src="../imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
@@ -19,32 +19,45 @@
  
         <nav id="menu-h">
           <ul>
-            <li><a target="blank" href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;">Inicio</a></li>
-            <li><a target="blank" href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
-            <li><a target="blank" href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-            <li><a target="blank" href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
+            <li><a href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;">Inicio</a></li>
+            <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
+            <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
+            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
            </ul>
         </nav>
     </header>
 
             <main>    
+         <?php 
+          $conexion=mysqli_connect('localhost','root','2002','ared')
+           ?>
+          <?php
+          $sql="SELECT Nombre,Rutas,Foto_fondo from paquetes_turisticos where Cod_paquete=10";
+          $result=mysqli_query($conexion,$sql);
+
+          while($mostrar=mysqli_fetch_array($result)) {
+          ?> 
+
+          <?php 
+            $consult= "SELECT Foto_fondo,Nombre,Rutas FROM paquetes_turisticos";
+            $resultados= mysqli_query($ared, $consult);
+
+             while ($mostrar = mysqli_fetch_array($resultados)) {
                 <div class="caja"> 
                     <div class="img">
                       <div class="img2">
-                        <a href="../PaginaPrincipal/Paquetes2.php"><img src="../imagenes/Mirador.png" alt=""></a>
+                        <a href="../PaginaPrincipal/Paquetes2.php"><img src=<?php echo $mostrar['Foto_fondo']?>></a>
                        </div>
                     </div> 
                      <div class="subcaja">
                         <div class="texto">
-                         <h2>Tierra de <br> 
-                            miradores</h2> 
-                         <p>Mano del gigante, city<br> 
-                            tour, mirador la cacica,<br> 
-                            mirador brisas de mirt-<br>hayu 
-                            y senos de mirthayu.</p> 
+                         <h2><?php echo $mostrar['Nombre']?></h2> 
+                         <p><?php echo nl2br($mostrar['Rutas']);?></p> 
                         </div>
                      </div>
                     </div>
+                  }
+                  ?> 
                     
                     <div class="caja"> 
                         <div class="img">
@@ -59,36 +72,9 @@
                             </div>
                          </div>
                         </div>
-
-                        <div class="caja"> 
-                            <div class="img">
-                              <div class="img2">
-                                <img src="../imagenes/" alt="">
-                               </div>
-                            </div> 
-                             <div class="subcaja">
-                                <div class="texto">
-                                 <h2></h2> 
-                                 <p></p> 
-                                </div>
-                             </div>
-                            </div>
-
-                            <div class="caja"> 
-                                <div class="img">
-                                  <div class="img2">
-                                    <img src="../imagenes/" alt="">
-                                   </div>
-                                </div> 
-                                 <div class="subcaja">
-                                    <div class="texto">
-                                     <h2></h2> 
-                                     <p></p> 
-                                    </div>
-                                 </div>
-                                </div>
-
-                            
+                        <?php 
+                        }
+                        ?>         
             </main> 
 
    <footer>

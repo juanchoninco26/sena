@@ -7,10 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Página promoción</title>
-    <link rel="stylesheet" href="../Estilos/EstilosPromo.css">
+    <link rel="stylesheet" href="../estilos/EstilosPromo.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
    </head>
 <body>  
+<?php 
+           $conexion=mysqli_connect('localhost','root','2002','ared')
+           ?>
+          <?php
+          $sql="SELECT descripcion_corta,descripcion_larga,Fotografia_referencia,Foto from promociones where id_promocion=1";
+          $result=mysqli_query($conexion,$sql);
+
+          while($mostrar=mysqli_fetch_array($result)) {
+          ?> 
+   <body background=<?php echo $mostrar['Fotografia_referencia']?>></body> 
     <header>
         <div> 
            <img src="../imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
@@ -19,39 +29,29 @@
           
         <nav id="menu-h">
           <ul>
-            <li><a target="blank" href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;">Inicio</a></li>
-            <li><a target="blank" href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
-            <li><a target="blank" href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-            <li><a target="blank" href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
+            <li><a href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;">Inicio</a></li>
+            <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
+            <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
+            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
            </ul>
         </nav>
     </header>
    <main> 
        <div class="caja1">
-       <form class="promo" action="../php/promo.php" method="post">
-
-
-
-       <form class="promo" action="../php/promo.php" method="post">
-       <form class="promo" action="../php/promo.php" method="post">
-
-          <h2>¡Promoción del mes!</h2>
+       <h2><?php echo $mostrar['descripcion_corta']?></h2>
           <div class="Parrafo">
             <ul> 
-            <p>Conoce el Municipio de Gigante con
-               30% de descuento en todas nuestras
-               rutas. Verás paisajes únicos y majestuosos
-               de la mano de expertos en
-               guianza turística. ¿Qué estás esperando?
-               Reserva la ruta de tus sueños
-               ¡AHORA!</p> 
+            <p><?php echo $mostrar['descripcion_larga']?></p> 
             </ul>
           </div>
+               
          </div>
       <aside>
-            <div class="img2">
-              <img src="../imagenes/Imagen1.png" width="250px" height="360px" alt="" style="border-radius: 20px">
-            </div>
+            <div class="img2"> 
+              <img <?php echo $mostrar['Foto']?> width="250px" height="360px" alt="" style="border-radius: 20px">
+              <?php 
+             }
+             ?>
 
          <div class="Botton">
             <a href="../PaginaPrincipal/Carrito.php"><h5>Reservar</h5></a> 

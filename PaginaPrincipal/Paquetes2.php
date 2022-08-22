@@ -9,10 +9,18 @@
     <title>Página Paquetes2</title>
     <link rel="stylesheet" href="../Estilos/EstilosPaquetes2.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
- 
 </head>
 <body>
-  <body background="../imagenes/Mirador.png" bgcolor="aqua"></body> 
+<?php 
+           $conexion=mysqli_connect('localhost','root','2002','ared')
+           ?>
+          <?php
+          $sql="SELECT Nombre,Foto_fondo,Foto1,Foto2,Foto3,costo,Punto_paquete,Descripcion,Itinerario,Incluye,Recomendaciones from paquetes_turisticos where Cod_paquete=10";
+          $result=mysqli_query($conexion,$sql);
+
+          while($mostrar=mysqli_fetch_array($result)) {
+          ?> 
+  <body background=<?php echo $mostrar['Foto_fondo']?>></body>  
     <header>
         <div> 
            <img src="../imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
@@ -21,10 +29,10 @@
 
         <nav id="menu-h">
           <ul>
-            <li><a target="blank" href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
-            <li><a target="blank" href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
-            <li><a target="blank" href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-            <li><a target="blank" href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
+            <li><a href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
+            <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
+            <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
+            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
            </ul>
         </nav>
     </header>
@@ -36,13 +44,13 @@
        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../imagenes/ManoDelGigante.png" width="50%" height="300px" class="d-block w-100" alt="banner1">
+            <img src=<?php echo $mostrar['Foto1']?> width="50%" height="300px" class="d-block w-100" alt="banner1">
           </div>
           <div class="carousel-item">
-            <img src="../imagenes/Manodelgigante2.png" width="50%" height="300px" class="d-block w-100" alt="banner2">
+            <img src=<?php echo $mostrar['Foto2']?>  width="50%" height="300px" class="d-block w-100" alt="banner2">
           </div>
           <div class="carousel-item">
-            <img src="../imagenes/ManoDelGigante3.png" width="50%" height="300px" class="d-block w-100" alt="banner3">
+            <img src=<?php echo $mostrar['Foto3']?> width="50%" height="300px" class="d-block w-100" alt="banner3">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
@@ -58,21 +66,20 @@
   </div> 
    <div class="subcaja">
     <div class="texto">
-      <h3>Tierra de <br> miradores</h3> 
+      <h3><?php echo nl2br($mostrar['Nombre']);?></h3> 
       </div>
    </div>
   </div>
   
   <aside>
   <div class="texto">
-    <p>Bienvenidos a la tierra de gigantes,vislumbra paisajes de ensueños mientras conoces la historia de los gigantes que existieron en este municipio.
-    </p> 
+    <p><?php echo $mostrar['Descripcion']?></p> 
     <h2>Itinerario</h2>
-    <p>Mano del gigante,city tour,mirador la cacica,mirador brisas de mirtayu y senos de mirtayu.</p>
+    <p><?php echo $mostrar['Itinerario']?></p>
     <h2>Incluye</h2>
-    <p>Entrada a los sitios,asistencia médica,guianza turística especializada,transporte,almuerzo.</p>
+    <p><?php echo $mostrar['Incluye']?></p>
     <h2>Recomendaciones</h2>
-    <p>Usar repelente,bloqueador solar,ropa cómoda,zapatos cerrados tipo tenis,gorra o sombrero.</p>    
+    <p><?php echo $mostrar['Recomendaciones']?></p>    
     <h4>Por cada compra,acumulas puntos de descuento para que lo uses en tu próxima compra</h4>
   </div>  
     
@@ -83,10 +90,16 @@
   </nav>
 
   <div class="Valor">
-    <h5>Valor:800.000</h5> 
+    <h5>Valor:<?php echo  $mostrar['costo'];?></h5> 
   </div> 
+
+  <div class="Punto">
+    <h5>Puntos:<?php echo  $mostrar['Punto_paquete'];?></h5> 
+  </div>
 </aside>
-    
+<?php 
+  }
+?>
     </main>
 
     <footer>

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../Estilos/EstilosSitios3.css">
 </head>
 <body>
-<body background="../imagenes/MiradorCacica2.png" bgcolor="aqua"></body>
+<body background="../imagenes/MiradorCacica2.png"></body>
     <header>
         <div> 
            <img src="../imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
@@ -53,10 +53,10 @@
                     $totalCantidad = $totalCantidad;
                 }
                 ?>
-            <li><a target="blank" href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
-            <li><a target="blank" href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
-            <li><a target="blank" href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-            <li><a target="blank" href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;"> <?php echo $totalCantidad; ?> Carrito</a></li>
+            <li><a href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
+            <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
+            <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
+            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;"> <?php echo $totalCantidad; ?> Carrito</a></li>
            </ul>
         </nav>
     </header>
