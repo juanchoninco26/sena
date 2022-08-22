@@ -42,7 +42,7 @@
             $consult= "SELECT Foto_fondo,Nombre,Rutas FROM paquetes_turisticos";
             $resultados= mysqli_query($ared, $consult);
 
-             while ($mostrar = mysqli_fetch_array($resultados)) {
+             while ($mostrar = mysqli_fetch_array($resultados)) {?>
                 <div class="caja"> 
                     <div class="img">
                       <div class="img2">
@@ -56,22 +56,8 @@
                         </div>
                      </div>
                     </div>
-                  }
-                  ?> 
+                   <?php }?>
                     
-                    <div class="caja"> 
-                        <div class="img">
-                          <div class="img2">
-                            <img src="../imagenes/SanAgustín.png" alt="">
-                           </div>
-                        </div> 
-                         <div class="subcaja">
-                            <div class="texto">
-                             <h2> San Agustín </h2> 
-                             <p>Cascada escondida,estrecho Magdalena,la chaquira,<br> parque arqueológico,cascada tres chorros,rafting en el río Magdalena,trek pnn los Guacharos.</p> 
-                            </div>
-                         </div>
-                        </div>
                         <?php 
                         }
                         ?>         

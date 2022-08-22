@@ -59,7 +59,21 @@
         </nav>
     </header>
 
-            <main>    
+          <main>  
+          <?php 
+          $conexion=mysqli_connect('localhost','root','2002','ared')
+           ?>
+          <?php
+          $sql="SELECT Nombre,Foto1,Foto2,Foto3 from lugares_turisticos where Cod_lugar_turistico=1";
+          $result=mysqli_query($conexion,$sql);
+
+          while($mostrar=mysqli_fetch_array($result)) {
+          ?> 
+            <?php 
+            $consult= "SELECT Foto1,Foto2,Foto3,Nombre FROM lugares_turisticos";
+            $resultados= mysqli_query($ared, $consult);
+
+             while ($mostrar = mysqli_fetch_array($resultados)) {?>
               <div id="Cajas">  
               <div class="caja"> 
                 <div class="img">
@@ -67,13 +81,13 @@
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                       <div class="carousel-inner">
                         <div class="carousel-item active">
-                          <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/Manodelgigante2.png" class="d-block w-100" alt="baneer1"></a>
+                          <a href="../PaginaPrincipal/Sitios2.php"><img src=<?php echo $mostrar['Foto1']?> class="d-block w-100" alt="baneer1"></a>
                         </div>
                         <div class="carousel-item">
-                          <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/ManoDelGigante3.png" class="d-block w-100" alt="banner2"></a>
+                          <a href="../PaginaPrincipal/Sitios2.php"><img src=<?php echo $mostrar['Foto2']?> class="d-block w-100" alt="banner2"></a>
                         </div>
                         <div class="carousel-item">
-                          <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/ManoDelGigante4.png" class="d-block w-100" alt="banner3"></a>
+                          <a href="../PaginaPrincipal/Sitios2.php"><img src=<?php echo $mostrar['Foto3']?> class="d-block w-100" alt="banner3"></a>
                         </div>
                       </div>
                     </div>
@@ -81,12 +95,16 @@
                 </div> 
                  <div class="subcaja">
                   <div class="texto">
-                    <h2>Mano del Gigante</h2>
+                    <h2><?php echo $mostrar['Nombre']?></h2>
                     <h3>Mirador-Fototour</h3>  
                     </div>
                  </div>
                 </div>
-
+                <?php }?>
+               <?php 
+                 }
+                ?> 
+               
               <div class="caja"> 
                 <div class="img">
                   <div class="img2">
