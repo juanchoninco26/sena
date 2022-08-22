@@ -1,5 +1,5 @@
 <?php
-$ared = mysqli_connect(
+/*$ared = mysqli_connect(
     'localhost',
     'root',
     '',
@@ -8,6 +8,11 @@ $ared = mysqli_connect(
 );
 
 if (isset($ared)) {
-    /*echo 'db is connected';*/
+    echo 'db is connected';
+}*/
+
+function rutas(){
+    $rutas_bd=include '../../php/puntos-turista-bd.php';
+    return $rutas_bd;
 }
 ?> 

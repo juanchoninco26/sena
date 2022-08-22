@@ -1,5 +1,8 @@
 <?php 
-include '/xampp/xampp/htdocs/360/ruta360/php/puntos-turista-bd.php';
+include '../php/puntos-turista-bd.php';
+
+//include_once '../../php/puntos-turista-bd.php';
+//require '../../php/puntos-turista-bd.php';
 
 if (isset($_POST['loguin'])){
     $nombre = $_POST['username'];
@@ -39,6 +42,7 @@ if (isset($_POST['loguin'])){
             header('Location:/login.php');    
         }
 }
+//-------------------------------login de pagina principal---------------------------------------
 if (isset($_POST['loguin-extern'])){
     $nombre = $_POST['username'];
     $contraseña=$_POST['password'];

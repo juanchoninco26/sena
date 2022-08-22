@@ -1,8 +1,11 @@
 <?php 
-
-include '..\php\puntos-turista-bd.php';
+include '../../php/puntos-turista-bd.php';
 session_start();
 //ver video:https://www.youtube.com/watch?v=pn2v9lPakHQ
+
+//----------------------variables globales------------------------
+
+//----------------------------------------------------------------
 
 //reservaciones:reservas pendientes 
 if (isset($_POST['reprogramar'])){
@@ -281,6 +284,7 @@ if (isset($_POST['editar_perfil'])){
 }
 
 //--------------------- pagina principal ---------------------
+
 //registro
 if(isset($_POST['registrarse'])){
     $nombre=$ared->real_escape_string($_POST['nombre']);
@@ -355,5 +359,18 @@ if (isset($_POST['editar_usuario'])){
         }
         
     } 
+}
+if(isset($_POST['volverSitios'])){
+    switch ($_SESSION['Id_cargo']) {
+        case 1:
+            header("Location:/usuarios/gerente/editar-sitios.php");
+            break;
+        case 2:
+            header("Location:/usuarios/asesor/editar-sitios.php");
+            break;
+        default:
+        header('Location:/login.php'); 
+            break;
+    }
 }
 ?>

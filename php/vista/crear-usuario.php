@@ -15,7 +15,7 @@
         <div class="lista">
             <ol>
                 <?php
-                $consult = "SELECT* FROM empleados";
+                $consult = "SELECT Nombre FROM empleados ORDER BY Nombre ASC";
                 $resutados = mysqli_query($ared, $consult);
 
                 while ($mostrar = mysqli_fetch_array($resutados)) { ?>

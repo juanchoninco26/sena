@@ -1,6 +1,7 @@
-<?php include '../../php/puntos-turista-bd.php'?>
+<?php include '../../php/puntos-turista-bd.php' ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,20 +11,22 @@
     <link href="/script/mostrar.js" rel="stylesheet" type="text/javascript">
     <title>crear usuario</title>
 </head>
+
 <body>
-<?php 
-session_start();
-if ($_SESSION['Id_cargo'] ==1){
-?>
-    <?php 
-    include '../../php/include/menu.php';
+    <?php
+    session_start();
+    if ($_SESSION['Id_cargo'] == 1) {
     ?>
-        <?php 
-    include '../../php/vista/crear-usuario.php';
-    ?>
-    <?php } else{
-    header('Location:/login.php'); 
-} ?>
+        <?php
+        include '../../php/include/menu.php';
+        ?>
+        <?php
+        include '../../php/vista/crear-usuario.php';
+        ?>
+    <?php } else {
+        header('Location:/login.php');
+    } ?>
 
 </body>
+
 </html>

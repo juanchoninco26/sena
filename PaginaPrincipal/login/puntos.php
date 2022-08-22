@@ -17,8 +17,8 @@ while ($rows = mysqli_fetch_array($cons)) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/estilos/user-externo/men-user-extern.css" rel="stylesheet" type="text/css">
-  <link href="/estilos/user-externo/puntos.css" rel="stylesheet" type="text/css">
+  <link href="../../estilos/user-externo/men-user-extern.css" rel="stylesheet" type="text/css">
+  <link href="../../estilos/user-externo/puntos.css" rel="stylesheet" type="text/css">
   <title>Puntos</title>
 </head>
 <body class="body">
