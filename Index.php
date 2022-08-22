@@ -18,10 +18,10 @@
 
        <nav id="menu-h">
          <ul>
-           <li><a target="blank" href="Index.php"><img src="./imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
-           <li><a target="blank" href="./PaginaPrincipal/Sitios.php">Sitios</a></li>
-           <li><a target="blank" href="./PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-           <li><a target="blank" href="./PaginaPrincipal/Carrito.php"><img src="./imagenes/LC-PNG.png" style="width: 24px; height: 24px;">  Carrito</a></li>
+           <li><a href="Index.php"><img src="./imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
+           <li><a href="./PaginaPrincipal/Sitios.php">Sitios</a></li>
+           <li><a href="./PaginaPrincipal/Paquetes.php">Paquetes</a></li>
+           <li><a href="./PaginaPrincipal/Carrito.php"><img src="./imagenes/LC-PNG.png" style="width: 24px; height: 24px;">  Carrito</a></li>
           </ul>
        </nav>
    </header>
@@ -34,13 +34,24 @@
            </div>  
             
            <aside>
+           <?php 
+           $conexion=mysqli_connect('localhost','root','2002','ared')
+           ?>
+          <?php
+          $sql="SELECT Titulo,porcentaje from promociones where id_promocion=1";
+          $result=mysqli_query($conexion,$sql);
+
+          while($mostrar=mysqli_fetch_array($result)) {
+          ?> 
+          
             <div class="text">
-              <h2>30%</h2>
-              <h4>dto</h4>
+             <h2><?php echo $mostrar['porcentaje']?>%</h2>
+             <h4>dto</h4>
              </div>
-             <p>En nuestras rutas al<br> 
-               interior del municipio<br> 
-               de Gigante-Huila</p>
+             <p><?php echo $mostrar['Titulo']?></p>
+               <?php 
+             }
+             ?>
               
              <div class="Promo">
                <ul>
