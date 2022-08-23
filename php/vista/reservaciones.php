@@ -38,7 +38,6 @@
             <div>
                 <h3>reservas pendientes</h3>
             </div>
-            <form action="/php/guardar_dat.php" method="POST">
                 <?php
                 $consult = "SELECT * FROM reservas";
                 $resultados = mysqli_query($ared, $consult);
@@ -46,6 +45,7 @@
                 while ($mostrar = mysqli_fetch_array($resultados)) {;
                     //$_SESSION['reservas']=$mostrar['id_reservas'];
                 ?>
+            <form action="/php/guardar_dat.php" method="POST">
                     <div id="buscador">
                         <input type="date" name="reprogramar" id=""><button>enviar</button><button onclick="ocultar()" >X</button>
                         <br>
@@ -92,18 +92,19 @@
             </div>
             <?php
             //el id se escuentra en: php/id.php
-            $id=$_SESSION['j'];
+            if(empty($_SESSION['id-turista'])){
+                $_SESSION['id-turista']=1;
+            }
+            $id=$_SESSION['id-turista'];
             $reserva=$_SESSION['idReserva'];
-
-            $consult = "SELECT * FROM registro_turista WHERE id_turista='$id'";
-            $resultados = mysqli_query($ared, $consult);
-            while($mostrar = mysqli_fetch_array($resultados)){
+            $consult =$ared->query("SELECT * FROM registro_turista t INNER JOIN reservas r ON t.id_turista=r.id_turista WHERE t.id_turista='$id'");
+            while($mostrar = $consult->fetch_array()){
             ?>
             <div class="letras">
                 <p><b>Nombre:</b><?php echo $mostrar['Nombre'];?></p>
-                <p><b>N. Identificacion:</b><?php echo $id;?></p>
+                <p><b>N. Identificacion:</b><?php echo $_SESSION['id-turista'];?></p>
                 <p><b>N. Telefono:</b><?php echo $mostrar['Telefono'];?></p>
-                <p><b>Fecha:</b><?php echo $reserva;?></p>
+                <p><b>Fecha:</b><?php echo $mostrar['reprogramar'];?></p>
             </div>
             <?php }?>
         </div>

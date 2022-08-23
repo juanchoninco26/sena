@@ -1,5 +1,5 @@
 <?php 
-include '../../php/puntos-turista-bd.php';
+include '../php/puntos-turista-bd.php';
 session_start();
 //ver video:https://www.youtube.com/watch?v=pn2v9lPakHQ
 
@@ -12,7 +12,7 @@ if (isset($_POST['reprogramar'])){
     $reprogramar=$_POST['reprogramar'];
     $reserva=$_POST['reserva'];
 
-    $lista="UPDATE reservas SET reprogramar='$reprogramar' WHERE id_reservas = '$reserva'";
+    $lista="UPDATE reservas SET reprogramar='$reprogramar' WHERE id_turista	 = '".$_SESSION['id-turista']."'";
     $resultado=mysqli_query($ared,$lista) or die("error:". mysqli_error($ared));
 
     if ($resultado) {
