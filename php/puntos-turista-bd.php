@@ -13,4 +13,6 @@ $ared = new mysqli(
 if (!isset($ared)){
     echo 'no se puede realizar la conexion';
 }
+
+ob_start();
 ?>
