@@ -18,11 +18,11 @@ session_start();
 <body>
   <?php
   
-       $conexion=mysqli_connect('localhost','root','2002','ared')
+       //$conexion=mysqli_connect('localhost','root','2002','ared')
        ?>
       <?php
       $sql="SELECT Nombre,descripcion_corta,descripcion_larga,precio,ubicacion,punto_lugar,Foto_fondo,foto1,foto2,foto3,Punto_lugar from lugares_turisticos where Cod_lugar_turistico=1";
-      $result=mysqli_query($conexion,$sql);
+      $result=mysqli_query($ared,$sql);
 
       while($mostrar=mysqli_fetch_array($result)) {
       ?> 
@@ -64,7 +64,7 @@ session_start();
             <li><a href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
             <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
             <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
+            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;"> <?php echo $totalCantidad; ?>  Carrito</a></li>
            </ul>
         </nav>
     </header>

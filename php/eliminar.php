@@ -24,6 +24,16 @@ if (isset($_GET['Cod_lugar_turistico'])){
     }
 }
 
+//editar paquete turista
+if(isset($_GET['Cod_paquete'])){
+    $id=$_GET['Cod_paquete'];
+
+    $elim="DELETE FROM paquetes_turisticos WHERE Cod_paquete = '$id'";
+    $resultado=mysqli_query($ared,$elim);
+    if($resultado){
+        header('Location: /php/vista/editar-paquete-turista.php'); 
+    }
+}
 
 // eliminar: crear usuario
 if(isset($_GET['Id_empleado'])){

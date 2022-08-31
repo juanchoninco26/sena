@@ -30,10 +30,10 @@ if(isset($_SESSION['carrito']) || isset($_POST['nombre'])){
     
     $_SESSION['carrito']=$carrito_compras;
     if(isset($_POST['agregar1'])){
-        header("Location:../PaginaPrincipal\Sitios2.php");
+        header("Location:../PaginaPrincipal/Sitios2.php");
     }
     if(isset($_POST['agregar2'])){
-        header("Location:../PaginaPrincipal\Sitios3.php");
+        header("Location:../PaginaPrincipal/Sitios3.php");
     }
     
 }
@@ -41,6 +41,6 @@ if(isset($_SESSION['carrito']) || isset($_POST['nombre'])){
 if (isset($_POST['limpiar'])) {
     session_unset();
     session_destroy();
-    header("Location:../PaginaPrincipal\Carrito.php");
+    header("Location:../PaginaPrincipal/Carrito.php");
 }
 ?>

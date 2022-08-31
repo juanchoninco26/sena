@@ -22,7 +22,7 @@
                 <div class="img-centro">
                     <img src="imagenes/logo-360.png">
                 </div>
-                <form class="formulario" action="/php/login2.php" method="POST">
+                <form class="formulario" action="../php/login2.php" method="POST">
                     <div class="letra2">
                         <h1>INICIAR SESIÓN</h1>
                     </div>

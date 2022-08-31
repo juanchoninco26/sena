@@ -24,22 +24,21 @@ if (isset($_POST['loguin'])){
     $_SESSION['Id_cargo']=$filas['Id_cargo'];
         switch ($filas['Id_cargo']) {    
             case 1://administrador  
-                header("location:/usuarios/gerente/reservaciones.php");
+                header("location:../../usuarios/gerente/reservaciones.php");
                 break;
             case 2://asesor
-                
-                header("location:/usuarios/asesor/reservaciones.php");
+                header("location:../../usuarios/asesor/reservaciones.php");
                 break;
             case 3://contador
-                
-                header("location:/usuarios/contador/puntos-turista.php");
+                header("location:../../usuarios/contador/puntos-turista.php");
                 break;
             //default:
                 //header('Location:/login.php'); 
                 //break;
         }
         if(!$filas['Id_cargo']){
-            header('Location:/login.php');    
+    
+            header('Location:../../login.php');    
         }
 }
 //-------------------------------login de pagina principal---------------------------------------
@@ -56,7 +55,7 @@ if (isset($_POST['loguin-extern'])){
     $_SESSION['NombreUsuarioExterno']=$filas['Nombre'];
     $_SESSION['contraseñaUsuarioExterno']=$filas['Contraseña'];
         if($contraseña==$filas['Contraseña']){
-            header('Location:/PaginaPrincipal/login/puntos.php');    
+            header('Location:../../PaginaPrincipal/login/puntos.php');    
         }else{
             echo '<script>
             var opcion = confirm("Usuario o Contraseña Incorrecta ");

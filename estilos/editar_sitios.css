@@ -100,7 +100,7 @@ ol li{
 }
 .contenedor2{
     width: 380px;
-    height: 315px;
+    height: 50px;
     background: rgba(255, 255, 255, 0.350);
     border-radius: 15px;
 }
@@ -109,51 +109,13 @@ ol li{
     margin: 20px;
     padding-bottom: 150px;
 }
-.slider::-webkit-scrollbar{
-    width: 1px;
-}
-.slider{
-    display: flex;
-    height:40px;
-    margin-bottom: 3px;
-    overflow: auto;
-}
-.t-paquetes {
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    
-}
-.sub-t-paquete p{
-    margin-right: 10px;
-    padding: 2px;
-    color: white;
-    background: green;
-    border-radius: 5px;
-}
-.formulario1 {
-    display: block;
-    justify-content: space-around;
-    color: green;
-}
-.edpq h3{
+.edpq H3{
     text-align: center;
-    color: green;
 }
-.formulario1 input{
-    margin-bottom: 9px;
-    border: none;
-    border-radius: 9px;
+.edpq H3 A{
+    text-decoration: none;
 }
-.formulario1 button{
-    color: white;
-    background:green;
-    border: none;
-    width: 80px;
-    height: 25px;
-    border-radius: 8px;
-}
+
 .contenedortres{
     width: 30%;
     height: auto;

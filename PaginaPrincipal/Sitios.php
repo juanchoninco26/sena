@@ -61,11 +61,11 @@
 
           <main>  
           <?php 
-          $conexion=mysqli_connect('localhost','root','2002','ared')
+          //$ared=mysqli_connect('localhost','root','2002','ared')
            ?>
           <?php
           $sql="SELECT Nombre,Foto1,Foto2,Foto3 from lugares_turisticos where Cod_lugar_turistico=1";
-          $result=mysqli_query($conexion,$sql);
+          $result=mysqli_query($ared,$sql);
 
           while($mostrar=mysqli_fetch_array($result)) {
           ?> 

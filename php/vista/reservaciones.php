@@ -101,6 +101,7 @@
             while($mostrar = $consult->fetch_array()){
             ?>
             <div class="letras">
+                <p><b>Id reserva:</b><?php echo $mostrar['id_reservas'];?></p>
                 <p><b>Nombre:</b><?php echo $mostrar['Nombre'];?></p>
                 <p><b>N. Identificacion:</b><?php echo $_SESSION['id-turista'];?></p>
                 <p><b>N. Telefono:</b><?php echo $mostrar['Telefono'];?></p>

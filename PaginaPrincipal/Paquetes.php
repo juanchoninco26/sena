@@ -29,16 +29,7 @@
 
             <main>    
          <?php 
-          $conexion=mysqli_connect('localhost','root','2002','ared')
-           ?>
-          <?php
-          $sql="SELECT Nombre,Rutas,Foto_fondo from paquetes_turisticos where Cod_paquete=10";
-          $result=mysqli_query($conexion,$sql);
-
-          while($mostrar=mysqli_fetch_array($result)) {
-          ?> 
-
-          <?php 
+          //$ared=mysqli_connect('localhost','root','2002','ared');
             $consult= "SELECT Foto_fondo,Nombre,Rutas FROM paquetes_turisticos";
             $resultados= mysqli_query($ared, $consult);
 
@@ -56,11 +47,7 @@
                         </div>
                      </div>
                     </div>
-                   <?php }?>
-                    
-                        <?php 
-                        }
-                        ?>         
+                   <?php }?>        
             </main> 
 
    <footer>
