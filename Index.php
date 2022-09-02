@@ -85,10 +85,9 @@
                      <h3> Siguenos en nuestras <br> Redes Sociales </h3>
                   </div> 
 
-                    <button class="btn-abrir-popup" id="btn-abrir-popup"> Suscríbete a Nuestro Newsletter para recibir nuestras novedades. </button>
-
+                    <button class="btn-abrir-popup" id="btn-abrir-popup"> Suscríbete a Nuestro Newsletter para recibir nuestras novedades.</button>
                     <div class="overlay" id="overlay">
-                    <form class="guardar-correo" action="../php/correo.php" method="post">
+                    <form class="guardar-correo" action="./php/correo.php" method="post">
                       <div class="popup" id="popup">
                         <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                         <h2>Newsletter</h2> 
@@ -100,7 +99,7 @@
                               <div class="contenedor-inputs">
                               <input autocomplete="off" type="email" class="campo" placeholder="Introduce tu correo electrónico" name="correo"> 
                               <input type="submit"
-                              value="Suscribir" class="btn-sub" name="boton">
+                              value="Suscribir" value="Mensaje"  class="btn-sub" name="boton" onclick="alert('Tu correo fue suscrito exitosamente')">
                              </div> 
                             </div>
                       </div> 
