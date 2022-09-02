@@ -1,7 +1,7 @@
 <?php 
+session_start();
 //https://programacion.net/articulo/carrito_de_la_compra_simple_en_php_utilizando_sesiones_1723
 //https://www.youtube.com/watch?v=dcdtvaZDpOI
-session_start();
 //carrito
 //se recibe del formulario los datos del carrito
 if(isset($_SESSION['carrito']) || isset($_POST['nombre'])){
@@ -30,17 +30,20 @@ if(isset($_SESSION['carrito']) || isset($_POST['nombre'])){
     
     $_SESSION['carrito']=$carrito_compras;
     if(isset($_POST['agregar1'])){
-        header("Location:../PaginaPrincipal/Sitios2.php");
+        header("Location:../../PaginaPrincipal\Sitios2.php");
     }
     if(isset($_POST['agregar2'])){
-        header("Location:../PaginaPrincipal/Sitios3.php");
+        header("Location:../../PaginaPrincipal\Sitios3.php");
     }
-    
+    if(isset($_POST['agregar3'])){
+        header("Location:/../../PaginaPrincipal/Carrito.php");
+    }
 }
 
 if (isset($_POST['limpiar'])) {
     session_unset();
     session_destroy();
-    header("Location:../PaginaPrincipal/Carrito.php");
+    header("Location:.../PaginaPrincipal/Carrito.php");
 }
 ?>
+
