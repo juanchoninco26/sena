@@ -163,6 +163,7 @@ main .infom{
     border-radius: 10px;
     color: white;
     background: rgb(44, 42, 42);
+    line-height: 18px;
 }
 main .infom .boton{
     width: 100%;
@@ -180,6 +181,7 @@ main .infom button{
     border-radius: 5px;
     background: rgb(192, 16, 16);
     color: white;
+    width: 70px;
 }
 main .infom p{
     text-align: center;
@@ -189,6 +191,8 @@ main .infom p{
     border:solid 2px;
     border-color: green;
     border-radius: 5px;
+    margin-left: 850px;
+    margin-top: -180px;
 }
 .compra .total p{
     margin: 3px;
@@ -353,6 +357,7 @@ div .Total {
     width:200px;
     height:40px;
     border-radius: 15px;
+    margin-left: 850px;
 }
 
 #Comprar ul {
@@ -375,6 +380,10 @@ div .Total {
 #Comprar ul:hover{
     background-color:#A9DFBF;
     border-radius: 12px;
+}
+
+button:not(:disabled){
+    margin-left: 850px;
 }
 
 footer{
