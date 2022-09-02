@@ -56,7 +56,7 @@ session_start();
                 <li><a href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
                 <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
                 <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-                <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;"> <?php echo $totalCantidad ?> Carrito</a></li>
+                <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
             </ul>
         </nav>
     </header>
@@ -115,7 +115,7 @@ session_start();
                     
                 </div>
                 <br>
-                <nav id="Comprar">
+                <nav id="Comprar">                   
                     <ul>
                         <li><a href="../PaginaPrincipal/Pago.php"> Comprar </a></li>
                     </ul>
@@ -124,7 +124,7 @@ session_start();
                 <form action="/php/carritoCompras.php" method="POST">
                     <button name='limpiar'>limpiar carrito</button>
                 </form>
-
+            
             </div>
     </main>
 
