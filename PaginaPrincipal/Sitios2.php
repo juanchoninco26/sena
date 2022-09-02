@@ -15,17 +15,17 @@ session_start();
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="../estilos/EstilosSitios2.css">
 </head>
-<body>
-  <?php
+<body> 
+<?php
   
-       //$conexion=mysqli_connect('localhost','root','2002','ared')
-       ?>
-      <?php
-      $sql="SELECT Nombre,descripcion_corta,descripcion_larga,precio,ubicacion,punto_lugar,Foto_fondo,foto1,foto2,foto3,Punto_lugar from lugares_turisticos where Cod_lugar_turistico=1";
-      $result=mysqli_query($ared,$sql);
+  $conexion=mysqli_connect('localhost','root','2002','ared')
+  ?>
+ <?php
+ $sql="SELECT Nombre,descripcion_corta,descripcion_larga,precio,ubicacion,punto_lugar,Foto_fondo,foto1,foto2,foto3,Punto_lugar from lugares_turisticos where Cod_lugar_turistico=1";
+ $result=mysqli_query($conexion,$sql);
 
-      while($mostrar=mysqli_fetch_array($result)) {
-      ?> 
+ while($mostrar=mysqli_fetch_array($result)) {
+ ?>
       <body background=<?php echo $mostrar['Foto_fondo']?>></body>
       <?php
         // contamos los productos agregados
@@ -64,7 +64,7 @@ session_start();
             <li><a href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
             <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
             <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;"> <?php echo $totalCantidad; ?>  Carrito</a></li>
+            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
            </ul>
         </nav>
     </header>
@@ -92,13 +92,13 @@ session_start();
             </div>
 
       <nav id="Reserva">
+      <form action="../php/carritoCompras.php" method="post">
         <ul>
-          <li><a href="../PaginaPrincipal/Carrito.php"> Reservar Ahora </a></li>
+          <li><button name="agregar3" type="submit" href=""><h5>Reservar Ahora</h5></button></li>
         </ul>
       </nav>
 
       <nav id="Carrito">
-        <form action="/php/carritoCompras.php" method="post">
           <?php
           //enviamos con el  formulario el nombre, precio y cantidad al carrito
           $consulta = "SELECT * FROM lugares_turisticos WHERE Cod_lugar_turistico= 1";
@@ -112,7 +112,7 @@ session_start();
               <li><button name="agregar1" type="submit" href=""><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;"> Agregar al carrito</button></li>
             </ul>
           <?php }?>
-        </form>
+          </form>
       </nav>
 
            <div class="Valor">
@@ -202,9 +202,7 @@ session_start();
           <li><a href="https://www.youtube.com/results?search_query=mano+del+gigante+huila"> Ver Video </a></li>
         </ul>
       </nav>
-      <?php 
-    }
-    ?>
+      
     </aside>
   </main>
 
@@ -236,7 +234,8 @@ session_start();
     </div>
   </footer>
   <script src="../script/popup.js"></script>
-
+  <?php 
+    }
+    ?>
 </body>
-
 </html>
