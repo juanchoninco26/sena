@@ -29,11 +29,11 @@
                     </div>
                     <div class="user">
                         <h2>Usuario</h2>
-                        <input type="text" placeholder="" name="username"> 
+                        <input type="text" placeholder="" name="usuario"> 
                     </div>
                     <div class="password">
                         <h2>Contraseña</h2>
-                        <input type="password" placeholder="" name="password"> 
+                        <input type="password" placeholder="" name="contraseña"> 
                     </div>
                     <button type="submit" class="login" id="login" name="loguin-extern"><a>Entrar</a></button>
                     <p>¿No tienes una cuenta?<a href="/PaginaPrincipal/login/registrarse.php">Crear una.</a></p>

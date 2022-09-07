@@ -5,23 +5,32 @@
             <a onclick="mostrar()"><img src="/imagenes/buscador.svg" alt="" id="buscar"></a>
         </div>
         <div id="buscador">
-            <div class="centrar">
-                <input type="search" name="" id="search">
-                <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
-                <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
-            </div>
+            <form action="" method="GET">
+                <div class="centrar">
+                    <input type="search" name="puntos_trista" id="search">
+                    <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
+                    <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
+                </div>
+            </form>
             <script src="/script/mostrar.js"></script>
         </div>
+        <?php
+        $puntos_trista = "";
+        if (isset($_GET['puntos_trista'])) {
+            $busqueda = $_GET['puntos_trista'];
+            $puntos_trista = "WHERE Id_turista LIKE'%" . $busqueda . "%'";
+        }
+        ?>
         <div class="lista">
             <ol>
                 <?php
-                $consult = "SELECT * FROM generarpuntos";
+                $consult = "SELECT * FROM generarpuntos $puntos_trista";
                 $resutados = mysqli_query($ared, $consult);
 
                 while ($mostrar = mysqli_fetch_array($resutados)) { ?>
-
-
-                    <li><?php echo $mostrar['puntos_manualmente']; ?><p><?php echo $mostrar['Id_turista']; ?></p><button><a onclick="return confirm('estas seguro de eliminar este dato?')" href="/php/elim-punt-turist.php?id=<?php echo $mostrar['Cod_descuento']; ?>">x Quitar</a></button></li>
+                    <li>
+                        <?php echo $mostrar['puntos_manualmente']; ?><p><?php echo $mostrar['Id_turista']; ?></p><button><a onclick="return confirm('estas seguro de eliminar este dato?')" href="/php/elim-punt-turist.php?id=<?php echo $mostrar['Cod_descuento']; ?>">x Quitar</a></button>
+                    </li>
                 <?php } ?>
             </ol>
 
@@ -37,9 +46,9 @@
             //el video muestra quien inicia el software
             //session_start() esta en el: php/loguin
             include '../../php/include/cargo.php';
-            $cargo=cargo();
+            $cargo = cargo();
             echo "<h3>$cargo</h3>";
-            
+
             if ($nombre = $_SESSION['Nombre']) {
                 echo "<p>$nombre</p>";
             }

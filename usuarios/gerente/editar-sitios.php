@@ -8,6 +8,7 @@
     <link href="/estilos/menu.css" rel="stylesheet" type="text/css">
     <link href="/estilos/editar_sitios.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/4aa94af17d.js" crossorigin="anonymous"></script>
+    <script src="lib/jquery.js"></script>
 
     <title>editar sitios</title>
 </head>

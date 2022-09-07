@@ -6,24 +6,33 @@
                 <a onclick="mostrar()"><img src="/imagenes/buscador.svg" alt="" id="buscar"></a>
             </div>
             <div id="buscador">
-                <div class="centrar">
-                    <input type="search" name="" id="search">
-                    <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
-                    <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
-                </div>
+                <form action="" method="GET">
+                    <div class="centrar">
+                        <input type="search" name="b_editar_sitios" id="b_editar_sitios">
+                        <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
+                        <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
+                    </div>
+                </form>
                 <script src="/script/mostrar.js"></script>
             </div>
+            <?php
+            $lugare_truisticos="";
+            if(isset($_GET['b_editar_sitios'])){
+                $busqueda=$_GET['b_editar_sitios'];
+                $lugare_truisticos="WHERE Nombre LIKE'%".$busqueda."%'";
+            }
+            ?>
             <div class="editar-sitios">
-                <ol>
+                <ol >
                     <!-- mostrar datos de la BD -->
                     <?php
-                    $consult = "SELECT*FROM lugares_turisticos;";
+                    $consult = "SELECT * FROM lugares_turisticos $lugare_truisticos";
                     $resutados = mysqli_query($ared, $consult);
 
                     while ($mostrar = mysqli_fetch_array($resutados)) { ?>
 
                         <li>
-                            <p><?php echo $mostrar['Nombre']; ?></p><button><a onclick="return confirm('estas seguro de eliminar este dato?')"  href="/php/eliminar.php?Cod_lugar_turistico=<?php echo $mostrar['Cod_lugar_turistico']; ?>">x Quitar</a></button>
+                            <p><?php echo $mostrar['Nombre']?></p><button><a onclick="return confirm('estas seguro de eliminar este dato?')" href="/php/eliminar.php?Cod_lugar_turistico=<?php echo $mostrar['Cod_lugar_turistico']; ?>">x Quitar</a></button>
                         </li>
                     <?php } ?>
                 </ol>
@@ -49,9 +58,9 @@
                 //el video muestra quien inicia el software
                 //session_start() esta en el: php/loguin
                 include '../../php/include/cargo.php';
-                $cargo=cargo();
+                $cargo = cargo();
                 echo "<h3>$cargo</h3>";
-                
+
                 if ($nombre = $_SESSION['Nombre']) {
                     echo "<p>$nombre</p>";
                 }

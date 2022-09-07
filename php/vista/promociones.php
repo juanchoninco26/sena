@@ -33,9 +33,9 @@
             //session_start() esta en el: php/loguin
 
             include '../../php/include/cargo.php';
-            $cargo=cargo();
+            $cargo = cargo();
             echo "<h3>$cargo</h3>";
-            
+
             if ($nombre = $_SESSION['Nombre']) {
                 echo "<p>$nombre</p>";
             }
@@ -57,19 +57,27 @@
             <a onclick="mostrar()"><img src="/imagenes/buscador.svg" alt="" id="buscar"></a>
         </div>
         <div id="buscador">
-            <div class="centrar">
-                <input type="search" name="" id="search">
-                <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
-                <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
-            </div>
+            <form action="" method="GET">
+                <div class="centrar">
+                    <input type="search" name="promociones" id="search">
+                    <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
+                    <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
+                </div>
+            </form>
         </div>
         <script src="/script/mostrar.js"></script>
-
+        <?php
+        $promociones = "";
+        if (isset($_GET['promociones'])) {
+            $busqueda = $_GET['promociones'];
+            $promociones = "WHERE Titulo LIKE'%" . $busqueda . "%'";
+        }
+        ?>
         <div class="lista">
             <ol>
                 <!-- mostrar datos de la BD -->
                 <?php
-                $consult = "SELECT * FROM promociones;";
+                $consult = "SELECT * FROM promociones $promociones;";
                 $resutados = mysqli_query($ared, $consult);
 
                 while ($mostrar = mysqli_fetch_array($resutados)) { ?>

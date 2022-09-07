@@ -6,16 +6,24 @@
         </div>
         <div id="buscador">
             <div class="centrar">
-                <input type="search" name="" id="search">
-                <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
-                <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
+                <form action="" method="GET">
+                    <input type="search" name="crear_usuario" id="search">
+                    <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
+                    <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
+                </form>
             </div>
-
         </div>
+        <?php
+        $crear_usuario = "";
+        if (isset($_GET['crear_usuario'])) {
+            $busqueda = $_GET['crear_usuario'];
+            $crear_usuario = "WHERE Nombre LIKE'%" . $busqueda . "%'";
+        }
+        ?>
         <div class="lista">
             <ol>
                 <?php
-                $consult = "SELECT Nombre FROM empleados ORDER BY Nombre ASC";
+                $consult = " SELECT Nombre FROM empleados $crear_usuario ORDER BY Nombre ASC";
                 $resutados = mysqli_query($ared, $consult);
 
                 while ($mostrar = mysqli_fetch_array($resutados)) { ?>
@@ -37,9 +45,9 @@
             //el video muestra quien inicia el software
             //session_start() esta en el: php/loguin
             include '../../php/include/cargo.php';
-            $cargo=cargo();
+            $cargo = cargo();
             echo "<h3>$cargo</h3>";
-            
+
             if ($nombre = $_SESSION['Nombre']) {
                 echo "<p>$nombre</p>";
             }

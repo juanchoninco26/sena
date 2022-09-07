@@ -1,9 +1,5 @@
 <?php 
 include '../php/puntos-turista-bd.php';
-
-//include_once '../../php/puntos-turista-bd.php';
-//require '../../php/puntos-turista-bd.php';
-
 if (isset($_POST['loguin'])){
     $nombre = $_POST['username'];
     $contraseña=$_POST['password'];
@@ -12,15 +8,14 @@ if (isset($_POST['loguin'])){
     $row3="Contador";
     session_start();
     $_SESSION['Nombre']=$nombre;
-    $_SESSION['admin']=$admin;
-    $_SESSION['ase']=$row2;
-    $_SESSION['cont']=$cont;
+    //$_SESSION['admin']=$admin;
+    //$_SESSION['ase']=$row2;
+    //$_SESSION['cont']=$cont;
 
 
     $consulta="SELECT Nombre,Contraseña,Id_cargo FROM empleados WHERE Nombre='$nombre' and Contraseña='$contraseña'";
-    $resultado= mysqli_query($ared,$consulta);
+    $resultado= mysqli_query($ared,$consulta) or die(mysqli_error($ared));
     $filas= mysqli_fetch_array($resultado);
-
     $_SESSION['Id_cargo']=$filas['Id_cargo'];
         switch ($filas['Id_cargo']) {    
             case 1://administrador  
@@ -32,19 +27,16 @@ if (isset($_POST['loguin'])){
             case 3://contador
                 header("location:../../usuarios/contador/puntos-turista.php");
                 break;
-            //default:
-                //header('Location:/login.php'); 
-                //break;
-        }
-        if(!$filas['Id_cargo']){
-    
-            header('Location:../../login.php');    
+            default:
+                //echo '<script>window.open(../../login.php)</script>';
+                header('Location:/login.php'); 
+                break;
         }
 }
 //-------------------------------login de pagina principal---------------------------------------
 if (isset($_POST['loguin-extern'])){
-    $nombre = $_POST['username'];
-    $contraseña=$_POST['password'];
+    $nombre = $_POST['usuario'];
+    $contraseña=$_POST['contraseña'];
     session_start();
     $_SESSION['usuarioExterno']=$nombre;
     $_SESSION['passwordUser']=$contraseña;
@@ -55,7 +47,7 @@ if (isset($_POST['loguin-extern'])){
     $_SESSION['NombreUsuarioExterno']=$filas['Nombre'];
     $_SESSION['contraseñaUsuarioExterno']=$filas['Contraseña'];
         if($contraseña==$filas['Contraseña']){
-            header('Location:../../PaginaPrincipal/login/puntos.php');    
+           header('Location:../../PaginaPrincipal/login/puntos.php');    
         }else{
             echo '<script>
             var opcion = confirm("Usuario o Contraseña Incorrecta ");

@@ -29,7 +29,7 @@ session_start();
           <div class="lista">
             <ol>
               <?php 
-                 $consult ="SELECT * FROM paquetes_turisticos"; 
+                 $consult ="SELECT Nombre FROM paquetes_turisticos WHERE Id_turista='".$_SESSION['turista_id']."'"; 
                  $resutados = mysqli_query($ared, $consult);
              
                  while ($mostrar = mysqli_fetch_array($resutados)) {?>
