@@ -1,4 +1,4 @@
-<?php include ("../php/puntos-turista-bd.php")?>
+<?php include ("../php/puntos-turista-bd.php");session_start();?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,16 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Página promoción</title>
     <link rel="stylesheet" href="../estilos/EstilosPromo.css">
+    <title>Página promoción</title>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
    </head>
-<body>  
+<body> 
 <?php 
            $conexion=mysqli_connect('localhost','root','2002','ared')
            ?>
           <?php
-          $sql="SELECT descripcion_corta,descripcion_larga,Fotografia_referencia,Foto from promociones where id_promocion=1";
+          $sql="SELECT Nombre,descripcion_larga,Fotografia_referencia,Foto,Precio from promociones where id_promocion=1";
           $result=mysqli_query($conexion,$sql);
 
           while($mostrar=mysqli_fetch_array($result)) {
@@ -28,7 +28,37 @@
         </div>
           
         <nav id="menu-h">
-          <ul>
+        <?php
+                // contamos los productos agregados
+                if (isset($_SESSION['carrito'])) {
+                    $carrito_compras = $_SESSION['carrito'];
+                    for ($i = 0; $i <= count($carrito_compras) - 1; $i++) {
+                        if (isset($carrito_compras[$i])) {
+                            if ($carrito_compras[$i] != NULL) {
+                                if (!isset($carrito_compras['cantidad'])) {
+                                    $carrito_compras['cantidad'] = '0';
+                                } else {
+                                    $carrito_compras['cantidad'] = $carrito_compras['cantidad'];
+                                }
+                                $total_cantidad = $carrito_compras['cantidad'];
+                                $total_cantidad++;
+                                if (!isset($totalCantidad)) {
+                                    $totalCantidad = '0';
+                                } else {
+                                    $totalCantidad = $totalCantidad;
+                                }
+                                $totalCantidad += $total_cantidad;
+                            }
+                        }
+                    }
+                }
+                if (!isset($totalCantidad)) {
+                    $totalCantidad = '';
+                } else {
+                    $totalCantidad = $totalCantidad;
+                }
+                ?>
+            <ul>
             <li><a href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;">Inicio</a></li>
             <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
             <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
@@ -38,25 +68,41 @@
     </header>
    <main> 
        <div class="caja1">
-       <h2><?php echo $mostrar['descripcion_corta']?></h2>
+       <h2><?php echo $mostrar['Nombre']?></h2>
           <div class="Parrafo">
             <ul> 
             <p><?php echo $mostrar['descripcion_larga']?></p> 
             </ul>
           </div>
-               
+          <ul>
+              <li><a class="btn_costo" name=""><h5><?php echo $mostrar['Precio']?></h5></a></li>
+            </ul>  
          </div>
+         <nav id="btn_comprar">
+        <form action="../php/carritoCompras.php" method="post">
+         <?php
+          //enviamos con el  formulario el nombre, precio y cantidad al carrito
+          $consulta = "SELECT * FROM promociones WHERE Id_promocion= 1";
+          $respuesta = mysqli_query($ared, $consulta);
+          while ($fila = mysqli_fetch_assoc($respuesta)){
+          ?>
+            <input  style="display: none" type="text" name="nombre" value="<?php echo $fila['Nombre'];?>">
+            <input  style="display: none" type="text" name="precio" value="<?php echo $fila['Precio'];?>">
+            <input  style="display: none" type="text" name="cantidad" value="1">
+            <ul>
+              <li><button name="agregar3" type="submit" href=""><h5>Reservar</h5></button></li>
+            </ul>
+          <?php }?>
+          </form>
+          </nav>
       <aside>
             <div class="img2"> 
-              <img <?php echo $mostrar['Foto']?> width="250px" height="360px" alt="" style="border-radius: 20px">
+              <img src=<?php echo $mostrar['Foto']?> width="250px" height="360px" alt="" style="border-radius: 20px">
               <?php 
              }
              ?>
-
-         <div class="Botton">
-            <a href="../PaginaPrincipal/Carrito.php"><h5>Reservar</h5></a> 
-           </div>
-           </form>
+       
+        </form>
       </aside>   
    </main> 
  <body>
