@@ -17,16 +17,16 @@ session_start();
 </head>
 <body> 
 <?php
-  
   $conexion=mysqli_connect('localhost','root','2002','ared')
   ?>
  <?php
- $sql="SELECT Nombre,descripcion_corta,descripcion_larga,precio,ubicacion,punto_lugar,Foto_fondo,foto1,foto2,foto3,Punto_lugar from lugares_turisticos where Cod_lugar_turistico=1";
+ $sql="SELECT Nombre,descripcion_corta,descripcion_larga,precio,ubicacion,punto_lugar,Foto_fondo,foto1,foto2,foto3,Punto_lugar,Ubicacion from lugares_turisticos where Cod_lugar_turistico=1";
  $result=mysqli_query($conexion,$sql);
 
  while($mostrar=mysqli_fetch_array($result)) {
  ?>
-      <body background=<?php echo $mostrar['Foto_fondo']?>></body>
+
+   <body background=<?php echo $mostrar['Foto_fondo']?>></body>
       <?php
         // contamos los productos agregados
          if (isset($_SESSION['carrito'])) {
@@ -132,7 +132,7 @@ session_start();
       <div class="Ubicación">
         <div class="Caja">
           <ul>
-            <a href="https://www.google.com/maps/place/Mirador+La+Mano+del+Gigante/@2.4144251,-75.4861108,15z/data=!4m5!3m4!1s0x0:0xc4466883657f3f23!8m2!3d2.4144251!4d-75.4861108"><img src="../imagenes/Ubicación.png"></a>
+            <a href="<?php echo $mostrar['ubicacion']?>"><img src="../imagenes/Ubicación.png"></a>
           </ul>
         </div>
       </div>
@@ -234,7 +234,7 @@ session_start();
     </div>
   </footer>
   <script src="../script/popup.js"></script>
-  <?php 
+<?php 
     }
     ?>
 </body>

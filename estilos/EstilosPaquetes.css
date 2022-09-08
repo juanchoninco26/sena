@@ -54,7 +54,6 @@ main {
    display: flex;
    overflow:auto;
    display:flex;
-   justify-content: space-between;
 }
 
 .caja {

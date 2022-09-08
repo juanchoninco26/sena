@@ -1,5 +1,6 @@
-<?php include ("../php/puntos-turista-bd.php")?>
-
+<?php include ("../php/puntos-turista-bd.php");
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +78,7 @@
             <img src=<?php echo $mostrar['Foto1']?> width="50%" height="300px" class="d-block w-100" alt="banner1">
           </div>
           <div class="carousel-item">
-            <img src=<?php echo $mostrar['Foto2']?>  width="50%" height="300px" class="d-block w-100" alt="banner2">
+            <img src=<?php echo $mostrar['Foto2']?> width="50%" height="300px" class="d-block w-100" alt="banner2">
           </div>
           <div class="carousel-item">
             <img src=<?php echo $mostrar['Foto3']?> width="50%" height="300px" class="d-block w-100" alt="banner3">
