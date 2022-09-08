@@ -29,12 +29,12 @@ session_start();
           <div class="lista">
             <ol>
               <?php 
-                 $consult ="SELECT Nombre FROM paquetes_turisticos WHERE Id_turista='".$_SESSION['turista_id']."'"; 
+                 $consult ="SELECT Cod_lugar_turistico FROM turista_lugares_paquetes WHERE Id_turista='".$_SESSION['turista_id']."'"; 
                  $resutados = mysqli_query($ared, $consult);
              
                  while ($mostrar = mysqli_fetch_array($resutados)) {?>
 
-              <li><p><?php echo $mostrar['Nombre'];?></p><a href="">usar</a></li>
+              <li><p><?php echo $mostrar['Cod_lugar_turistico'];?></p><a href="">usar</a></li>
               <?php } ?>
             </ol>
           </div>
@@ -67,11 +67,11 @@ session_start();
           <div class="lista2">
             <ol>
             <?php 
-                 $consult ="SELECT * FROM paquetes_turisticos"; 
+                 $consult ="SELECT Cod_paquetepromociones FROM turista_lugares_paquetes WHERE Id_turista='".$_SESSION['turista_id']."'";  
                  $resutados = mysqli_query($ared, $consult);
              
                  while ($mostrar = mysqli_fetch_array($resutados)) {?>
-              <li><p><?php echo $mostrar['Rutas'];?></p><a href="">abrir</a></li>
+              <li><p><?php echo $mostrar['Cod_paquetepromociones'];?></p><a href="">abrir</a></li>
               <?php } ?>
             </ol>
           </div>
