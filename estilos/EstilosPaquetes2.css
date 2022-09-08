@@ -110,7 +110,7 @@ main p {
 main h4 {
     font-size: 15px;
     width: 220px;
-    margin-top: 60px;
+    margin-top: 10px;
     color: black;
     margin-left: 600px;
     position:relative;
@@ -185,6 +185,43 @@ main h4 {
     width: 220px;
     position: relative;
 }
+
+#Punto {
+    width:140px;
+    height:50px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-left: 400px;
+    border-color: #06330C;
+    position: relative;
+}
+
+.Punto {
+    display: flex;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 70px;
+    margin-top: -65px;
+    width: 50px;
+    }
+
+.Punto h5 {
+    font-family:Arial, Helvetica, sans-serif;
+    color:black;
+    text-decoration: none;
+    text-align:center;
+    line-height: 50px;
+    font-size: 30px;
+    border-style:solid;
+    border-color: #23ac35;
+    border-radius: 15px;
+    border-width: 5px;
+    width: 220px;
+    position: relative;
+}
+
 
 
 .carousel {
