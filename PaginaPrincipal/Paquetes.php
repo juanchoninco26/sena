@@ -1,5 +1,4 @@
 <?php include ("../php/puntos-turista-bd.php")?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,15 +28,24 @@
 
             <main>    
          <?php 
-          //$ared=mysqli_connect('localhost','root','2002','ared');
-            $consult= "SELECT Foto_fondo,Nombre,Rutas FROM paquetes_turisticos";
+          $conexion=mysqli_connect('localhost','root','2002','ared')
+           ?>
+          <?php
+          $sql="SELECT Nombre,Rutas,Foto_fondo,Enlace from paquetes_turisticos where Cod_paquete=10";
+          $result=mysqli_query($conexion,$sql);
+
+          while($mostrar=mysqli_fetch_array($result)) {
+          ?> 
+
+          <?php 
+            $consult= "SELECT Foto_fondo,Nombre,Rutas,Enlace FROM paquetes_turisticos";
             $resultados= mysqli_query($ared, $consult);
 
              while ($mostrar = mysqli_fetch_array($resultados)) {?>
                 <div class="caja"> 
                     <div class="img">
                       <div class="img2">
-                        <a href="../PaginaPrincipal/Paquetes2.php"><img src=<?php echo $mostrar['Foto_fondo']?>></a>
+                        <a href="<?php echo $mostrar['Enlace']?>"><img src=<?php echo $mostrar['Foto_fondo']?>></a>
                        </div>
                     </div> 
                      <div class="subcaja">
@@ -47,7 +55,11 @@
                         </div>
                      </div>
                     </div>
-                   <?php }?>        
+                   <?php }?>
+                    
+                        <?php 
+                        }
+                        ?>         
             </main> 
 
    <footer>
