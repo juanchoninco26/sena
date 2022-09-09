@@ -35,11 +35,10 @@
             
            <aside>
            <?php 
-           $conexion=mysqli_connect('localhost','root','2002','ared')
-           ?>
-          <?php
+           //$conexion=mysqli_connect('localhost','root','2002','ared');
+
           $sql="SELECT Titulo,porcentaje from promociones where id_promocion=1";
-          $result=mysqli_query($conexion,$sql);
+          $result=mysqli_query($ared,$sql);
 
           while($mostrar=mysqli_fetch_array($result)) {
           ?> 

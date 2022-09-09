@@ -105,7 +105,7 @@
                  }
                 ?> 
                
-              <div class="caja"> 
+              <!--<div class="caja"> 
                 <div class="img">
                   <div class="img2">
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -208,7 +208,7 @@
                         <h3>Fototour</h3>  
                         </div>
                      </div>
-                    </div>
+                    </div>-->
                   
             </main> 
 
