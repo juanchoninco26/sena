@@ -1,4 +1,6 @@
-<?php include ("../php/puntos-turista-bd.php"); session_start();?>
+<?php include ("../php/puntos-turista-bd.php");
+ session_start();
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,11 +63,11 @@
 
           <main>  
           <?php 
-          $conexion=mysqli_connect('localhost','root','2002','ared')
+          //$ared=mysqli_connect('localhost','root','2002','ared')
            ?>
           <?php
           $sql="SELECT Nombre,Foto1,Foto2,Foto3,Enlace from lugares_turisticos where Cod_lugar_turistico=1";
-          $result=mysqli_query($conexion,$sql);
+          $result=mysqli_query($ared,$sql);
 
           while($mostrar=mysqli_fetch_array($result)) {
           ?> 
@@ -104,112 +106,6 @@
                <?php 
                  }
                 ?> 
-               
-              <div class="caja"> 
-                <div class="img">
-                  <div class="img2">
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <a href="../PaginaPrincipal/Sitios3.php"><img src="../imagenes/MiradorCacica.png" class="d-block w-100" alt="baneer1"></a>
-                        </div>
-                        <div class="carousel-item">
-                          <a href="../PaginaPrincipal/Sitios3.php"><img src="../imagenes/MiradorCacica2.png" class="d-block w-100" alt="banner2"></a>
-                        </div>
-                        <div class="carousel-item">
-                          <a href="../PaginaPrincipal/Sitios3.php"><img src="../imagenes/MiradorCacica3.png" class="d-block w-100" alt="banner3"></a>
-                        </div>
-                      </div>
-                    </div>
-                   </div>
-                </div> 
-                 <div class="subcaja">
-                  <div class="texto">
-                    <h2>La Cacica</h2>
-                    <h3>Mirador-Fototour</h3>  
-                    </div>
-                 </div>
-                </div>
-
-                <div class="caja"> 
-                  <div class="img">
-                    <div class="img2">
-                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <a href="../PaginaPrincipal/Sitios.php"><img src="../imagenes/Balcon.png" class="d-block w-100" alt="baneer1"></a>
-                          </div>
-                          <div class="carousel-item">
-                            <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/Balcon2.png" class="d-block w-100" alt="banner2"></a>
-                          </div>
-                          <div class="carousel-item">
-                            <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/Balcon3.png" class="d-block w-100" alt="banner3"></a>
-                          </div>
-                        </div>
-                      </div>
-                     </div>
-                  </div> 
-                   <div class="subcaja">
-                    <div class="texto">
-                      <h2>Mirador-El Balcón</h2>
-                      <h3>Fototour</h3>  
-                      </div>
-                   </div>
-                  </div>
-
-                  <div class="caja"> 
-                    <div class="img">
-                      <div class="img2">
-                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active">
-                              <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/Desierto_de_La_Tatacoa.jpg" class="d-block w-100" alt="baneer1"></a>
-                            </div>
-                            <div class="carousel-item">
-                              <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/desierto-de-la-tatacoa-2.jpg" class="d-block w-100" alt="banner2"></a>
-                            </div>
-                            <div class="carousel-item">
-                              <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/desierto-de-la-tatacoa-3.jpg" class="d-block w-100" alt="banner3"></a>
-                            </div>
-                          </div>
-                        </div>
-                       </div>
-                    </div> 
-                     <div class="subcaja">
-                      <div class="texto">
-                        <h2>Desierto de la Tatacoa</h2>
-                        <h3>Fototour</h3>  
-                        </div>
-                     </div>
-                    </div>
-                  </div>
-
-                  <div class="caja"> 
-                    <div class="img">
-                      <div class="img2">
-                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active">
-                              <a href="../PaginaPrincipal/Sitios.php"><img src="../imagenes/Balcon.png" class="d-block w-100" alt="baneer1"></a>
-                            </div>
-                            <div class="carousel-item">
-                              <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/Balcon2.png" class="d-block w-100" alt="banner2"></a>
-                            </div>
-                            <div class="carousel-item">
-                              <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/Balcon3.png" class="d-block w-100" alt="banner3"></a>
-                            </div>
-                          </div>
-                        </div>
-                       </div>
-                    </div> 
-                     <div class="subcaja">
-                      <div class="texto">
-                        <h2>Mirador-El Balcón</h2>
-                        <h3>Fototour</h3>  
-                        </div>
-                     </div>
-                    </div>
-                  
             </main> 
 
    <footer>
