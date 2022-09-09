@@ -54,23 +54,23 @@
             <li><a href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
             <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
             <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;"> <?php echo $totalCantidad ?> Carrito</a></li>
+            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
            </ul>
         </nav>
     </header>
 
           <main>  
           <?php 
-          //$ared=mysqli_connect('localhost','root','2002','ared')
+          $conexion=mysqli_connect('localhost','root','2002','ared')
            ?>
           <?php
-          $sql="SELECT Nombre,Foto1,Foto2,Foto3 from lugares_turisticos where Cod_lugar_turistico=1";
-          $result=mysqli_query($ared,$sql);
+          $sql="SELECT Nombre,Foto1,Foto2,Foto3,Enlace from lugares_turisticos where Cod_lugar_turistico=1";
+          $result=mysqli_query($conexion,$sql);
 
           while($mostrar=mysqli_fetch_array($result)) {
           ?> 
             <?php 
-            $consult= "SELECT Foto1,Foto2,Foto3,Nombre FROM lugares_turisticos";
+            $consult= "SELECT Foto1,Foto2,Foto3,Nombre,Enlace FROM lugares_turisticos";
             $resultados= mysqli_query($ared, $consult);
 
              while ($mostrar = mysqli_fetch_array($resultados)) {?>
@@ -81,13 +81,13 @@
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                       <div class="carousel-inner">
                         <div class="carousel-item active">
-                          <a href="../PaginaPrincipal/Sitios2.php"><img src=<?php echo $mostrar['Foto1']?> class="d-block w-100" alt="baneer1"></a>
+                          <a href="<?php echo $mostrar['Enlace']?>"><img src=<?php echo $mostrar['Foto1']?> class="d-block w-100" alt="baneer1"></a>
                         </div>
                         <div class="carousel-item">
-                          <a href="../PaginaPrincipal/Sitios2.php"><img src=<?php echo $mostrar['Foto2']?> class="d-block w-100" alt="banner2"></a>
+                          <a href="<?php echo $mostrar['Enlace']?>"><img src=<?php echo $mostrar['Foto2']?> class="d-block w-100" alt="banner2"></a>
                         </div>
                         <div class="carousel-item">
-                          <a href="../PaginaPrincipal/Sitios2.php"><img src=<?php echo $mostrar['Foto3']?> class="d-block w-100" alt="banner3"></a>
+                          <a href="<?php echo $mostrar['Enlace']?>"><img src=<?php echo $mostrar['Foto3']?> class="d-block w-100" alt="banner3"></a>
                         </div>
                       </div>
                     </div>
@@ -104,112 +104,6 @@
                <?php 
                  }
                 ?> 
-               
-              <div class="caja"> 
-                <div class="img">
-                  <div class="img2">
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <a href="../PaginaPrincipal/Sitios3.php"><img src="../imagenes/MiradorCacica.png" class="d-block w-100" alt="baneer1"></a>
-                        </div>
-                        <div class="carousel-item">
-                          <a href="../PaginaPrincipal/Sitios3.php"><img src="../imagenes/MiradorCacica2.png" class="d-block w-100" alt="banner2"></a>
-                        </div>
-                        <div class="carousel-item">
-                          <a href="../PaginaPrincipal/Sitios3.php"><img src="../imagenes/MiradorCacica3.png" class="d-block w-100" alt="banner3"></a>
-                        </div>
-                      </div>
-                    </div>
-                   </div>
-                </div> 
-                 <div class="subcaja">
-                  <div class="texto">
-                    <h2>La Cacica</h2>
-                    <h3>Mirador-Fototour</h3>  
-                    </div>
-                 </div>
-                </div>
-
-                <div class="caja"> 
-                  <div class="img">
-                    <div class="img2">
-                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <a href="../PaginaPrincipal/Sitios.php"><img src="../imagenes/Balcon.png" class="d-block w-100" alt="baneer1"></a>
-                          </div>
-                          <div class="carousel-item">
-                            <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/Balcon2.png" class="d-block w-100" alt="banner2"></a>
-                          </div>
-                          <div class="carousel-item">
-                            <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/Balcon3.png" class="d-block w-100" alt="banner3"></a>
-                          </div>
-                        </div>
-                      </div>
-                     </div>
-                  </div> 
-                   <div class="subcaja">
-                    <div class="texto">
-                      <h2>Mirador-El Balcón</h2>
-                      <h3>Fototour</h3>  
-                      </div>
-                   </div>
-                  </div>
-
-                  <div class="caja"> 
-                    <div class="img">
-                      <div class="img2">
-                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active">
-                              <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/Desierto_de_La_Tatacoa.jpg" class="d-block w-100" alt="baneer1"></a>
-                            </div>
-                            <div class="carousel-item">
-                              <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/desierto-de-la-tatacoa-2.jpg" class="d-block w-100" alt="banner2"></a>
-                            </div>
-                            <div class="carousel-item">
-                              <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/desierto-de-la-tatacoa-3.jpg" class="d-block w-100" alt="banner3"></a>
-                            </div>
-                          </div>
-                        </div>
-                       </div>
-                    </div> 
-                     <div class="subcaja">
-                      <div class="texto">
-                        <h2>Desierto de la Tatacoa</h2>
-                        <h3>Fototour</h3>  
-                        </div>
-                     </div>
-                    </div>
-                  </div>
-
-                  <div class="caja"> 
-                    <div class="img">
-                      <div class="img2">
-                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active">
-                              <a href="../PaginaPrincipal/Sitios.php"><img src="../imagenes/Balcon.png" class="d-block w-100" alt="baneer1"></a>
-                            </div>
-                            <div class="carousel-item">
-                              <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/Balcon2.png" class="d-block w-100" alt="banner2"></a>
-                            </div>
-                            <div class="carousel-item">
-                              <a href="../PaginaPrincipal/Sitios2.php"><img src="../imagenes/Balcon3.png" class="d-block w-100" alt="banner3"></a>
-                            </div>
-                          </div>
-                        </div>
-                       </div>
-                    </div> 
-                     <div class="subcaja">
-                      <div class="texto">
-                        <h2>Mirador-El Balcón</h2>
-                        <h3>Fototour</h3>  
-                        </div>
-                     </div>
-                    </div>
-                  
             </main> 
 
    <footer>
