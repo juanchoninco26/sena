@@ -15,7 +15,9 @@ include '../../php/puntos-turista-bd.php';
 <body>
 <?php 
 session_start();
-  if(isset($_SESSION['usuarioExterno'])==($_SESSION['NombreUsuarioExterno']) and ($_SESSION['passwordUser'])==($_SESSION['contraseñaUsuarioExterno'])){
+  if(!isset($_SESSION['usuarioExterno'])){
+    header('Location:../../PaginaPrincipal/login/login.php');
+  }else{
   ?>
     <div class="menu-">
         <?php
@@ -102,8 +104,8 @@ session_start();
             </div>
         </div>
     </div>
-<?php }elseif (!empty($_SESSION['usuarioExterno'])) {
-       header('Location:../../PaginaPrincipal/login/login.php'); 
-} ?>
+<?php 
+} 
+?>
 </body>
 </html>

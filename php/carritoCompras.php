@@ -30,13 +30,26 @@ if(isset($_SESSION['carrito']) || isset($_POST['nombre'])){
     
     $_SESSION['carrito']=$carrito_compras;
     if(isset($_POST['agregar1'])){
-        header("Location:../../PaginaPrincipal\Sitios2.php");
+        header("Location:../../PaginaPrincipal/Sitios2.php");
     }
     if(isset($_POST['agregar2'])){
-        header("Location:../../PaginaPrincipal\Sitios3.php");
+        header("Location:../../PaginaPrincipal/Sitios3.php");
     }
     if(isset($_POST['agregar3'])){
         header("Location:/../../PaginaPrincipal/Carrito.php");
+    }
+}
+
+if (isset($_GET['eliminar_car'])) {
+    $total = 0;
+    $carrito_compras = $_SESSION['carrito'];
+    for ($i = 0; $i <= count($carrito_compras) - 1; $i--) {
+        if (isset($carrito_compras[$i])) {
+            if ($carrito_compras[$i] != NULL) {
+                $totals = $carrito_compras[$i]['precio'];
+                $total = $total + ($totals * $carrito_compras[$i]['cantidad']);
+            }
+        }
     }
 }
 

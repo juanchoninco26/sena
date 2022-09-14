@@ -83,7 +83,7 @@ session_start();
                                 $total = $total + ($totals * $carrito_compras[$i]['cantidad']);
                 ?>
                                 <div class="infom">
-                                    <div class="boton"><button>X Quitar</button></div>
+                                    <div class="boton"><a href="../php/carritoCompras.php?eliminar_car">X Quitar</a></div>
                                     <div>
                                         <p><?php echo $carrito_compras[$i]['nombre']; ?></p>
                                         <p>$<?php echo number_format($carrito_compras[$i]['precio']); ?></p>

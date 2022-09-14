@@ -15,7 +15,9 @@ session_start();
 
 <body>
 <?php 
-  if(isset($_SESSION['usuarioExterno'])==($_SESSION['NombreUsuarioExterno']) and ($_SESSION['passwordUser'])==($_SESSION['contraseñaUsuarioExterno'])){
+  if(!isset($_SESSION['usuarioExterno'])){
+    header('Location:../../PaginaPrincipal/login/login.php');
+  }else{
   ?>
     <div class="main">
         <?php
@@ -102,8 +104,8 @@ session_start();
             </div>
         </div>
     </div>
-<?php }else{
-    header('Location:/PaginaPrincipal/login/login.php'); 
-    } ?>
+<?php  
+    } 
+    ?>
 </body>
 </html>
