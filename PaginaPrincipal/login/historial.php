@@ -15,7 +15,6 @@ session_start();
 <?php 
   if(isset($_SESSION['usuarioExterno'])==($_SESSION['NombreUsuarioExterno']) and ($_SESSION['passwordUser'])==($_SESSION['contraseñaUsuarioExterno'])){
   ?>
-  <?php ?>
   <div class="menu">
     <?php 
     include '../../php/include/men-user-extern.php';
@@ -70,7 +69,8 @@ session_start();
                  $consult ="SELECT Cod_paquetepromociones FROM turista_lugares_paquetes WHERE Id_turista='".$_SESSION['turista_id']."'";  
                  $resutados = mysqli_query($ared, $consult);
              
-                 while ($mostrar = mysqli_fetch_array($resutados)) {?>
+                 while ($mostrar = mysqli_fetch_array($resutados)) {
+                  ?>
               <li><p><?php echo $mostrar['Cod_paquetepromociones'];?></p><a href="">abrir</a></li>
               <?php } ?>
             </ol>

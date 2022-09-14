@@ -28,11 +28,11 @@
 
             <main>    
          <?php 
-          $conexion=mysqli_connect('localhost','root','2002','ared')
+          //$conexion=mysqli_connect('localhost','root','2002','ared')
            ?>
           <?php
           $sql="SELECT Nombre,Rutas,Foto_fondo,Enlace from paquetes_turisticos where Cod_paquete=10";
-          $result=mysqli_query($conexion,$sql);
+          $result=mysqli_query($ared,$sql);
 
           while($mostrar=mysqli_fetch_array($result)) {
           ?> 

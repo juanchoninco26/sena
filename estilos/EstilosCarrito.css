@@ -381,6 +381,23 @@ div .Total {
     background-color:#A9DFBF;
     border-radius: 12px;
 }
+#limpiar_car button{
+    background-color:#06330C;
+    color: white;
+    width:200px;
+    height:40px;
+    border-radius: 15px;
+    border: none;
+    margin-left: 850px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+
+}
+#limpiar_car button:hover{
+    background-color:#A9DFBF;
+    border-radius: 12px;
+}
 
 button:not(:disabled){
     margin-left: 850px;

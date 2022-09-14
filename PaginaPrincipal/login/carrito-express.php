@@ -15,7 +15,7 @@ include '../../php/puntos-turista-bd.php';
 <body>
 <?php 
 session_start();
-  if(($_SESSION['usuarioExterno'])==($_SESSION['NombreUsuarioExterno']) and ($_SESSION['passwordUser'])==($_SESSION['contraseñaUsuarioExterno'])){
+  if(isset($_SESSION['usuarioExterno'])==($_SESSION['NombreUsuarioExterno']) and ($_SESSION['passwordUser'])==($_SESSION['contraseñaUsuarioExterno'])){
   ?>
     <div class="menu-">
         <?php
@@ -70,7 +70,7 @@ session_start();
                                     <div class="boton"><button>X Quitar</button></div>
                                     <div>
                                         <p><?php echo $carrito_compras[$i]['nombre']; ?></p>
-                                        <p>$<?php echo $carrito_compras[$i]['precio']; ?></p>
+                                        <p>$<?php echo number_format($carrito_compras[$i]['precio']); ?></p>
                                     </div>
                                 </div>
                 <?php
@@ -92,7 +92,7 @@ session_start();
                             } else {
                                 $_SESSION['total_carrito'];
                             }
-                            print_r($_SESSION['total_carrito']);
+                            print_r(number_format($_SESSION['total_carrito']));
                             ?>
                         </span>
                     </p>
@@ -102,8 +102,8 @@ session_start();
             </div>
         </div>
     </div>
-<?php }else{
-    header('Location:../../PaginaPrincipal/login/login.php'); 
-    } ?>
+<?php }elseif (!empty($_SESSION['usuarioExterno'])) {
+       header('Location:../../PaginaPrincipal/login/login.php'); 
+} ?>
 </body>
 </html>

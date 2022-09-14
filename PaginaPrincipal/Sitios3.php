@@ -17,11 +17,11 @@ session_start();
 </head>
 <body> 
 <?php
-  $conexion=mysqli_connect('localhost','root','2002','ared')
+  //$conexion=mysqli_connect('localhost','root','2002','ared')
   ?>
  <?php
  $sql="SELECT Nombre,descripcion_corta,descripcion_larga,precio,ubicacion,punto_lugar,Foto_fondo,foto1,foto2,foto3,Punto_lugar,Ubicacion from lugares_turisticos where Cod_lugar_turistico=2";
- $result=mysqli_query($conexion,$sql);
+ $result=mysqli_query($ared,$sql);
 
  while($mostrar=mysqli_fetch_array($result)) {
  ?>

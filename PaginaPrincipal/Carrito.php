@@ -86,7 +86,7 @@ session_start();
                                     <div class="boton"><button>X Quitar</button></div>
                                     <div>
                                         <p><?php echo $carrito_compras[$i]['nombre']; ?></p>
-                                        <p>$<?php echo $carrito_compras[$i]['precio']; ?></p>
+                                        <p>$<?php echo number_format($carrito_compras[$i]['precio']); ?></p>
                                     </div>
                                 </div>
                 <?php                            
@@ -103,12 +103,12 @@ session_start();
                     <p>Total:
                         <span>
                             <?php
-                            if (!isset($_SESSION['total_carrito'])) {
+                            if (empty($_SESSION['total_carrito'])){
                                 $_SESSION['total_carrito'] = 0;
                             } else {
                                 $_SESSION['total_carrito'];
                             }
-                            print_r($_SESSION['total_carrito']);
+                            print_r(number_format($_SESSION['total_carrito']));
                             ?>
                         </span>
                     </p>
@@ -117,11 +117,11 @@ session_start();
                 <br>
                 <nav id="Comprar">                   
                     <ul>
-                        <li><a href="../PaginaPrincipal/Pago.php"> Comprar </a></li>
+                        <li><a href="../../PaginaPrincipal/login/login.php"> Comprar </a></li>
                     </ul>
                 </nav>
                 <br>
-                <form action="/php/carritoCompras.php" method="POST">
+                <form action="../php/carritoCompras.php" method="POST" id="limpiar_car">
                     <button name='limpiar'>limpiar carrito</button>
                 </form>
             

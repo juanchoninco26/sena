@@ -44,10 +44,10 @@
           ?> 
           
             <div class="text">
-             <h2><?php echo $mostrar['porcentaje']?>%</h2>
+             <h2><?php echo nl2br ($mostrar['porcentaje'])?>%</h2>
              <h4>dto</h4>
              </div>
-             <p><?php echo $mostrar['Titulo']?></p>
+             <p><?php echo nl2br($mostrar['Titulo'])?></p>
                <?php 
              }
              ?>

@@ -41,9 +41,10 @@ if(isset($_SESSION['carrito']) || isset($_POST['nombre'])){
 }
 
 if (isset($_POST['limpiar'])) {
-    session_unset();
-    session_destroy();
-    header("Location:.../PaginaPrincipal/Carrito.php");
+    session_unset($_SESSION['carrito']);
+    session_destroy($_SESSION['carrito']);
+    unset($_SESSION['total_carrito']);
+    header("Location:../PaginaPrincipal/Carrito.php");
 }
 ?>
 

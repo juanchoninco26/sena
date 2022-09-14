@@ -63,7 +63,7 @@ include '../../php/puntos-turista-bd.php';
                         <tr>
                             <td><?php echo $ver['Nombre']; ?></td>
                             <td><?php echo $ver['Rutas']; ?></td>
-                            <td><?php echo $ver['Costo']; ?></td>
+                            <td><?php echo $ver['Precio']; ?></td>
                             <td><?php echo $ver['Punto_paquete']; ?></td>
                             <td><?php echo $ver['Descripcion']; ?></td>
 
