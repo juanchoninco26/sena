@@ -2,6 +2,32 @@ body{
     background: #DAF7A6 ;
 }
 
+/*layout exclusivo para dispositivos que funcionen con un ancho de ventana menor a 980 píxeles*/
+@media screen and (max-width: 980px){
+    #contenedor{
+        width: 90%;
+    }
+    #contenido{
+        width: 60%;
+    }
+    #barra_lateral{
+        width:30%;
+    }
+}
+
+/*lo mismo para el ancho de un dispositivo móvil */
+@media screen and (max-width: 480px){
+    #encabezado{
+        height: auto;
+    }
+    #contenido{
+        width: auto;
+    }
+    #barra_lateral{
+        display:none;
+    }
+}
+
 header{
     display: flex;
     align-items: center;
@@ -16,9 +42,8 @@ h1{
 }
 
 #menu-h {
-    width:50%;
-    height:30px;
-    padding: 15px;
+    height:31px;
+    padding: 16px;
     border-radius: 15px;
     background-color: hsl(128, 79%, 11%);
 } 
@@ -53,8 +78,6 @@ main {
     justify-content: space-around;
     margin: 0;
     padding: 0;
-    height: 400px;
-    width: 100%;
 } 
 
 .Imagen  {
@@ -76,8 +99,6 @@ aside {
     padding: 0;
     margin: 0;
     margin-left: 5px;
-    height: 400px;
-    width: auto;
 }
 
 .text {
@@ -192,8 +213,6 @@ main aside h6 {
 
 
 footer {
-    width: fit-content;
-    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-around;

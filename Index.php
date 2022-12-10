@@ -8,6 +8,7 @@
     <title>Página Principal</title>
     <link rel="stylesheet" href="./estilos/Estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
 </head>
 <body>  
    <header>
@@ -21,7 +22,7 @@
            <li><a href="Index.php"><img src="./imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
            <li><a href="./PaginaPrincipal/Sitios.php">Sitios</a></li>
            <li><a href="./PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-           <li><a href="./PaginaPrincipal/Carrito.php"><img src="./imagenes/LC-PNG.png" style="width: 24px; height: 24px;">  Carrito</a></li>
+           <li><a href="./PaginaPrincipal/Carrito.php"><img src="./imagenes/LC-PNG.png" style="width: 22px; height: 22px;">  Carrito</a></li>
           </ul>
        </nav>
    </header>
@@ -32,10 +33,9 @@
                 <img src="./imagenes/Imagen_principal.png.png" alt="">
               </div>
            </div>  
-            
+
            <aside>
            <?php 
-           //$conexion=mysqli_connect('localhost','root','2002','ared');
 
           $sql="SELECT Titulo,porcentaje from promociones where id_promocion=1";
           $result=mysqli_query($ared,$sql);

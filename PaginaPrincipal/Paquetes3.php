@@ -3,7 +3,6 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,19 +10,15 @@ session_start();
   <title>Página Paquetes3</title>
   <link rel="stylesheet" href="../Estilos/EstilosPaquetes2.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
 </head>
-
 <body>
-  <?php
-  //$conexion=mysqli_connect('localhost','root','2002','ared')
-  ?>
   <?php
   $sql = "SELECT Nombre,Foto_fondo,Foto1,Foto2,Foto3,Precio,Punto_paquete,Descripcion,Itinerario,Incluye,Recomendaciones from paquetes_turisticos where Cod_paquete=11";
   $result = mysqli_query($ared, $sql);
 
   while ($mostrar = mysqli_fetch_array($result)) {
   ?>
-
     <body background=<?php echo $mostrar['Foto_fondo'] ?>></body>
     <header>
       <div>
@@ -99,7 +94,7 @@ session_start();
           </div>
         </div>
         <div class="subcaja">
-          <div class="texto">
+          <div class="texto1">
             <h3><?php echo nl2br($mostrar['Nombre']); ?></h3>
           </div>
         </div>

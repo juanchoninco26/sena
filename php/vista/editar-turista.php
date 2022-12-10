@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../estilos/editar-turista.css">
-    <title>Editar</title>
+    <title>Document</title>
 </head>
 
 <body>
@@ -15,9 +15,8 @@
         <form action="/php/guardar_dat.php" method="post">
             <div class="div">
                 <div class="subcajaUno">
-                    
                     <input type="hidden" name="id" value="<?php print_r($_SESSION['paquetestur']); ?>"> 
-                    <p>Nombre: <input class="input" type="text" name="nombre" value="<?php /* las sesiones son traidas desde php/confirmar*/print_r($_SESSION['paquetestur2']); ?>"></p>
+                    <p>Nombre: <input class="input" type="text" name="nombre" value="<?php print_r($_SESSION['paquetestur2']); ?>"></p>
                     <p>Rutas: <input class="input" type="text" name="rutas" value="<?php print_r($_SESSION['paquetestur3']); ?>"></p>
                     <p>Precio: <input class="input" type="text" name="precio" value="<?php print_r($_SESSION['paquetestur4']); ?>"></p>
                     <p>Punto paquete: <input class="input" type="text" name="puntos" value="<?php print_r($_SESSION['paquetestur5']); ?>"></p>

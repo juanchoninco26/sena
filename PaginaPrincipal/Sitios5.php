@@ -14,14 +14,12 @@ session_start();
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="../estilos/EstilosSitios2.css">
+  <link meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
 </head>
 <body> 
-<?php
-  $conexion=mysqli_connect('localhost','root','2002','ared')
-  ?>
  <?php
  $sql="SELECT Nombre,descripcion_corta,descripcion_larga,precio,ubicacion,punto_lugar,Foto_fondo,foto1,foto2,foto3,Punto_lugar from lugares_turisticos where Cod_lugar_turistico=4";
- $result=mysqli_query($conexion,$sql);
+ $result=mysqli_query($ared,$sql);
 
  while($mostrar=mysqli_fetch_array($result)) {
  ?>
@@ -64,7 +62,7 @@ session_start();
             <li><a href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
             <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
             <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
+            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 22px; height: 22px;">Carrito</a></li>
            </ul>
         </nav>
     </header>
@@ -166,7 +164,7 @@ session_start();
 
       <div class="contenedor">
         <div class="boton">
-          <button id="btn-abrir-popup" class="btn-abrir-popup">+</button>
+          <button id="btn-abrir-popup" class="btn-abrir-popup">ver</button>
         </div>
         <div class="overlay" id="overlay">
           <div class="popup" id="popup">

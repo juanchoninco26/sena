@@ -1,9 +1,7 @@
 <?php include("../php/puntos-turista-bd.php");
 session_start(); ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,20 +9,17 @@ session_start(); ?>
     <link rel="stylesheet" href="../estilos/EstilosPromo.css">
     <title>Página promoción</title>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+    <link meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
 </head>
-
 <body>
+<body background="../imagenes/Recurso.png.png"></body>
+
     <?php
-    //$conexion=mysqli_connect('localhost','root','2002','ared')
-    ?>
-    <?php
-    $sql = "SELECT Nombre,descripcion_larga,Fotografia_referencia,Foto,Precio from promociones where id_promocion=1";
+    $sql = "SELECT Nombre,descripcion_larga,Foto,Precio from promociones where id_promocion=1";
     $result = mysqli_query($ared, $sql);
 
     while ($mostrar = mysqli_fetch_array($result)) {
     ?>
-
-        <body background=<?php echo $mostrar['Fotografia_referencia'] ?>></body>
         <header>
             <div>
                 <img src="../imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left" />
@@ -66,7 +61,7 @@ session_start(); ?>
                     <li><a href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;">Inicio</a></li>
                     <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
                     <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-                    <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
+                    <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 22px; height: 22px;">Carrito</a></li>
                 </ul>
             </nav>
         </header>

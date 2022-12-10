@@ -16,7 +16,7 @@ echo (filter_var($correo[1], FILTER_VALIDATE_EMAIL) ? 'Es email' : 'No es email'
  $boton=1;
 
   //insertar datos en la tabla
-  $lista = "INSERT INTO Correo (Id_correo, correo, Activo, Id_turista) 
+  $lista = "INSERT INTO Correo (Id, correo, Activo, Id_turista) 
   VALUES ('$username','$correo','$boton',NULL)";
   $resultado = mysqli_query($ared,$lista) or die("error:". mysqli_error($ared));
 

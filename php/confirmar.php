@@ -37,7 +37,7 @@ if(isset($_GET['Cod_paquete'])){
             $_SESSION['paquetestur']=$ver['Cod_paquete'];
             $_SESSION['paquetestur2']=$ver['Nombre'];
             $_SESSION['paquetestur3']=$ver['Rutas'];
-            $_SESSION['paquetestur4']=$ver['Precio'];
+            $_SESSION['paquetestur4']=$ver['Costo'];
             $_SESSION['paquetestur5']=$ver['Punto_paquete'];
             $_SESSION['paquetestur6']=$ver['Descripcion'];
             header('Location:/php/vista/editar-turista.php');

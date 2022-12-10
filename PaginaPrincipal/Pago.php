@@ -9,10 +9,10 @@
     <title>Página Pago</title>
     <link rel="stylesheet" href="../estilos/EstilosPago.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
- 
+    <link meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
 </head>
 <body>
-<body background="../imagenes/FondoChica.png" bgcolor="aqua"></body>
+<body background="../imagenes/FondoChica.png"></body>
     <header>
         <div> 
            <img src="../imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
@@ -24,7 +24,7 @@
             <li><a href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
             <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
             <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
+            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 22px; height: 22px;">Carrito</a></li>
            </ul>
         </nav>
     </header>

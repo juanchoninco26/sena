@@ -82,7 +82,7 @@ session_start();
                             <p>Nombre</p>
                             <input type="text" name="nombre" id="" value="<?php echo $rows['Nombre']; ?>">
                             <p>Cedula</p>
-                            <input type="text" name="cedula" id="" value="<?php $_SESSION['id_turista']= $rows['id_turista']; echo $rows['id_turista'];?>">
+                            <input type="text" name="cedula" id="" value="<?php echo $rows['id_turista'];?>">
                             <p>Contraseña</p>
                             <input type="password" name="contraseña" id="" value="<?php echo $rows['Contraseña']; ?>">
                             <p>Repetir Contraseña</p>

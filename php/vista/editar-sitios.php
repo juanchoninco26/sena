@@ -42,7 +42,7 @@
             <!-- editar paquetes -->
             <div class="paquetes">
                 <div class="edpq">
-                    <h3><a href="/php/vista/editar-paquete-turista.php">Editar Paquetes</a></h3>
+                    <h3><a href="/php/vista/editar-paquete-turista.php">Editar Paquetes Turista</a></h3>
                 </div>
             </div>
         </div>
