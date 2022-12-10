@@ -100,7 +100,14 @@ session_start();
                     </p>
                 </div>
                 <br>
-                <div><input type="button" value="Comprar" class="botn-compra"></div>
+                <form method="get">
+                <div><input type="button" value="Comprar" name="Comprar_final" class="botn-compra"></div>
+                </form>
+                <?php
+                if (isset($_GET['Comprar_final'])){
+                    header("Location:/../../PaginaPrincipal/login/login.php");
+                }
+                ?>
             </div>
         </div>
     </div>

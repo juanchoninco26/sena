@@ -1,5 +1,6 @@
 <?php 
-include '../../php/puntos-turista-bd.php'; 
+include '../../php/puntos-turista-bd.php';
+
 session_start();
 $nombre1 = $_SESSION['usuarioExterno'];
 $consulta = "SELECT *FROM registro_turista where Nombre='$nombre1'";

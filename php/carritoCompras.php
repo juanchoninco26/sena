@@ -36,7 +36,7 @@ if(isset($_SESSION['carrito']) || isset($_POST['nombre'])){
         header("Location:../../PaginaPrincipal/Sitios3.php");
     }
     if(isset($_POST['agregar3'])){
-        header("Location:/../../PaginaPrincipal/Carrito.php");
+        header("Location:/../../PaginaPrincipal/login/login.php");
     }
 }
 
