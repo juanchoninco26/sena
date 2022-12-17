@@ -535,12 +535,61 @@ footer h3 {
         opacity: 1;
     }
 }
+
 /*web responsive: laptop*/
-@media screen and (max-width: 1024px) and  (min-width:701px){
-    body{
-        background-color: #5e7de3;
+@media screen and (max-width: 1124px) and  (min-width:701px){
+    header{
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    header .content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main .imagen2 img{
+        width: auto;
+        height: auto;
+        margin-top: 0px;
+    }
+    /*
+    .Promo .H{
+        margin-bottom: 50px;
+    }
+    .Promo h6{
+        margin-left: 1px;
+    }
+    .Promo #menu-h2{
+        margin-left: 1px;
+    }
+    .Promo .Logo{
+        margin-left: 90px;
+    }
+    */
+    footer{
+        display: grid;
+        margin-top: 100px;
+    }
+
+    footer .btn-abrir-popup {
+        height: auto;
+        order: 1;
+    }
+    footer .Barra{
+        order: 2;
+        text-align: center;
+        margin-top: 30px;
+    }
+    footer .redes{
+        order: 3;
+    }
+    .redes .sociales{
+        padding-top: 0;
+        margin-left: 0;
     }
 }
+
 /* web responsive: movil */
 @media screen and (max-width: 700px) {
     * {

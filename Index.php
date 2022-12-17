@@ -16,7 +16,6 @@
 
 <body>
   <header>
-
     <div class="content">
       <div class="inicio_imagen">
         <img src="./imagenes/360.png.png.png" alt="" width="130" height="130" />
