@@ -1,34 +1,9 @@
 body{
     background: #DAF7A6 ;
+    background-image: url(../imagenes/Recurso_png.png);
     background-repeat: repeat-y;
     background-position: right;
-    background-size: 520px;
-}
-
-/*layout exclusivo para dispositivos que funcionen con un ancho de ventana menor a 980 píxeles*/
-@media screen and (max-width: 980px){
-    #contenedor{
-        width: 90%;
-    }
-    #contenido{
-        width: 60%;
-    }
-    #barra_lateral{
-        width:30%;
-    }
-}
-
-/*lo mismo para el ancho de un dispositivo móvil */
-@media screen and (max-width: 480px){
-    #encabezado{
-        height: auto;
-    }
-    #contenido{
-        width: auto;
-    }
-    #barra_lateral{
-        display:none;
-    }
+    background-size: contain;
 }
 
 header{
@@ -36,7 +11,9 @@ header{
     align-items: center;
     justify-content: space-around;
 }
-
+header img{
+    float: left;
+}
 header h1{
     margin-left: 160px;
     line-height: 100px;
@@ -73,6 +50,9 @@ header h1{
 
 nav ul :hover{
     background-color:#A9DFBF;
+}
+.img-menu{
+    display: none;
 }
 
 main {
@@ -125,7 +105,12 @@ aside {
 main aside .img2 {
     margin-right: 100px;
 }
-
+main .pre0{
+    display: none;
+}
+main .pre{
+    margin-bottom: 100px;
+}
 .caja1 ul .btn_costo{
     display: flex;
     text-align: center;
@@ -156,19 +141,11 @@ main .caja1 .btn_costo {
     line-height: 35px;
 }
 
-body {
-    height: 100vh;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-
 h5{
     font-size: 30px;
     color: white;
     margin: 0px;
     line-height: 45px;
-    margin-left: 8px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -196,7 +173,7 @@ li  {
     background: #06330C;
     width: 150px;
     border-radius: 10px;
-    margin-left: -205px;
+    margin-left: -190px;
     margin-top: 150px;
     height: 50px;
     text-decoration: none;
@@ -259,4 +236,198 @@ footer h5{
 .redes img:hover {
       background-color:#A9DFBF;
       border-radius: 20px;
+}
+
+/*para laptop*/
+@media screen and (max-width: 1124px) and  (min-width:701px){
+    header{
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    header .content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main h2{
+        font-size: 30pt;
+        text-align: center;
+    }
+    main .caja1{
+        margin-left: 0px;
+    }
+    main .Parrafo{
+       font-size: 23pt;
+       width: auto; 
+    }
+    main #btn_comprar button{
+        margin-top: 410px;
+    }
+    main aside .img2{
+        margin-right: 0px;
+    }
+    footer{
+        display: block;
+    }
+    footer .tex h5{
+        text-align: center;
+        margin-left: 0px;
+        padding-bottom: 0px;
+        font-size: 20pt;
+        font-weight: 800;
+    }
+}
+/* para dispositivos moviles:celulares*/
+@media screen and (max-width: 700px) {
+    *{
+        box-sizing: border-box;
+        font-size: 13pt;
+    }
+    body{
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    header{
+        display: block;
+        align-items: center;
+    }
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .inicio_imagen {
+        display: block;
+        justify-content: center;
+    }
+    .inicio_imagen img {
+        width: 100px;
+        height: 100px;
+    }
+    .img-menu{
+        display: block;
+        width: 30px;
+        height: 30px;
+        float: right;
+        padding: 2px;
+        margin: 20px;  
+    }
+    nav ul li{
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding: 10px;
+        width: 100%;
+        
+    }
+    #menu-h {
+        background-color: transparent;
+        width: 100%;  
+        padding: 0px; 
+    }
+
+    #menu-h .sub-a {
+        visibility: hidden;
+        display: contents;
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    #menu-h .responsive{
+        visibility: visible;
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: hsl(128, 79%, 11%);
+        transition: 2s;
+    }
+    #menu-h a {
+        padding: 1px;
+    }
+
+    #menu-h a img {
+        width: 0;
+        height: 0;
+    }
+
+    main{
+        display: block;
+        align-items: center;
+        justify-content: center;
+
+    }
+    main h2{
+        font-size: 20pt;
+        text-align: center;
+    }
+    main .caja1{
+        width: auto;
+        height: auto;
+        margin-bottom: 50px;
+        margin-left: 0;
+    }
+    main .Parrafo{
+        width: auto;
+        padding: 10px;
+    }
+    main .pre0{
+        display: block;
+    }
+    main .caja1 h5{
+        color: white;
+        background: #06330C;
+        width: 130px;
+        text-align: center;
+        border-radius: 8px;
+        
+    }
+    main .pre{
+        display: none;
+    }
+    #btn_comprar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #btn_comprar button{
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    aside{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main aside .img2{
+        margin-right: 0px;
+    }
+
+    footer{
+        display: grid;
+    }
+    footer h5{
+        text-align: center;
+        margin-left: 0px;
+    }
+    .tex{
+        text-align: center;
+        order: 1;
+    }
+    .redes{
+        order: 2;
+    }
+    .copyright{
+        background: #62bf6e;
+        order: 3;
+    }
+    footer h4{
+        color: white;
+        margin-left: 0px;
+        padding-bottom: 0px;
+        text-align: center;
+        font-size: 13pt;
+    }
+
 }
