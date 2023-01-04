@@ -79,7 +79,7 @@ session_start();
           </div>
            
           <div class="texto2">
-           <div class="subtexto2"> 
+           <div class="subtexto2">
            <p><?php echo nl2br($mostrar['descripcion_larga']);?></p> 
           </div>
         </div>

@@ -42,7 +42,7 @@ session_start();
                         $result = $ared->query("SELECT * FROM registro_turista WHERE Nombre = '$nombre1'");
                         while ($mostrar = mysqli_fetch_array($result)) {
                         ?>
-                            <img src="<?php echo $mostrar['Fotografia']; ?>" alt="">
+                            <img src="<?php echo $mostrar['Fotografia']; ?>" alt="avatar">
                         <?php } ?>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ session_start();
                         while($mostrar=mysqli_fetch_array($resultado3)){
                     ?>
                     <div>
-                        <img src="<?php echo $mostrar['locales'];?>" alt="" width="90px" height="96px">
+                        <a href="<?php echo $mostrar['click_local']?>"><img src="<?php echo $mostrar['locales'];?>" alt="" width="90px" height="96px"></a>
                     </div>
                     <?php }?>
                 </div>
@@ -79,7 +79,7 @@ session_start();
                         while($mostrar=mysqli_fetch_array($resultado3)){
                     ?>
                     <div>
-                        <img src="<?php echo $mostrar['nacionales'];?>" alt="" width="90px" height="96px">
+                        <a href="<?php echo $mostrar['click_regional']?>"><img src="<?php echo $mostrar['nacionales'];?>" alt="" width="90px" height="96px"></a>
                     </div>
                     <?php }?>
                 </div>
@@ -97,7 +97,7 @@ session_start();
                         while($mostrar=mysqli_fetch_array($resultado3)){
                     ?>
                     <div>
-                        <img src="<?php echo $mostrar['nacionales'];?>" alt="" width="90px" height="96px">
+                        <a href="<?php echo $mostrar['click_nacional']?>"><img src="<?php echo $mostrar['nacionales'];?>" alt="" width="90px" height="96px"></a>
                     </div>
                     <?php }?>
                 </div>

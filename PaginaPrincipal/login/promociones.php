@@ -49,19 +49,14 @@ session_start();
     <div class="contenedor">
       <div class="caja-card">
         <?php
-        $consult = "SELECT * FROM promociones";
+        $consult = "SELECT * FROM promociones where estado=1";
         $resutados = mysqli_query($ared, $consult);
         while ($mostrar = mysqli_fetch_array($resutados)) {
         ?>
           <div class="card">
             <div class="content1">
-              <img src="<?php echo $mostrar['Fotografia_referencia'];?>" alt="">
+              <a href="<?php echo $mostrar['Enlace']?>"><img src="<?php echo $mostrar['Fotografia_referencia'];?>" alt=""></a>
               <p><?php echo $mostrar['Titulo']; ?></p>
-              <!--<div class="content2">
-              <div class="letras">
-              <p><?php echo $mostrar['Titulo']; ?></p>
-              </div>
-              </div>-->
             </div>
           </div>
         <?php } ?>

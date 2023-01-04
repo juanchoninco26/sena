@@ -7,6 +7,7 @@ $cons = mysqli_query($ared, $consulta);
 while ($rows = mysqli_fetch_array($cons)) {
     //se envia los datos del id
     $_SESSION['turista_id'] = $rows['id_turista'];
+    $puntos=$rows['Puntos_acumulados'];
 }
 //'../login/editar-perfil.php';
 ?>
@@ -69,7 +70,7 @@ while ($rows = mysqli_fetch_array($cons)) {
     <br>
     <div class="caja2">
       <div class="parrafo">
-        <p>Usar puntos acomulados (12 sitios)</p>
+        <p>Usar puntos acomulados (<?php echo $puntos.' puntos' ?>)</p>
       </div>
     </div>
   </div>

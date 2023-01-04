@@ -15,7 +15,7 @@ session_start(); ?>
 
 <body>
     <?php
-    $sql = "SELECT Nombre,descripcion_larga,Foto,Precio from promociones where id_promocion=1";
+    $sql = "SELECT Nombre,descripcion_larga,Foto,Precio from promociones where estado=1";
     $result = mysqli_query($ared, $sql);
 
     while ($mostrar = mysqli_fetch_array($result)) {
@@ -99,7 +99,7 @@ session_start(); ?>
                 <form action="../php/carritoCompras.php" method="post">
                     <?php
                     //enviamos con el  formulario el nombre, precio y cantidad al carrito
-                    $consulta = "SELECT * FROM promociones WHERE Id_promocion= 1";
+                    $consulta = "SELECT * FROM promociones WHERE estado= 1";
                     $respuesta = mysqli_query($ared, $consulta);
                     while ($fila = mysqli_fetch_assoc($respuesta)) {
                     ?>
