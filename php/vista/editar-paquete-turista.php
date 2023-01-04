@@ -21,18 +21,38 @@ include '../../php/puntos-turista-bd.php';
             <form action="/php/guardar_dat.php" method="POST">
                 <input type="submit" value="volver" name="volverSitios">
             </form>
+            <div class="agregar">
+                <div onclick="desplegar_paquete()">agregar</div>
+            </div>
         </div>
-        <div class="cajaInicial">
+        <div class="displayCaja" id="cajaInicial">
             <form class="formulario" action="/php/guardar_dat.php" method="post">
                 <div class="div">
                     <div class="subcajaUno">
-                        <p>Nombre: <input class="input" type="text" name="nombre" value=""></p>
-                        <p>Rutas: <input class="input" type="text" name="rutas" value=""></p>
-                        <p>Precio: <input class="input" type="text" name="precio"></p>
+                        <div class="contenido">
+                            <label for="nombre">Nombre:</label>
+                            <input class="input" type="text" name="nombre" value="">
+                        </div>
+
+                        <div class="contenido">
+                            <label for="rutas">Rutas:</label>
+                            <input class="input" type="text" name="rutas" value="">
+                        </div>
+
+                        <div class="contenido">
+                            <label for="precio">Precio:</label>
+                            <input class="input" type="text" name="precio">
+                        </div>
                     </div>
                     <div class="subcajaDos">
-                        <p>Punto paquete: <input class="input" type="text" name="puntos" value=""></p>
-                        <p>Descripción: <textarea class="textarea" name="descripcion" id="" cols="20" rows="4" placeholder=""></textarea></p>
+                        <div class="contenido">
+                            <label for="puntos">Punto paquete:</label>
+                            <input class="input" type="text" name="puntos" value="">
+                        </div>
+                        <div class="contenido">
+                            <lavel for="descripcion">Descripción:</lavel>
+                            <textarea class="textarea" name="descripcion" id="" cols="20" rows="4" placeholder=""></textarea>
+                        </div>
                     </div>
                 </div>
                 <div class="boton_">
@@ -80,6 +100,8 @@ include '../../php/puntos-turista-bd.php';
     <?php } else {
         header('Location:/login.php');
     } ?>
+
+    <script src="../../script/menu.js"></script>
 </body>
 
 </html>

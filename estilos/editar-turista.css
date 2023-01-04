@@ -64,12 +64,14 @@ body .formul{
     border: none;
     width: 80px;
     margin-top: 10px;
+    margin-left: 10px;
     background: rgb(0, 47, 128);
     font-weight: 600;
     font-size: 13pt;
     padding: 3px;
     border-radius:6px;
     cursor: pointer;
+    color: white;
 }
 .formul .boton2 a{
     color: white;

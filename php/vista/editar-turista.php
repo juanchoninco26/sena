@@ -25,7 +25,9 @@
                 </div>
                 <div class="boton_">
                     <input class="boton" type="submit" value="Editar" name="paquetes">
-                    <button class="boton2"><a href="/php/vista/editar-paquete-turista.php">Volver</a></button>
+                    <input class="boton2" type="submit" value="volver" name="link">
+                    <?php ///php/vista/editar-paquete-turista.php?>
+                    
                 </div>
             </div>
         </form>

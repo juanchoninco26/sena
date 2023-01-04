@@ -98,6 +98,10 @@ h2{
     height: 25px;
     border-radius: 6px;
 }
+.mensaje{
+    color: green;
+    margin-bottom: 15px;
+}
 .login{
     border: none;
     background: rgba(6, 144, 6, 0.883);

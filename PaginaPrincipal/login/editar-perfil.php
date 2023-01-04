@@ -80,24 +80,24 @@ session_start();
                                 <p>Modificar Datos</p>
                             </div>
                             <p>Nombre</p>
-                            <input type="text" name="nombre" id="" value="<?php echo $rows['Nombre']; ?>">
+                            <input type="text" name="nombre"  value="<?php echo $rows['Nombre']; ?>">
                             <p>Cedula</p>
-                            <input type="text" name="cedula" id="" value="<?php echo $rows['id_turista'];?>">
+                            <input type="text" name="cedula"  value="<?php echo $rows['id_turista'];?>" readonly>
                             <p>Contraseña</p>
-                            <input type="password" name="contraseña" id="" value="<?php echo $rows['Contraseña']; ?>">
+                            <input type="password" name="contraseña" value="">
                             <p>Repetir Contraseña</p>
-                            <input type="password" name="repcontraseña" id="" value="<?php echo $rows['Contraseña']; ?>">
+                            <input type="password" name="repcontraseña"  value="">
                             <p>Fecha de nacimiento</p>
-                            <input type="text" name="edad" id="" value="<?php echo $rows['Fecha_nacimiento']; ?>">
+                            <input type="date" name="edad"  value="<?php echo $rows['Fecha_nacimiento']; ?>">
                             <div>
                                 <input type="submit" value="Actualizar" name="editar_usuario" onclick="alert('datos actualizados');">
                             </div>
                         </div>
                         <div class="min-dat">
                             <p>Telefono</p>
-                            <input type="number" name="telefono" id="" value="<?php echo $rows['Telefono']; ?>">
+                            <input type="number" name="telefono"  value="<?php echo $rows['Telefono']; ?>">
                             <p>Correo</p>
-                            <input type="text" name="correo" id="" value="<?php echo $rows['Correo_electronico']; ?>">
+                            <input type="email" name="correo"  value="<?php echo $rows['Correo_electronico']; ?>">
 
                             <p>Foto</p>
                             <input type="file" name="foto" id="seleccionArchivos">

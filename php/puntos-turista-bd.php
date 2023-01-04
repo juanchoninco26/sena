@@ -8,7 +8,7 @@ $ared = new mysqli(
     2526         //puerto
 );
 
-//$ared -> set_charset ("utf8");
+$ared -> set_charset ("utf8");
 
 if (!isset($ared)){
     echo 'no se puede realizar la conexion';

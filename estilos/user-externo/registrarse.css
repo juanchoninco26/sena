@@ -106,6 +106,13 @@ h2{
     height: 25px;
     border-radius: 6px;
 }
+.formulario .mensaje{
+    color: green;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 15px;
+
+}
 .login{
     border: none;
     background: rgba(6, 144, 6, 0.883);

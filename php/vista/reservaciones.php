@@ -74,7 +74,6 @@
                     url:url,
                     data:'id='+id,
                     success: function(response){
-                        console.log(response);
                         document.location.reload();         
                     }
                 });
