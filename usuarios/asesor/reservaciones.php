@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/estilos/menu.css" rel="stylesheet" type="text/css">
     <link href="/estilos/reservaciones.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
     <script src='/fullcalendar/dist/index.global.js'></script>
     <script src="fullcalendar/packages/core/locales/es-us.global.js"></script>
 

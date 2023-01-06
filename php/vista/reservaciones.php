@@ -3,19 +3,9 @@
         <div id='calendar'></div>
     </div>
 </div>
-<?php
-function reservasDato()
-{
-    include '../../php/puntos-turista-bd.php';
-    $query = "SELECT * FROM reservas";
-    $resultado = mysqli_query($ared, $query);
-    while ($lista = mysqli_fetch_array($resultado)) {
-        return $lista['reprogramar'];
-    }
-}
-?>
 <script>
     //https://fullcalendar.io/
+    //se requiere comprar el paquete premium para usar envios por json
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -31,22 +21,17 @@ function reservasDato()
                 <?php
                 $query = "SELECT * FROM reservas";
                 $resultado = mysqli_query($ared, $query);
-                while ($lista = mysqli_fetch_array($resultado)):
+                while ($lista = mysqli_fetch_array($resultado)) :
                 ?>
-                title: '<?php echo $lista['reprogramar'];?>',
-                start: '<?php echo $lista['reprogramar']; ?>',
-                constraint: 'businessHours',
-                background: '#257e4a',
+                    title: '<?php echo $lista['reprogramar']; ?>',
+                    start: '<?php echo $lista['reprogramar']; ?>',
+                    constraint: 'businessHours',
+                    background: '#257e4a',
 
                 <?php endwhile ?>
             }]
         });
-
         calendar.render();
-    });
-
-    $(document).ready(function() {
-
     });
 </script>
 
@@ -111,8 +96,6 @@ function reservasDato()
                     </form>
                 </ol>
             <?php } ?>
-
-            <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script>
                 //click para mostrar info de la persona seleccionada
                 //https://www.youtube.com/watch?v=Pf2gwnNyq1g
