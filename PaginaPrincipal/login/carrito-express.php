@@ -44,7 +44,6 @@ session_start();
                     </div>
                     <div class="foto">
                         <?php
-
                         $nombre1 = $_SESSION['usuarioExterno'];
                         $result = $ared->query("SELECT * FROM registro_turista WHERE Nombre = '$nombre1'");
                         while ($mostrar = mysqli_fetch_array($result)) {
@@ -100,7 +99,10 @@ session_start();
                     </p>
                 </div>
                 <br>
-                <div><input type="button" value="Comprar" class="botn-compra"></div>
+                <div>
+                    <input type="button" value="Comprar" class="botn-compra">
+                    <input type="button" value="limpiar" class="botn-compra">
+                </div>
             </div>
         </div>
     </div>

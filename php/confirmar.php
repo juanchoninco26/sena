@@ -1,6 +1,7 @@
 <?php 
 include '../php/puntos-turista-bd.php';
 session_start();
+
 //reservaciones:confirmar
 if (isset($_GET['confirmar'])){
     $id=$_GET['confirmar'];
@@ -23,8 +24,8 @@ if (isset($_GET['confirmar'])){
         } else {
            die('error:'. $ared ->error);
         }
-    }
-    
+}
+
 //editar paquete turista
 if(isset($_GET['Cod_paquete'])){
     $id=$_GET['Cod_paquete'];
@@ -45,6 +46,7 @@ if(isset($_GET['Cod_paquete'])){
     }
     
 }
+
 //reprogramar 
 if (isset($_GET['reprogramar'])){
     $id=$_GET['reprogramar'];
@@ -70,4 +72,5 @@ if (isset($_GET['reprogramar'])){
         $paquete=$_POST['paquetes'];
     }
 }
+
 ?>

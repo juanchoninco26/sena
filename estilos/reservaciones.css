@@ -9,7 +9,11 @@ body{
 }
 .calen-google{
     width: 100%;
-    height: auto;
+    height: 450px;
+}
+#calendar{
+    background: white;
+    margin-right: 10%;
 }
 .administrador{
     width: 30%;
