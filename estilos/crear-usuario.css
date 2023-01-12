@@ -55,7 +55,22 @@ body{
     margin-right:40px;
     padding-bottom: 3px;
 }
-.lista ol li{
+.lista ol #datos{
+    display: block;
+}
+.lista ol #datos #resultado{
+    background: white;
+    list-style: none;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 7px;
+    margin-bottom: 10px; 
+}
+/* .lista ol li{
     background: white;
     list-style: none;
     height: 40px;
@@ -65,7 +80,7 @@ body{
     justify-content: space-between;
     padding-left: 10px;
     padding-right: 7px;   
-}
+} */
 .lista ol li button{
     color: white;
     border: none;

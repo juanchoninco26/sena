@@ -6,34 +6,89 @@
         </div>
         <div id="buscador">
             <div class="centrar">
-                <form action="" method="GET">
-                    <input type="search" name="crear_usuario" id="search">
+                <form action="" method="">
+                    <input type="search" name="buscarUsuario" id="search">
                     <a href=""><img src="/imagenes/buscador.svg" alt="" id="buscar1"></a>
                     <a onclick="ocultar()"><img src="/imagenes/arriba.svg" alt="" id="esconder"></a>
                 </form>
             </div>
         </div>
         <?php
-        $crear_usuario = "";
-        if (isset($_GET['crear_usuario'])) {
-            $busqueda = $_GET['crear_usuario'];
-            $crear_usuario = "WHERE Nombre LIKE'%" . $busqueda . "%'";
-        }
+        // $crear_usuario = "";
+        // if (isset($_GET['crear_usuario'])) {
+        //     $busqueda = $_GET['crear_usuario'];
+        //     $crear_usuario = "WHERE Nombre LIKE'%" . $busqueda . "%'";
+        // }
         ?>
         <div class="lista">
             <ol>
                 <?php
-                $consult = " SELECT Nombre FROM empleados $crear_usuario ORDER BY Nombre ASC";
-                $resutados = mysqli_query($ared, $consult);
+                // $consult = " SELECT Nombre,Id_empleado FROM empleados $crear_usuario ORDER BY Nombre ASC";
+                // $resutados = mysqli_query($ared, $consult);
 
-                while ($mostrar = mysqli_fetch_array($resutados)) { ?>
+                // while ($mostrar = mysqli_fetch_array($resutados)) { 
+                ?>
 
-                    <form action="/php/elim_usuario.php" method="GET">
-                        <li><?php echo $mostrar['Nombre']; ?><button><a onclick="return confirm('estas seguro de eliminar este dato?') " href="/php/eliminar.php?Id_empleado=<?php echo $mostrar['Id_empleado']; ?>">x Quitar</a></button></li>
-                    <?php } ?>
-                    </form>
+                <form action="/php/elim_usuario.php" method="GET">
+                    <li id="datos">
+                        <!-- <p><?php //echo $mostrar['Nombre'];
+                                ?></p><button><a onclick="return confirm('estas seguro de eliminar este dato?') " href="/php/eliminar.php?Id_empleado=<?php //echo $mostrar['Id_empleado']; 
+                                                                                                                                                        ?>">x Quitar</a></button> -->
+                    </li>
+                    <?php //} 
+                    ?>
+                </form>
             </ol>
         </div>
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                //enviar los resultados al servidor
+                const buscarDatos = async (url) => {
+                    // const url = `../../php/listas_api.php`;
+                    // let datosR = new FormData();
+                    // datosR.append('buscarUsuario',criteriosBusqueda);
+                    // console.log(criteriosBusqueda)
+                    const response = await fetch(url);
+                    const rta = await response.json();
+                    // console.log(rta);
+                    return rta
+                }
+
+                //mostrar datos 
+                buscarDatos(`../../php/listas_api.php`)
+                    .then((data) => {
+                        viewData(data)
+                    })
+                    .catch(error => console.error('2  error:', error))
+            });
+            //arr es el array y el query e el input
+            function filterItems(arr, query) {
+                return arr.filter((e) => e.toString().toLowerCase().includes(query.toLowerCase()));
+            }
+
+            function viewData(data) {
+                const busqueda = document.querySelector('#search');
+                let criteriosBusqueda = '';
+
+                if (busqueda) {
+                    busqueda.addEventListener('input', event => {
+                        criteriosBusqueda = event.target.value.toUpperCase();
+                        return criteriosBusqueda
+                    })
+                }
+                console.log(filterItems(data,'Felipe Torres'));
+
+                let template = ``;
+                data.forEach(Element => {
+                    const nombre = Element.Nombre;
+                    const id = Element.Id_empleado;
+                    template += `<ul id='resultado'>${nombre}<button><a onclick="return confirm('estas seguro de eliminar este dato?') " href="/php/eliminar.php?Id_empleado=${id}">x Quitar</a></button></ul>`;
+                })
+                //funciona, hay que arreglar la parte visual
+                //https://www.youtube.com/watch?v=6zii2I6LlT0 minuto:57:40
+                document.getElementById("datos").innerHTML = template;
+            }
+        </script>
     </div>
 </div>
 <div class="sec3">
@@ -73,15 +128,15 @@
         ?>
         <form class="add-user" action="/php/guardar_dat.php" method="POST" enctype="multipart/form-data">
             <p>Nombre</p>
-            <input type="text" name="nombre" id="">
+            <input type="text" name="nombre">
             <p>Contraseña</p>
-            <input type="password" name="contraseña" id="">
+            <input type="password" name="contraseña">
             <p>Fecha de nacumiento</p>
-            <input type="date" name="edad" id="">
+            <input type="date" name="edad">
             <p>telefono</p>
-            <input type="text" name="telefono" id="">
+            <input type="text" name="telefono">
             <p>Cargo</p>
-            <select name="cargo" id="">
+            <select name="cargo">
                 <?php
                 while ($fila = $result->fetch_assoc()) :
                     $id = $fila['Id_cargo'];

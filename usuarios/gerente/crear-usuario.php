@@ -26,7 +26,6 @@
     <?php } else {
         header('Location:/login.php');
     } ?>
-
 </body>
 
 </html>

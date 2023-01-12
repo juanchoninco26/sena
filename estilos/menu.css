@@ -24,7 +24,7 @@ body{
     text-decoration: none;
     color: white;
 }
-li{
+.li{
     margin-bottom: 12px;
     margin-top: 12px;
 }
@@ -35,11 +35,11 @@ li a{
     font-weight: 600;
     font-size: 24pt;
 }
-li:hover{
+.li:hover{
     background:rgb(200, 219, 157);
     border-radius: 9px 0px 0px 9px;
 }
-a:hover{
+.li a:hover{
     color:rgb(4, 56, 4);
 }
 .btn{
