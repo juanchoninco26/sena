@@ -41,13 +41,10 @@
             </ol>
         </div>
         <script>
-            window.addEventListener('DOMContentLoaded', () => {
-                //enviar los resultados al servidor
+            document.addEventListener('DOMContentLoaded', () => {
+                viewData()
+                //consultamos los datos al servidor local 
                 const buscarDatos = async (url) => {
-                    // const url = `../../php/listas_api.php`;
-                    // let datosR = new FormData();
-                    // datosR.append('buscarUsuario',criteriosBusqueda);
-                    // console.log(criteriosBusqueda)
                     const response = await fetch(url);
                     const rta = await response.json();
                     // console.log(rta);
@@ -57,27 +54,34 @@
                 //mostrar datos 
                 buscarDatos(`../../php/listas_api.php`)
                     .then((data) => {
+                        //pasamos la respueta a la funcion  viewData(data)
+                        console.log(data)
                         viewData(data)
                     })
                     .catch(error => console.error('2  error:', error))
             });
-            //arr es el array y el query e el input
-            function filterItems(arr, query) {
-                return arr.filter((e) => e.toString().toLowerCase().includes(query.toLowerCase()));
-            }
 
             function viewData(data) {
-                const busqueda = document.querySelector('#search');
+
+                const busqueda = document.querySelector('#search'); //buscador
                 let criteriosBusqueda = '';
 
                 if (busqueda) {
                     busqueda.addEventListener('input', event => {
-                        criteriosBusqueda = event.target.value.toUpperCase();
+                        criteriosBusqueda = event.target.value.toUpperCase(); //captura el valor ingresado
                         return criteriosBusqueda
                     })
+                    filterItems()
                 }
-                console.log(filterItems(data,'Felipe Torres'));
+                //filtro de datos
+                function filterItems(data_r, teclado) {
+                    return data_r.filter((e) => e.toString().toLowerCase().includes(teclado.toLowerCase()));
+                }
 
+                //le pasamos el dato retornado y lo ingresado por el teclado para ver por consola
+                console.log(filterItems(data,"admin"));
+
+                //recorrer los datos para mostrarlos 
                 let template = ``;
                 data.forEach(Element => {
                     const nombre = Element.Nombre;
