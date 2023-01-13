@@ -41,8 +41,9 @@
             </ol>
         </div>
         <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                viewData()
+            window.addEventListener('DOMContentLoaded', () => {
+                document.getElementById("datos").innerHTML = '';
+
                 //consultamos los datos al servidor local 
                 const buscarDatos = async (url) => {
                     const response = await fetch(url);
@@ -52,45 +53,43 @@
                 }
 
                 //mostrar datos 
-                buscarDatos(`../../php/listas_api.php`)
+                buscarDatos('../../php/listas_api.php?buscarUsuario')
                     .then((data) => {
                         //pasamos la respueta a la funcion  viewData(data)
                         console.log(data)
                         viewData(data)
+                        // newData(data)
                     })
                     .catch(error => console.error('2  error:', error))
             });
 
             function viewData(data) {
-
+                //data me devuelve los datos de la api
                 const busqueda = document.querySelector('#search'); //buscador
-                let criteriosBusqueda = '';
+                let criteriosBusqueda='';
 
-                if (busqueda) {
-                    busqueda.addEventListener('input', event => {
-                        criteriosBusqueda = event.target.value.toUpperCase(); //captura el valor ingresado
-                        return criteriosBusqueda
-                    })
-                    filterItems()
-                }
-                //filtro de datos
-                function filterItems(data_r, teclado) {
-                    return data_r.filter((e) => e.toString().toLowerCase().includes(teclado.toLowerCase()));
-                }
-
-                //le pasamos el dato retornado y lo ingresado por el teclado para ver por consola
-                console.log(filterItems(data,"admin"));
+                //me muestra los datos filtados en la consola
+                busqueda.addEventListener('keyup', event => {
+                    criteriosBusqueda = data.filter(data => data.Nombre.toLowerCase().includes(busqueda.value.toLowerCase())) //captura el valor ingresado
+                    console.log(criteriosBusqueda);
+                    return criteriosBusqueda
+                });
 
                 //recorrer los datos para mostrarlos 
-                let template = ``;
-                data.forEach(Element => {
-                    const nombre = Element.Nombre;
-                    const id = Element.Id_empleado;
-                    template += `<ul id='resultado'>${nombre}<button><a onclick="return confirm('estas seguro de eliminar este dato?') " href="/php/eliminar.php?Id_empleado=${id}">x Quitar</a></button></ul>`;
-                })
+                // let template = ``;
+                // data.forEach(asunc (Element) => {
+                //     const nombre = await Element.Nombre;
+                //     const id = Element.Id_empleado;
+                //     template += `<ul id='resultado'>${nombre}<button><a onclick="return confirm('estas seguro de eliminar este dato?') " href="/php/eliminar.php?Id_empleado=${id}">x Quitar</a></button></ul>`;
+                // })
+
+                //usuarios muestra los datos en pantalla que se han traido
+                const usuarios =  parametro => parametro.map(d => `<ul id='resultado'>${d.Nombre}<button><a onclick="return confirm('estas seguro de eliminar este dato?') " href="/php/eliminar.php?Id_empleado=${d.id}">x Quitar</a></button></ul>`).join(' ');
                 //funciona, hay que arreglar la parte visual
                 //https://www.youtube.com/watch?v=6zii2I6LlT0 minuto:57:40
-                document.getElementById("datos").innerHTML = template;
+
+                const u = usuarios(data);
+                document.getElementById("datos").innerHTML = u;
             }
         </script>
     </div>
