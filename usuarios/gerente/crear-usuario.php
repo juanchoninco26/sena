@@ -1,6 +1,6 @@
 <?php include '../../php/puntos-turista-bd.php' ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -23,6 +23,8 @@
         <?php
         include '../../php/vista/crear-usuario.php';
         ?>
+        <script src="../../llamadosApi/contolador js/listaApiCrearUsuario.js"></script>
+        
     <?php } else {
         header('Location:/login.php');
     } ?>

@@ -24,22 +24,40 @@ body{
     width: 28px;
     height: 28px;
 }
+
 #buscador{
     display:none;
 }
-#buscador #buscar {
+#buscador #buscar1 {
     width: 28px;
     height: 28px;
     margin-left: 1px;
-    
 }
 #buscador #esconder{
     width: 20px;
     height: 28px;
     padding: 2px;
     margin-left: 10px;
+    margin-right: 10px;
 }
-
+#buscador .buscar{
+    background: rgb(20, 200, 20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10pc;
+    
+}
+#buscador #search{
+    border-radius: 20px;
+    border: none;
+    background: white;
+    height: 30px;
+    margin-left: 5px;
+}
+#buscador #search:focus-visible{
+    outline:none;
+}
 .centrar{
     display: flex;
     justify-content: center;
@@ -70,17 +88,6 @@ body{
     padding-right: 7px;
     margin-bottom: 10px; 
 }
-/* .lista ol li{
-    background: white;
-    list-style: none;
-    height: 40px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 7px;   
-} */
 .lista ol li button{
     color: white;
     border: none;

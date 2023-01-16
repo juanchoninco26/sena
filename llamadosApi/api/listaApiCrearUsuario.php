@@ -1,8 +1,8 @@
 <?php
-include '../php/puntos-turista-bd.php';
+include '../../php/puntos-turista-bd.php';
 
 
-$busqueda = $_GET['buscarUsuario'];
+$busqueda = isset($_GET['buscarUsuario']);
 
 //hacemos la consulta para la lista de crear usuario y mostrarlo
 $crear_usuario = "WHERE Nombre LIKE '%" . $busqueda . "%'";

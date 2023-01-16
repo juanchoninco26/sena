@@ -1,4 +1,4 @@
-<footer id="menu">
+<header id="menu">
     <nav class="caja">
         <ul class="subcaja">
             <li class="li"><a href="reservaciones.php">Reservaciones</a></li> 
@@ -11,4 +11,4 @@
             <button class="btn" name=""><a href="/php/CerrarSesionUser.php" class="h">cerar sesión</a></button>
         </ul>
     </nav>
-</footer>
+</header>
