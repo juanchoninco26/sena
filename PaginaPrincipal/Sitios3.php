@@ -49,20 +49,25 @@ session_start();
         }
         ?>
     <header>
-        <div> 
-           <img src="../imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
-           <h1>Ruta 360 Gigante</h1>
-        </div>
+    <div class="content">
+      <div class="inicio_imagen">
+        <img src="../imagenes/360.png.png.png" alt="" width="130" height="130" />
+        <h1>Ruta 360 Gigante</h1>
+      </div>
 
-        <nav id="menu-h">
-          <ul>
-            <li><a href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
-            <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
-            <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 22px; height: 22px;">Carrito</a></li>
-           </ul>
-        </nav>
-    </header>
+      <div class="img-menu" id="img-menu">
+        <div id="click"><img src="../imagenes/menu.svg" alt=""></div>
+      </div>
+    </div>
+
+    <nav id="menu-h">
+      <ul class="sub-a" id="sub-b">
+        <li><a href="../Index.php"><img src="../imagenes/home.png.png">Inicio</a></li>
+        <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
+        <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
+        <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png">Carrito</a></li>
+      </ul>
+    </nav>
   <main>
   <h2><?php echo $mostrar['Nombre']?></h2>
 
@@ -229,6 +234,7 @@ session_start();
     </div>
   </footer>
   <script src="../script/popup.js"></script>
+  <script src="../script/menu.js"></script>
 <?php 
     }
     ?>

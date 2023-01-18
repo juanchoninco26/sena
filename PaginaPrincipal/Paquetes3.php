@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +11,9 @@ session_start();
   <title>Página Paquetes3</title>
   <link rel="stylesheet" href="../Estilos/EstilosPaquetes2.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
+  <link meta name="viewport" content="width=device-width, initial-scale=1.0" &amp;gt;>
 </head>
+
 <body>
   <?php
   $sql = "SELECT Nombre,Foto_fondo,Foto1,Foto2,Foto3,Precio,Punto_paquete,Descripcion,Itinerario,Incluye,Recomendaciones from paquetes_turisticos where Cod_paquete=11";
@@ -19,51 +21,28 @@ session_start();
 
   while ($mostrar = mysqli_fetch_array($result)) {
   ?>
+
     <body background=<?php echo $mostrar['Foto_fondo'] ?>></body>
     <header>
-      <div>
-        <img src="../imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left" />
+    <div class="content">
+      <div class="inicio_imagen">
+        <img src="../imagenes/360.png.png.png" alt="" width="130" height="130" />
         <h1>Ruta 360 Gigante</h1>
       </div>
 
-      <nav id="menu-h">
-        <?php
-        // contamos los productos agregados
-        if (isset($_SESSION['carrito'])) {
-          $carrito_compras = $_SESSION['carrito'];
-          for ($i = 0; $i <= count($carrito_compras) - 1; $i++) {
-            if (isset($carrito_compras[$i])) {
-              if ($carrito_compras[$i] != NULL) {
-                if (!isset($carrito_compras['cantidad'])) {
-                  $carrito_compras['cantidad'] = '0';
-                } else {
-                  $carrito_compras['cantidad'] = $carrito_compras['cantidad'];
-                }
-                $total_cantidad = $carrito_compras['cantidad'];
-                $total_cantidad++;
-                if (!isset($totalCantidad)) {
-                  $totalCantidad = '0';
-                } else {
-                  $totalCantidad = $totalCantidad;
-                }
-                $totalCantidad += $total_cantidad;
-              }
-            }
-          }
-        }
-        if (!isset($totalCantidad)) {
-          $totalCantidad = '';
-        } else {
-          $totalCantidad = $totalCantidad;
-        }
-        ?>
-        <ul>
-          <li><a href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
-          <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
-          <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-          <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 24px; height: 24px;">Carrito</a></li>
-        </ul>
-      </nav>
+      <div class="img-menu" id="img-menu">
+        <div id="click"><img src="../imagenes/menu.svg" alt=""></div>
+      </div>
+    </div>
+
+    <nav id="menu-h">
+      <ul class="sub-a" id="sub-b">
+        <li><a href="../Index.php"><img src="../imagenes/home.png.png">Inicio</a></li>
+        <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
+        <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
+        <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png">Carrito</a></li>
+      </ul>
+    </nav>
     </header>
 
     <main>
@@ -158,6 +137,7 @@ session_start();
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="../script/menu.js"></script>
 
 </body>
 

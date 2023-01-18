@@ -1,40 +1,19 @@
 body {
-    background-color:#DAF7A6 ;
     background-repeat: repeat-y;
-    background-size: 500px 700px;
+    background-size: 500px 1100px;
     background-position: right;
+    background-color:#DAF7A6 ;
 }
 
-/*layout exclusivo para dispositivos que funcionen con un ancho de ventana menor a 980 píxeles*/
-@media screen and (max-width: 980px){
-    #contenedor{
-        width: 90%;
-    }
-    #contenido{
-        width: 60%;
-    }
-    #barra_lateral{
-        width:30%;
-    }
-}
-
-/*lo mismo para el ancho de un dispositivo móvil */
-@media screen and (max-width: 480px){
-    #encabezado{
-        height: auto;
-    }
-    #contenido{
-        width: auto;
-    }
-    #barra_lateral{
-        display:none;
-    }
-}
 
 header{
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+header img {
+    float: left;
 }
 
 h1{
@@ -44,16 +23,18 @@ h1{
     font-size: 35px;
 }
 
+.img-menu{
+    display: none;
+}
+
 header div img {
    margin-top: 15px;
 }
 
 #menu-h {
     height:60px;
-    padding: 8px;
     border-radius: 15px;
     background-color: hsl(128, 79%, 11%);
-    position: relative;
 } 
 
 #menu-h ul {
@@ -64,20 +45,27 @@ header div img {
     float: left;
     list-style: none;
     padding: 0;
-    margin: 2px;
+    margin: 0;
+    height: 60px;
 }
 
 #menu-h a {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-decoration: none;
-    padding: 16.1px;
-    margin: 0;
-    margin-left: 30px;
-    margin-right: 30px;
+    padding: 16px;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 60px;
 }
 
-header ul li :hover{
+#menu-h a img {
+    width: 22px;
+    height: 22px;
+    margin: 17px;
+}
+
+nav ul li:hover{
     background-color:#A9DFBF;
 }
 
@@ -624,3 +612,352 @@ footer  h6 {
     margin-right: 10px;
 }
 
+/*web responsive: laptop*/
+@media screen and (max-width: 1124px) and  (min-width:701px){
+    header{
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    header .content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main .imagen2 img{
+        width: auto;
+        height: auto;
+        margin-top: 0px;
+    }
+
+    footer{
+        display: grid;
+        margin-top: 100px;
+    }
+
+    footer .btn-abrir-popup {
+        height: auto;
+        order: 1;
+    }
+    footer .Barra{
+        order: 2;
+        text-align: center;
+        margin-top: 30px;
+    }
+    footer .redes{
+        order: 3;
+    }
+    .redes .sociales{
+        padding-top: 0;
+        margin-left: 0;
+    }
+}
+
+/* web responsive: movil */
+@media screen and (max-width: 700px) {
+    * {
+        box-sizing: border-box;
+        font-size: 13pt;
+    }
+
+    body {
+        background-repeat-y: no-repeat;
+        background-size: 460px;
+        padding-bottom: 350px;
+    }
+
+    header {
+        display: block;
+        align-items: center;
+    }
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    h1 {
+        line-height: 140px;
+        color: #06330C;
+        font-size: 24px;
+        display: flex;
+        margin-left: 10px;
+    }
+
+    .inicio_imagen {
+        display: block;
+        justify-content: center;
+    }
+
+    .inicio_imagen img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .img-menu{
+        display: block;
+        width: 30px;
+        height: 30px;
+        float: right;
+        padding: 2px;
+        margin: 20px;  
+    }
+    nav ul li{
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding: 10px;
+        width: 100%;   
+    }
+    #menu-h {
+        background-color: transparent;
+        width: 100%;  
+        padding: 0px; 
+    }
+
+    #menu-h .sub-a {
+        visibility: hidden;
+        display: contents;
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    #menu-h .responsive{
+        visibility: visible;
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: hsl(128, 79%, 11%);
+        transition: 0.5;
+        height: 250px;
+    }
+
+    #menu-h a {
+        padding: 1px;
+    }
+
+    #menu-h a img {
+        width: 0;
+        height: 0;
+    }
+
+    header img {
+        display: flex;
+    }
+
+    main {
+        display: block;
+    }
+
+    main h2 {
+        color: #06330C;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 60px;
+        width:320px;
+        margin: 0;
+        padding: 0;
+        height: 0;
+        padding-bottom: 140px;
+        margin-left: 30px
+    }
+
+    main .texto {
+        display: block;
+        margin-left: 505px;
+    }
+    
+    main .caja {
+       display: flex;
+    }
+
+    main .texto .subtexto {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 180px;
+        height: 250px;
+        color: #06330C;
+        line-height: 20px;
+    }
+
+    main .texto2 .subtexto2 {
+        width: 180px;
+        height: 250px;
+        margin-left: 10px;
+        color: #06330C;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 20px;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    main .Botones {
+        padding-top: 200px;
+        margin-left: 80px;
+    }
+
+    .Punto h5 {
+       color: #fff;
+    }
+
+    #Carrito {
+        background-color: #06330C;
+        width: 215px;
+        height: 50px;
+        border-radius: 10px;
+        line-height: 40px;
+    }
+
+    #Carrito button {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        background: #06330C;
+        text-decoration: none;
+        border: none;
+        width: max-content;
+    }
+
+    .Valor h5 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #f9fafb;
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        font-size: 30px;
+        border-style: solid;
+        border-color: #44c04b;
+        border-radius: 15px;
+        border-width: 5px;
+        width: 220px;
+        position: relative;
+    }
+
+    nav ul li {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    main aside {
+        display: block;
+    }
+
+    aside nav {
+        background: #06330C;
+        border-radius: 12px;
+        margin-left: 80px;
+        width: 157px;
+        height: 40px;
+        margin-bottom: 15px;
+    }
+
+    main aside h4 {
+        margin-right: 0;
+    }
+
+    main aside p {
+        text-align: center;
+    }
+
+    /*imagen de fondo*/
+    
+    .Imagen {
+        width: auto;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .Imagen .imagen2 img {
+        width: 100%;
+        height: 300px;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .popup.active {
+        transform: scale(1);
+        opacity: 1;
+        width: 60%;
+        margin-left: -220px;
+        height: 500px;
+    }
+
+    main .caja {
+        display: flex;
+        margin-left: -495px;
+        padding: 0;
+    }
+
+    #Cajas .carousel {
+        width: 340px;
+        margin-left: 490px;
+        padding-top: 10px;
+    }
+
+    footer {
+        margin-top: 50px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        width: 320px;
+    }
+
+    footer h4 {
+        color: #06330C;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        width: 400px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    footer h6 {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        color: #06330C;
+        line-height: 15px;
+        margin-left: 105px;
+    }
+
+    #menu-h2 {
+        width: 90px;
+        height: 4px;
+        padding: 0;
+        margin: 0;
+        background-color: black;
+        margin-left: 105px;
+    }
+
+    .Logo2 img {
+        height: 100px;
+        width: 100px;
+        margin-top: -80px;
+        margin-bottom: 60px;
+        margin-left: 175px;
+    }
+
+    footer h5 {
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .redes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        order: 3;
+        margin-left: 100px;
+    }
+
+    .redes .sociales {
+        margin-left: 0;
+        padding-top: 0;
+    }
+  }

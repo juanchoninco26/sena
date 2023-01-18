@@ -2,36 +2,14 @@ body{
     background: #DAF7A6;
 }
 
-/*layout exclusivo para dispositivos que funcionen con un ancho de ventana menor a 980 píxeles*/
-@media screen and (max-width: 980px){
-    #contenedor{
-        width: 90%;
-    }
-    #contenido{
-        width: 60%;
-    }
-    #barra_lateral{
-        width:30%;
-    }
-}
-
-/*lo mismo para el ancho de un dispositivo móvil */
-@media screen and (max-width: 480px){
-    #encabezado{
-        height: auto;
-    }
-    #contenido{
-        width: auto;
-    }
-    #barra_lateral{
-        display:none;
-    }
-}
-
 header{
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+header img {
+    float: left;
 }
 
 header div img {
@@ -46,9 +24,12 @@ h1{
     margin-top:-8px;
 }
 
+.img-menu{
+    display: none;
+}
+
 #menu-h {
-    height:63px;
-    padding: 9px;
+    height:60px;
     border-radius: 15px;
     background-color: hsl(128, 79%, 11%);
 } 
@@ -60,22 +41,31 @@ h1{
     font-size: 25px;
     float: left;
     list-style: none;
-    padding: 0px;
-    margin: 2px;
+    padding: 0;
+    margin: 0;
+    height: 60px;
 }
 
 #menu-h a {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-decoration: none;
-    padding: 17.5px;
-    margin-left: 32px;
-    margin-right: 32px;
+    padding: 16px;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 60px;
 }
 
-header li :hover{
+#menu-h a img {
+    width: 22px;
+    height: 22px;
+    margin: 17px;
+}
+
+nav ul li:hover{
     background-color:#A9DFBF;
 }
+
 
 .Carrito {
     background: #149425;
@@ -105,63 +95,6 @@ main h1 {
     margin-top:-50px;
     margin-left: 20px;
 }
-/*desde aqui
-.Caja {
-    background:white;
-    width: 820px;
-    height: 250px;
-    margin-top: 110px;
-    margin-left: -350px;
-    border-radius: 20px;
-    display: flex;
-}
-
-.Caja form  h3 {
-    color: #149425;
-    font-size: 100px;
-    margin-left: 134px;
-    margin-top: -110px;
-}
-
-.Caja form h4 {
-    color: #149425;
-    font-size: 100px;
-    margin-top: -110px;
-    margin-left: 289px;
-}
-.eliminarlugar{
-    display: flex;
-}
-.eliminarlugar .subcaja button{
-    font-weight: 300;
-    display: block;
-    align-items: center;
-    float: right;
-    border: none;
-    border-radius: 5px;
-    background: rgb(192, 16, 16);
-    color: white;
-}
-.eliminarlugar .subcaja button a{
-    color: white;
-    text-decoration: none;
-}
-.Barra a {
-    list-style: none;
-    text-decoration: none;
-    color: white;
-}
-
-form .subcaja {
-    width: 90px;
-    height: fit-content;
-    background: black;
-    border-radius: 15px;
-    margin-left: 45px;
-    margin-top: 30px;
-    padding: 5px;
-}
-*/
 .productos1::-webkit-scrollbar{
     width: 0;
     background: green;
@@ -409,6 +342,12 @@ div .Total {
     background-color:#A9DFBF;
     border-radius: 12px;
 }
+
+#Comprar ul li {
+    margin: 0;
+    padding: 0;
+}
+
 #limpiar_car button{
     background-color:#06330C;
     color: white;
@@ -482,4 +421,307 @@ footer h5{
 .redes img:hover {
     background-color:#A9DFBF;
     border-radius: 20px;
+}
+
+/*web responsive: laptop*/
+@media screen and (max-width: 1124px) and  (min-width:701px){
+    header{
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    header .content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main{
+        margin-top: 30px;
+    }
+    main .Carrito{
+        margin-left: 10px;
+    }
+    .productos1{
+        margin-left: 10px;
+    }
+    main .imagen2 img{
+        width: auto;
+        height: auto;
+        margin-top: 0px;
+    }
+    footer{
+        display: grid;
+        margin-top: 100px;
+    }
+
+    footer .btn-abrir-popup {
+        height: auto;
+        order: 1;
+    }
+    footer .Barra{
+        order: 2;
+        text-align: center;
+        margin-top: 30px;
+    }
+    footer .redes{
+        order: 3;
+    }
+    .redes .sociales{
+        padding-top: 0;
+        margin-left: 0;
+    }
+}
+
+/* web responsive: movil */
+@media screen and (max-width: 700px) {
+    * {
+        box-sizing: border-box;
+        font-size: 13pt;
+    }
+
+    body {
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header {
+        display: block;
+        align-items: center;
+    }
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .inicio_imagen {
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    h1 {
+        line-height: 130px;
+        color: #06330c;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 28px;
+        margin-left: 0;
+        padding-top: 10px;
+    }
+
+    .img-menu {
+        display: block;
+        width: 30px;
+        height: 30px;
+        float: right;
+        padding: 2px;
+        margin: 20px;
+        padding-top: 25px;
+    }
+
+    .inicio_imagen img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .img-menu{
+        display: block;
+        width: 30px;
+        height: 30px;
+        float: right;
+        padding: 2px;
+        margin: 20px;  
+        padding-top: 25px;
+    }
+    nav ul li{
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        width: 100%;
+        
+    }
+    #menu-h {
+        background-color: transparent;
+        width: 100%;  
+        padding: 0px; 
+    }
+
+    #menu-h .sub-a {
+        visibility: hidden;
+        display: contents;
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    #menu-h .responsive{
+        visibility: visible;
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: hsl(128, 79%, 11%);
+        transition: 2s;
+        height: 249px;
+        margin: 25px;
+        margin-left: -2px;
+    }
+    #menu-h a {
+        padding: 1px;
+    }
+
+    #menu-h a img {
+        width: 0;
+        height: 0;
+        margin: 0;
+    }
+
+    .Carrito {
+        background: #149425;
+        width: 100px;
+        height: 80px;
+        margin-left: 16px;
+        border-radius: 20px;
+        display: flex;
+    }
+
+    main h1 {
+        color: black;
+        font-size: 54px;
+        margin-top: -31px;
+        margin-left: 2px;
+    }
+
+    .compra .total {
+        width: fit-content;
+        border: solid 2px;
+        border-color: green;
+        border-radius: 5px;
+        margin-left: 8px;
+        margin-top: -120px;
+    }
+
+    .productos1 {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin-left: 16px;
+        padding-top: 50px;
+        position: static;
+    }
+
+    .product {
+        width: 357px;
+        height: auto;
+        display: inline-block;
+        grid-gap: 1rem;
+        grid-template-columns: auto auto auto auto;
+        background: white;
+        border-radius: 15px;
+    }
+
+    main .infom {
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border-radius: 10px;
+        color: white;
+        background: rgb(44, 42, 42);
+        line-height: 18px;
+        margin: 10px;
+    }
+
+    #Comprar {
+        background-color: #06330C;
+        width: 100px;
+        height: 32px;
+        border-radius: 15px;
+        margin: -60px;
+        margin-left: 110px;
+    }
+
+    #Comprar ul {
+        display: flex;
+        text-align: center;
+        font-size: 20px;
+        list-style: none;
+        margin: -5px;
+        line-height: 30px;
+    }
+
+    .Comprar nav ul li {
+        width: 100%;
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+    #Comprar a {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        text-decoration: none;
+        margin: 0;
+    }
+
+    #limpiar_car button {
+        background-color: #06330C;
+        color: white;
+        width: 100px;
+        height: 47px;
+        border-radius: 15px;
+        border: none;
+        margin-left: 244px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    /*imagen de fondo*/
+    
+    .Imagen {
+        width: auto;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .Imagen .imagen2 img {
+        width: 100%;
+        height: 300px;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    footer {
+        margin-top: 100px;
+        display: block;
+        align-items: center;
+        justify-items: center;
+    }
+
+    footer h4 {
+        color: #06330C;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin: 0;
+        text-align: center;
+    }
+
+    footer h5 {
+        text-align: center;
+        color: #06330C;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        padding-top: 20px;
+        margin: 0;
+    }
+
+    .redes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        order: 3;
+        margin-left: -40px;
+    }
+
+    .redes .sociales {
+        margin-left: 0;
+        padding-top: 0;
+    }
 }

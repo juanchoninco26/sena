@@ -16,49 +16,25 @@
 <body>
 <body background="../imagenes/Recurso2.png.png"></body>
     <header>
-        <div> 
-           <img src="../imagenes/360.png.png.png" alt="" width="130" height="130" style="float: left"/> 
-           <h1>Ruta 360 Gigante</h1>
-        </div>
- 
-        <nav id="menu-h">
-          <ul>
-          <?php
-                // contamos los productos agregados
-                if (isset($_SESSION['carrito'])) {
-                    $carrito_compras = $_SESSION['carrito'];
-                    for ($i = 0; $i <= count($carrito_compras) - 1; $i++) {
-                        if (isset($carrito_compras[$i])) {
-                            if ($carrito_compras[$i] != NULL) {
-                                if (!isset($carrito_compras['cantidad'])) {
-                                    $carrito_compras['cantidad'] = '0';
-                                } else {
-                                    $carrito_compras['cantidad'] = $carrito_compras['cantidad'];
-                                }
-                                $total_cantidad = $carrito_compras['cantidad'];
-                                $total_cantidad++;
-                                if (!isset($totalCantidad)) {
-                                    $totalCantidad = '0';
-                                } else {
-                                    $totalCantidad = $totalCantidad;
-                                }
-                                $totalCantidad += $total_cantidad;
-                            }
-                        }
-                    }
-                }
-                if (!isset($totalCantidad)) {
-                    $totalCantidad = '';
-                } else {
-                    $totalCantidad = $totalCantidad;
-                }
-                ?>
-            <li><a href="../Index.php"><img src="../imagenes/home.png.png" style="width: 22px; height:22px;"> Inicio</a></li>
-            <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
-            <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-            <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png" style="width: 22px; height: 22px;">Carrito</a></li>
-           </ul>
-        </nav>
+    <div class="content">
+      <div class="inicio_imagen">
+        <img src="../imagenes/360.png.png.png" alt="" width="130" height="130" />
+        <h1>Ruta 360 Gigante</h1>
+      </div>
+
+      <div class="img-menu" id="img-menu">
+        <div id="click"><img src="../imagenes/menu.svg" alt=""></div>
+      </div>
+    </div>
+
+    <nav id="menu-h">
+      <ul class="sub-a" id="sub-b">
+        <li><a href="../Index.php"><img src="../imagenes/home.png.png">Inicio</a></li>
+        <li><a href="../PaginaPrincipal/Sitios.php">Sitios</a></li>
+        <li><a href="../PaginaPrincipal/Paquetes.php">Paquetes</a></li>
+        <li><a href="../PaginaPrincipal/Carrito.php"><img src="../imagenes/LC-PNG.png">Carrito</a></li>
+      </ul>
+    </nav>
     </header>
 
           <main>  
@@ -122,6 +98,7 @@
      </div>
    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="../script/menu.js"></script>
 </body> 
 </html>
 
