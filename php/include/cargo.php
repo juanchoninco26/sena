@@ -11,12 +11,18 @@ function cargo(){
     $rows = mysqli_fetch_array($cons);
     if ($rows['Id_cargo'] == 1) {
         echo "Gerente";
+        $respuesta="gerente";
+        json_encode($respuesta);
     }
     if ($rows['Id_cargo'] == 2) {
         echo "Asesor";
+        $respuesta="gerente";
+        json_encode($respuesta);
     }
     if ($rows['Id_cargo'] == 3) {
         echo "Contador";
+        $respuesta="gerente";
+        json_encode($respuesta);
     }
 }
 
@@ -72,4 +78,5 @@ function mensajeRegistro(){
     }
     session_destroy();
 }
+
 ?>

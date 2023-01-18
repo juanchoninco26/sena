@@ -29,10 +29,10 @@
 
     <nav id="menu-h">
       <ul class="sub-a" id="sub-b">
-        <li><a href="./Index.php"><img src="./imagenes/home.png.png"> Inicio</a></li>
+        <li><a href="./Index.php"><img src="./imagenes/home.png.png">Inicio</a></li>
         <li><a href="./PaginaPrincipal/Sitios.php">Sitios</a></li>
         <li><a href="./PaginaPrincipal/Paquetes.php">Paquetes</a></li>
-        <li><a href="./PaginaPrincipal/Carrito.php"><img src="./imagenes/LC-PNG.png"> Carrito</a></li>
+        <li><a href="./PaginaPrincipal/Carrito.php"><img src="./imagenes/LC-PNG.png">Carrito</a></li>
       </ul>
     </nav>
   </header>

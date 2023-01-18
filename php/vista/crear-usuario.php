@@ -24,19 +24,19 @@
 </div>
 <div class="sec3">
     <div class="subcaja3">
-        <div>
+        <div id="infoPersona">
             <?php
             //ver en minuto 49,16: https://www.youtube.com/watch?v=fCTd8ilXZGI            
             //ver video:https://www.youtube.com/watch?v=9BLoMGO-XcU
             //el video muestra quien inicia el software
             //session_start() esta en el: php/loguin
             include '../../php/include/cargo.php';
-            $cargo = cargo();
-            echo "<h3>$cargo</h3>";
+            // $cargo = cargo();
+            // echo "<h3>$cargo</h3>";
 
-            if ($nombre = $_SESSION['Nombre']) {
-                echo "<p>$nombre</p>";
-            }
+            // if ($nombre = $_SESSION['Nombre']) {
+            //     echo "<p>$nombre</p>";
+            // }
             ?>
         </div>
         <div class="perfil">

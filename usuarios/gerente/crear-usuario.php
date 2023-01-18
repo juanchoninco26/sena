@@ -23,7 +23,8 @@
         <?php
         include '../../php/vista/crear-usuario.php';
         ?>
-        <script src="../../llamadosApi/contolador js/listaApiCrearUsuario.js"></script>
+        <script src="../../llamadosApi/contoladorJS/listaApiCrearUsuario.js"></script>
+        <script src="../../llamadosApi/contoladorJS/cargoUsuario.js"></script>
         
     <?php } else {
         header('Location:/login.php');
