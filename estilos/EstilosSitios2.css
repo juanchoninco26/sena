@@ -654,7 +654,7 @@ footer  h6 {
     }
 
     body {
-        background-repeat-y: no-repeat;
+        background-repeat: no-repeat;
         background-size: 460px;
         padding-bottom: 350px;
     }
