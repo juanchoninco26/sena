@@ -24,7 +24,7 @@ session_start();
 <body>
 
     <div class="caja">
-        <div>
+        <div class="texto">
             <div class="raya"></div>
             <div class="letra">
                 <h1><strong>Club 360. </strong><br>Espacio exclusivo para clientes VIP.</h1>
